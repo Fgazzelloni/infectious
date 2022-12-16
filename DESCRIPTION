@@ -1,0 +1,29 @@
+Package: infectious
+Title: Infectious
+Version: 0.0.0.9000
+Authors@R: 
+    person("Federica", "Gazzelloni", ,"fede.gazzelloni@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-4285-611X"))
+Description: This is a book dedidcated to modeling the state of health, it will be used for forecasting bad events.
+URL: https://github.com/fgazzelloni/infectious
+Depends: 
+    R (>= 3.1.0)
+Imports:
+    janitor,
+    sf,
+    tidymodels,
+    tidyverse,
+    viridis
+Suggests:
+    htmltools,
+    jpeg,
+    knitr,
+    sessioninfo
+Remotes:
+    tidyverse/dplyr,
+    tidyverse/dbplyr,
+    tidyverse/tidyr,
+    tidyverse/purrr
+Encoding: UTF-8
+License: MIT + file LICENSE
+RoxygenNote: 7.2.1

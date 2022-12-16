@@ -1,23 +1,69 @@
 project:
   type: book
+  output-dir: _book
 
 book:
   title: "Infectious"
   author: "Federica Gazzelloni"
   date: "12/16/2022"
+  page-navigation: true
+  page-footer:
+    left: |
+      Infectious was written by <a href="https://federicagazzelloni.netlify.app/">Federica Gazzelloni</a>.
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  cover-image: cover.png
+  favicon: cover.png
+  repo-url: https://github.com/fgazzelloni/infectious/
+  repo-branch: main
+  repo-actions: [edit, issue]
+  
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
-    - references.qmd
+    
+    - part: health_metrics.qmd
+      chapters:
+        - intro_hm.qmd
+        - content_hm.qmd
+        - summary_hm.qmd
+        
+    - part: modeling.qmd
+      chapters:
+        - intro_md.qmd
+        - content_md.qmd
+        - summary_md.qmd
+        
+    - part: data_visualization.qmd
+      chapters:
+        - intro_dv.qmd
+        - content_dv.qmd
+        - summary_dv.qmd 
+        
+    - part: case_studies.qmd
+      chapters:
+        - intro_cs.qmd
+        - content_cs.qmd
+        - summary_cs.qmd  
+        
+    - conclusions.qmd
+    - references.qmd   
+    
+  appendices:
+    - tools.qmd
+    - resources.qmd  
 
 bibliography: references.bib
 
 format:
   html:
     theme: cosmo
+    code-link: true 
   pdf:
     documentclass: scrreprt
+    
+    author-meta: "Federica Gazzelloni"
+    callout-appearance: simple   
 
 editor: visual
 
