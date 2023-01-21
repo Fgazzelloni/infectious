@@ -2,16 +2,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Infectious",
+    "title": "Health metrics and the spread of infectious diseases",
     "section": "",
-    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+    "text": "Preface\nHealth metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis are the topics of this book."
   },
   {
     "objectID": "intro_hm.html",
     "href": "intro_hm.html",
-    "title": "2  Introduction hm",
+    "title": "2  Overview",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "In this chapter are shown the methods used for building three key metrics: YLLs, YLDs and DALYs. These will be used throughout the book for making comparisons among the state of health of different countries."
   },
   {
     "objectID": "references.html",
@@ -19,5 +19,145 @@
     "title": "References",
     "section": "",
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis, is a manual and a textbook for an introductory health data analysis course. It can also turn out to be a useful source code for both practitioners and data scientists.\nPublic health metrics such as DALYs, YLL, and YLD are expressed in numbers of years of life lost or lived with disabilities whose sum expresses a key value generally used for ranking the health status of a population.\nA focus on the impact of recent infectious disease outbreaks, such as Covid19, on the state of health of the population, will be provided along with the most affected locations. The book is structured with an alternation of text and chunks of code in the R language to let the reader be a practitioner of real-world case studies on the topic.\nTo be more specific, the metrics used to summarize the state of health of a population will be compared across other locations and a prediction level tested on a few key models will be provided. The idea is to use {tidymodels}, and {INLA} as modeling tools. Finally complete the material some interesting spatial visualization, made with using {ggplot2}, {leaflet}, {sf}, {rgdal} R packages, plus other main packages for allowing the user for a wider understanding of the potentiality of the R language for both spatial and health metrics.\nThe book is foreseen for practitioners at early stages and graduated students in STEM."
+  },
+  {
+    "objectID": "health_metrics.html",
+    "href": "health_metrics.html",
+    "title": "Health metrics",
+    "section": "",
+    "text": "Health metrics are key variables to understand more about the state of health of a population. In this book we’ll talk about numbers of years of life lost (YLLs) and the numbers of years lived with disabilities (YLDs), to finally identify the key metric of the DALYs which means disability adjusted life years.\nThe numbers of years of life lost by a population in comparison to other population in a different country or to the Global mean trend is what is expected it should be based on the latest study results relative to the well being of a country in terms of the definition of a healthy life. To give an example, let’s think about a population whose individuals are living a good life, so defined healthy life measured on life expectancy established to be 80 years on average, as most of the World population meets this as a deadline.\nThe part of the population who do not meet this age, but dies earlier, contributes to building blocks of the numbers of years of life lost (YLLs), as well as for all that is related with a healthy living, the numbers of years spent dealing with a disability of different kind contribute to increasing the numbers of years lived with disabilities for a country’s population.\nTo establish the well being, meant as the healthy life defying the state of health of a population, based on the latest findings of the most updated studies, the sum of these two values YLLs and YLDs releases the key metric of DALYs. This metric value is used to quickly identify the level of health of a population compared to a Global review.\nIn addition, this level is used to improve the proportion of countries who are in need of a better health status recognition. To be more specific, the focus on the numbers of years can help identify the areas where most of the years are lost and need for improvement, whether in facilities, research or investments.\nAn improvement of health at a Global level is reached when the definition of a healthy file is met in most of the countries where it wasn’t before."
+  },
+  {
+    "objectID": "content_hm.html#ylls-ylds-and-dalys",
+    "href": "content_hm.html#ylls-ylds-and-dalys",
+    "title": "3  Content of hm",
+    "section": "3.1 YLLs, YLDs and DALYs",
+    "text": "3.1 YLLs, YLDs and DALYs\n\n3.1.1 YLLs\n\n\n3.1.2 YLDs\n\n\n3.1.3 DALYs"
+  },
+  {
+    "objectID": "content_hm.html#components",
+    "href": "content_hm.html#components",
+    "title": "3  YLLs, YLDs and DALYs",
+    "section": "3.1 Components",
+    "text": "3.1 Components\nTwo fundamental components are used for calculating the DALYs: - life tables - life expectancy\nBoth of these elements are key for achieving a high level value of the state of health of a population.\n\n3.1.1 Life tables\nThe life tables are selected among the most frequently used, more information about how to build a like table can be found in the #sec-tools of this book.\n\n\n3.1.2 Life expectancy\nThe life expectancy rates are calculated with consideration of the probability of survival based on key parameter such as age, and deaths probabilities for that age. More info about how to calculate the life expectancy can be found #sec-tools of this book."
+  },
+  {
+    "objectID": "content_hm.html#how-to-build-the-metrics",
+    "href": "content_hm.html#how-to-build-the-metrics",
+    "title": "3  YLLs, YLDs and DALYs",
+    "section": "3.2 How to build the metrics",
+    "text": "3.2 How to build the metrics\nIn this section a practical calculation of the health metrics is done for the practitioner to be able to replicate this calculation for further analysis based on thses key elements.\n\n3.2.1 YLLs\nThe number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death.\nLife expectancy for this book calculations is from worlddata\n\n\n3.2.2 YLDs\n\n\n3.2.3 DALYs"
+  },
+  {
+    "objectID": "content_hm.html#how-to-use-the-metrics",
+    "href": "content_hm.html#how-to-use-the-metrics",
+    "title": "3  YLLs, YLDs and DALYs",
+    "section": "3.3 How to use the metrics",
+    "text": "3.3 How to use the metrics"
+  },
+  {
+    "objectID": "tools.html",
+    "href": "tools.html",
+    "title": "Appendix A — Tools",
+    "section": "",
+    "text": "B github later:\nusethis::use_git() # this pushes all files in R to a remote folder designed to github repo\ngit init # git remote add origin https://github.com/Fgazzelloni/infectious.git # git branch -M main # git push -u origin main #\n#\n# # publish your book on github pages # # change the _quarto.yml file into: # project: # type: book # output-dir: docs # # add a .nojekyll file …(terminal) # touch .nojekyll # # then type # quarto render # # some issues might arise if more than one # # calculation is made inside a single cunck # # split the cuncks! # # quarto render creates a folder # docs"
+  },
+  {
+    "objectID": "tools.html#rstudio-installation",
+    "href": "tools.html#rstudio-installation",
+    "title": "Appendix A — Tools",
+    "section": "A.1 RStudio installation",
+    "text": "A.1 RStudio installation\nDownload and install R: Download and install RStudio IDE:"
+  },
+  {
+    "objectID": "tools.html#info-on-how-to-setup-this-project-in-quarto",
+    "href": "tools.html#info-on-how-to-setup-this-project-in-quarto",
+    "title": "Appendix A — Tools",
+    "section": "A.2 Info on how to setup this project in quarto",
+    "text": "A.2 Info on how to setup this project in quarto\nquarto is the new version of Rmarkdown, it can be used for making notes, presentations, websites, books and more.\nIn this project the book has been made in quarto and version saved on github.\nhttps://quarto.org/docs/publishing/github-pages.html In RStudio create a new project on a new directory and in terminal type: add git quarto book project\nThe automated process will create a _quarto.yml file, the top of the file will look like this one:\nproject: type: book\nOn terminal type: quarto preview\nIt creates a folder _book"
+  },
+  {
+    "objectID": "tools.html#github-useful-commands",
+    "href": "tools.html#github-useful-commands",
+    "title": "Appendix A — Tools",
+    "section": "G.1 GitHub useful commands",
+    "text": "G.1 GitHub useful commands"
+  },
+  {
+    "objectID": "metrics_hm.html",
+    "href": "metrics_hm.html",
+    "title": "2  YLLs, YLDs and DALYs",
+    "section": "",
+    "text": "A closer look at the metrics, their usage and potentiality for improvements\nIn this chapter are shown the methods used for building three key metrics: YLLs, YLDs and DALYs. These will be used throughout the book for making comparisons among the state of health of different countries."
+  },
+  {
+    "objectID": "components_hm.html#components",
+    "href": "components_hm.html#components",
+    "title": "3  Metrics components",
+    "section": "3.1 Components",
+    "text": "3.1 Components\nTwo fundamental components are used for calculating the DALYs: - life tables - life expectancy\nBoth of these elements are key for achieving a high level value of the state of health of a population.\n\n3.1.1 Life tables\nThe life tables are selected among the most frequently used, more information about how to build a like table can be found in the #sec-tools of this book.\n\n\n3.1.2 Life expectancy\nThe life expectancy rates are calculated with consideration of the probability of survival based on key parameter such as age, and deaths probabilities for that age. More info about how to calculate the life expectancy can be found #sec-tools of this book."
+  },
+  {
+    "objectID": "components_hm.html#how-to-build-the-metrics",
+    "href": "components_hm.html#how-to-build-the-metrics",
+    "title": "3  Metrics components",
+    "section": "3.2 How to build the metrics",
+    "text": "3.2 How to build the metrics\nIn this section a practical calculation of the health metrics is done for the practitioner to be able to replicate this calculation for further analysis based on thses key elements.\n\n3.2.1 YLLs\nThe number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death.\nLife expectancy for this book calculations is from worlddata\n\n\n3.2.2 YLDs\n\n\n3.2.3 DALYs"
+  },
+  {
+    "objectID": "components_hm.html#how-to-use-the-metrics",
+    "href": "components_hm.html#how-to-use-the-metrics",
+    "title": "3  Metrics components",
+    "section": "3.3 How to use the metrics",
+    "text": "3.3 How to use the metrics"
+  },
+  {
+    "objectID": "causes_hm.html",
+    "href": "causes_hm.html",
+    "title": "4  Causes and risks",
+    "section": "",
+    "text": "How to use the metrics\noverview of the causes and risks"
+  },
+  {
+    "objectID": "modeling.html",
+    "href": "modeling.html",
+    "title": "Modeling",
+    "section": "",
+    "text": "Feature engineering\nModel selection\nPackages and functions to use for the analysis\nAttempt at predicting the future"
+  },
+  {
+    "objectID": "appendix_b.html",
+    "href": "appendix_b.html",
+    "title": "Appendix B — Tools used to make this book",
+    "section": "",
+    "text": "C github later:\nusethis::use_git() # this pushes all files in R to a remote folder designed to github repo\ngit init # git remote add origin https://github.com/Fgazzelloni/infectious.git # git branch -M main # git push -u origin main #\n#\n# # publish your book on github pages # # change the _quarto.yml file into: # project: # type: book # output-dir: docs # # add a .nojekyll file …(terminal) # touch .nojekyll # # then type # quarto render # # some issues might arise if more than one # # calculation is made inside a single cunck # # split the cuncks! # # quarto render creates a folder # docs"
+  },
+  {
+    "objectID": "appendix_b.html#rstudio-installation",
+    "href": "appendix_b.html#rstudio-installation",
+    "title": "Appendix B — Tools used to make this book",
+    "section": "B.1 RStudio installation",
+    "text": "B.1 RStudio installation\nDownload and install R: Download and install RStudio IDE:"
+  },
+  {
+    "objectID": "appendix_b.html#info-on-how-to-setup-this-project-in-quarto",
+    "href": "appendix_b.html#info-on-how-to-setup-this-project-in-quarto",
+    "title": "Appendix B — Tools used to make this book",
+    "section": "B.2 Info on how to setup this project in quarto",
+    "text": "B.2 Info on how to setup this project in quarto\nquarto is the new version of Rmarkdown, it can be used for making notes, presentations, websites, books and more.\nIn this project the book has been made in quarto and version saved on github.\nhttps://quarto.org/docs/publishing/github-pages.html In RStudio create a new project on a new directory and in terminal type: add git quarto book project\nThe automated process will create a _quarto.yml file, the top of the file will look like this one:\nproject: type: book\nOn terminal type: quarto preview\nIt creates a folder _book"
+  },
+  {
+    "objectID": "appendix_b.html#github-useful-commands",
+    "href": "appendix_b.html#github-useful-commands",
+    "title": "Appendix B — Tools used to make this book",
+    "section": "H.1 GitHub useful commands",
+    "text": "H.1 GitHub useful commands"
   }
 ]

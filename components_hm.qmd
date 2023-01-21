@@ -1,0 +1,37 @@
+# Metrics components {#sec-metrics_hm}
+
+- Life tables and Life expectancy used in the book
+- How to use them and where to find them
+
+
+This section is dedicated to a closer look at what are the components of the metrics, how to build them and finally how to use them for making comparisons. YLLs,YLDs and DALYs can be used for different illnesses, and at different age levels.
+
+## Components
+
+Two fundamental components are used for calculating the DALYs: - life tables - life expectancy
+
+Both of these elements are key for achieving a high level value of the state of health of a population.
+
+### Life tables
+
+The life tables are selected among the most frequently used, more information about how to build a like table can be found in the #sec-tools of this book.
+
+### Life expectancy
+
+The life expectancy rates are calculated with consideration of the probability of survival based on key parameter such as age, and deaths probabilities for that age. More info about how to calculate the life expectancy can be found #sec-tools of this book.
+
+## How to build the metrics
+
+In this section a practical calculation of the health metrics is done for the practitioner to be able to replicate this calculation for further analysis based on thses key elements.
+
+### YLLs
+
+The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death.
+
+Life expectancy for this book calculations is from [worlddata](https://www.worlddata.info/life-expectancy.php#by-population)
+
+### YLDs
+
+### DALYs
+
+## How to use the metrics

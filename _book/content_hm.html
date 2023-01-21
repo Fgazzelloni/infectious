@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Infectious - 3&nbsp; Content of hm</title>
+<title>Infectious - 3&nbsp; YLLs, YLDs and DALYs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Content of hm</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">YLLs, YLDs and DALYs</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -117,12 +117,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro_hm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction hm</span></a>
+  <a href="./intro_hm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content_hm.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Content of hm</span></a>
+  <a href="./content_hm.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">YLLs, YLDs and DALYs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -242,14 +242,31 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#components" id="toc-components" class="nav-link active" data-scroll-target="#components"><span class="toc-section-number">3.1</span>  Components</a>
+  <ul class="collapse">
+  <li><a href="#life-tables" id="toc-life-tables" class="nav-link" data-scroll-target="#life-tables"><span class="toc-section-number">3.1.1</span>  Life tables</a></li>
+  <li><a href="#life-expectancy" id="toc-life-expectancy" class="nav-link" data-scroll-target="#life-expectancy"><span class="toc-section-number">3.1.2</span>  Life expectancy</a></li>
+  </ul></li>
+  <li><a href="#how-to-build-the-metrics" id="toc-how-to-build-the-metrics" class="nav-link" data-scroll-target="#how-to-build-the-metrics"><span class="toc-section-number">3.2</span>  How to build the metrics</a>
+  <ul class="collapse">
+  <li><a href="#ylls" id="toc-ylls" class="nav-link" data-scroll-target="#ylls"><span class="toc-section-number">3.2.1</span>  YLLs</a></li>
+  <li><a href="#ylds" id="toc-ylds" class="nav-link" data-scroll-target="#ylds"><span class="toc-section-number">3.2.2</span>  YLDs</a></li>
+  <li><a href="#dalys" id="toc-dalys" class="nav-link" data-scroll-target="#dalys"><span class="toc-section-number">3.2.3</span>  DALYs</a></li>
+  </ul></li>
+  <li><a href="#how-to-use-the-metrics" id="toc-how-to-use-the-metrics" class="nav-link" data-scroll-target="#how-to-use-the-metrics"><span class="toc-section-number">3.3</span>  How to use the metrics</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fgazzelloni/infectious/edit/main/content_hm.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/fgazzelloni/infectious/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-content_of_hm" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Content of hm</span></span></h1>
+<h1 class="title"><span id="sec-content_of_hm" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">YLLs, YLDs and DALYs</span></span></h1>
 </div>
 
 
@@ -257,14 +274,47 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
 
 </header>
 
+<p>This section is dedicated to a closer look at what are the components of the metrics, how to build them and finally how to use them for making comparisons. YLLs,YLDs and DALYs can be used for different illnesses, and at different age levels.</p>
+<section id="components" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="components"><span class="header-section-number">3.1</span> Components</h2>
+<p>Two fundamental components are used for calculating the DALYs: - life tables - life expectancy</p>
+<p>Both of these elements are key for achieving a high level value of the state of health of a population.</p>
+<section id="life-tables" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="life-tables"><span class="header-section-number">3.1.1</span> Life tables</h3>
+<p>The life tables are selected among the most frequently used, more information about how to build a like table can be found in the #sec-tools of this book.</p>
+</section>
+<section id="life-expectancy" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="life-expectancy"><span class="header-section-number">3.1.2</span> Life expectancy</h3>
+<p>The life expectancy rates are calculated with consideration of the probability of survival based on key parameter such as age, and deaths probabilities for that age. More info about how to calculate the life expectancy can be found #sec-tools of this book.</p>
+</section>
+</section>
+<section id="how-to-build-the-metrics" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="how-to-build-the-metrics"><span class="header-section-number">3.2</span> How to build the metrics</h2>
+<p>In this section a practical calculation of the health metrics is done for the practitioner to be able to replicate this calculation for further analysis based on thses key elements.</p>
+<section id="ylls" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="ylls"><span class="header-section-number">3.2.1</span> YLLs</h3>
+<p>The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death.</p>
+<p>Life expectancy for this book calculations is from <a href="https://www.worlddata.info/life-expectancy.php#by-population">worlddata</a></p>
+</section>
+<section id="ylds" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="ylds"><span class="header-section-number">3.2.2</span> YLDs</h3>
+</section>
+<section id="dalys" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="dalys"><span class="header-section-number">3.2.3</span> DALYs</h3>
+</section>
+</section>
+<section id="how-to-use-the-metrics" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="how-to-use-the-metrics"><span class="header-section-number">3.3</span> How to use the metrics</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -308,7 +358,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -344,31 +411,49 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./intro_hm.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction hm</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Overview</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

@@ -3,17 +3,18 @@ project:
   output-dir: _book
 
 book:
-  title: "Infectious"
+  title: "Health metrics and the spread of infectious diseases"
+  subtitle: "with machine learning applications and spatial model analysis"
   author: "Federica Gazzelloni"
   date: "12/16/2022"
   page-navigation: true
   page-footer:
     left: |
-      Infectious was written by <a href="https://federicagazzelloni.netlify.app/">Federica Gazzelloni</a>.
+      Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis was written by <a href="https://federicagazzelloni.netlify.app/">Federica Gazzelloni</a>.
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
-  cover-image: cover.png
-  favicon: cover.png
+  cover-image: images/cover.png
+  favicon: images/cover.png
   repo-url: https://github.com/fgazzelloni/infectious/
   repo-branch: main
   repo-actions: [edit, issue]
@@ -24,34 +25,34 @@ book:
     
     - part: health_metrics.qmd
       chapters:
-        - intro_hm.qmd
-        - content_hm.qmd
-        - summary_hm.qmd
+        - metrics_hm.qmd
+        - components_hm.qmd
+        - causes_hm.qmd
         
     - part: modeling.qmd
       chapters:
-        - intro_md.qmd
-        - content_md.qmd
-        - summary_md.qmd
+        - techniques_md.qmd
+        - packages_md.qmd
+        - prediction_md.qmd
         
-    - part: data_visualization.qmd
+    - part: data_visualizations.qmd
       chapters:
-        - intro_dv.qmd
-        - content_dv.qmd
-        - summary_dv.qmd 
+        - application_dv.qmd
+        - spatials_dv.qmd
+        - examples_dv.qmd 
         
     - part: case_studies.qmd
       chapters:
-        - intro_cs.qmd
-        - content_cs.qmd
+        - covid19_cs.qmd
+        - health_cs.qmd
         - summary_cs.qmd  
         
     - conclusions.qmd
     - references.qmd   
     
   appendices:
-    - tools.qmd
-    - resources.qmd  
+    - appendix_a.qmd
+    - appendix_b.qmd  
 
 bibliography: references.bib
 

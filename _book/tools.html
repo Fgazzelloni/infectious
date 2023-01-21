@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -117,12 +117,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro_hm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction hm</span></a>
+  <a href="./intro_hm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content_hm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Content of hm</span></a>
+  <a href="./content_hm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">YLLs, YLDs and DALYs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -242,7 +242,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#rstudio-installation" id="toc-rstudio-installation" class="nav-link active" data-scroll-target="#rstudio-installation"><span class="toc-section-number">A.1</span>  RStudio installation</a></li>
+  <li><a href="#info-on-how-to-setup-this-project-in-quarto" id="toc-info-on-how-to-setup-this-project-in-quarto" class="nav-link" data-scroll-target="#info-on-how-to-setup-this-project-in-quarto"><span class="toc-section-number">A.2</span>  Info on how to setup this project in quarto</a></li>
+  <li><a href="#github-later" id="toc-github-later" class="nav-link" data-scroll-target="#github-later"><span class="toc-section-number">B</span>  github later:</a></li>
+  <li><a href="#source-httpshappygitwithr.comexisting-github-last.html" id="toc-source-httpshappygitwithr.comexisting-github-last.html" class="nav-link" data-scroll-target="#source-httpshappygitwithr.comexisting-github-last.html"><span class="toc-section-number">C</span>  source: https://happygitwithr.com/existing-github-last.html</a></li>
+  <li><a href="#connect-with-github" id="toc-connect-with-github" class="nav-link" data-scroll-target="#connect-with-github"><span class="toc-section-number">D</span>  connect with github</a></li>
+  <li><a href="#create-a-github-repo-with-the-same-name-from-github-website" id="toc-create-a-github-repo-with-the-same-name-from-github-website" class="nav-link" data-scroll-target="#create-a-github-repo-with-the-same-name-from-github-website"><span class="toc-section-number">E</span>  create a github repo with the same name from github website</a></li>
+  <li><a href="#then-type" id="toc-then-type" class="nav-link" data-scroll-target="#then-type"><span class="toc-section-number">F</span>  then type</a></li>
+  <li><a href="#in-terminal-connect-with-github-repo" id="toc-in-terminal-connect-with-github-repo" class="nav-link" data-scroll-target="#in-terminal-connect-with-github-repo"><span class="toc-section-number">G</span>  in terminal connect with github repo</a>
+  <ul class="collapse">
+  <li><a href="#github-useful-commands" id="toc-github-useful-commands" class="nav-link" data-scroll-target="#github-useful-commands"><span class="toc-section-number">G.1</span>  GitHub useful commands</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fgazzelloni/infectious/edit/main/tools.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/fgazzelloni/infectious/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -257,14 +273,55 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
 
 </header>
 
+<p>To set up the environment for replicating the code used in this book the R language is needed as well as R and Rstudio IDE environments. The following sections contain the directions for installing <strong>R</strong> and <strong>RStudio</strong>, how to set up a book with <strong>quarto</strong> and how to use <strong>GitHub</strong> as a version saver source.</p>
+<section id="rstudio-installation" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="rstudio-installation"><span class="header-section-number">A.1</span> RStudio installation</h2>
+<p>Download and install R: Download and install RStudio IDE:</p>
+</section>
+<section id="info-on-how-to-setup-this-project-in-quarto" class="level2" data-number="A.2">
+<h2 data-number="A.2" class="anchored" data-anchor-id="info-on-how-to-setup-this-project-in-quarto"><span class="header-section-number">A.2</span> Info on how to setup this project in quarto</h2>
+<p><a href="https://quarto.org/">quarto</a> is the new version of <strong>Rmarkdown</strong>, it can be used for making notes, presentations, websites, books and more.</p>
+<p>In this project the book has been made in quarto and version saved on github.</p>
+<p>https://quarto.org/docs/publishing/github-pages.html In RStudio create a new project on a new directory and in terminal type: <code>add git</code> <code>quarto book project</code></p>
+<p>The automated process will create a <code>_quarto.yml</code> file, the top of the file will look like this one:</p>
+<p><code>project:</code> <code>type: book</code></p>
+<p>On terminal type: <code>quarto preview</code></p>
+<p>It creates a folder <code>_book</code></p>
+</section>
+<section id="github-later" class="level1" data-number="B">
+<h1 data-number="B"><span class="header-section-number">B</span> github later:</h1>
+</section>
+<section id="source-httpshappygitwithr.comexisting-github-last.html" class="level1" data-number="C">
+<h1 data-number="C"><span class="header-section-number">C</span> source: https://happygitwithr.com/existing-github-last.html</h1>
+</section>
+<section id="connect-with-github" class="level1" data-number="D">
+<h1 data-number="D"><span class="header-section-number">D</span> connect with github</h1>
+</section>
+<section id="create-a-github-repo-with-the-same-name-from-github-website" class="level1" data-number="E">
+<h1 data-number="E"><span class="header-section-number">E</span> create a github repo with the same name from github website</h1>
+</section>
+<section id="then-type" class="level1" data-number="F">
+<h1 data-number="F"><span class="header-section-number">F</span> then type</h1>
+<p>usethis::use_git() # this pushes all files in R to a remote folder designed to github repo</p>
+</section>
+<section id="in-terminal-connect-with-github-repo" class="level1" data-number="G">
+<h1 data-number="G"><span class="header-section-number">G</span> in terminal connect with github repo</h1>
+<p>git init # git remote add origin https://github.com/Fgazzelloni/infectious.git # git branch -M main # git push -u origin main #<br>
+#<br>
+# # publish your book on github pages # # change the _quarto.yml file into: # project: # type: book # output-dir: docs # # add a .nojekyll file …(terminal) # touch .nojekyll # # then type # quarto render # # some issues might arise if more than one # # calculation is made inside a single cunck # # split the cuncks! # # quarto render creates a folder # docs</p>
+<section id="github-useful-commands" class="level2" data-number="G.1">
+<h2 data-number="G.1" class="anchored" data-anchor-id="github-useful-commands"><span class="header-section-number">G.1</span> GitHub useful commands</h2>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -308,7 +365,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -344,24 +418,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

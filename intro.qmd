@@ -1,1 +1,11 @@
 # Introduction {#sec-introduction}
+
+Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis, is a manual and a textbook for an introductory health data analysis course. It can also turn out to be a useful source code for both practitioners and data scientists.
+
+Public health metrics such as **DALYs**, **YLL**, and **YLD** are expressed in numbers of years of life lost or lived with disabilities whose sum expresses a key value generally used for ranking the health status of a population.
+
+A focus on the impact of recent infectious disease outbreaks, such as Covid19, on the state of health of the population, will be provided along with the most affected locations. The book is structured with an alternation of text and chunks of code in the R language to let the reader be a practitioner of real-world case studies on the topic.
+
+To be more specific, the metrics used to summarize the state of health of a population will be compared across other locations and a prediction level tested on a few key models will be provided. The idea is to use {tidymodels}, and {INLA} as modeling tools. Finally complete the material some interesting spatial visualization, made with using {ggplot2}, {leaflet}, {sf}, {rgdal} R packages, plus other main packages for allowing the user for a wider understanding of the potentiality of the R language for both spatial and health metrics.
+
+The book is foreseen for practitioners at early stages and graduated students in STEM.

@@ -1,1 +1,8 @@
 # Modeling {#sec-modeling}
+
+  - Feature engineering
+  - Model selection
+  
+- Packages and functions to use for the analysis
+- Attempt at predicting the future
+  
