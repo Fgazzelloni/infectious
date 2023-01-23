@@ -1,20 +1,68 @@
 # Metrics components {#sec-metrics_hm}
 
-- Life tables and Life expectancy used in the book
-- How to use them and where to find them
+-   Life tables and Life expectancy used in the book
+-   How to use them and where to find them
 
-
-This section is dedicated to a closer look at what are the components of the metrics, how to build them and finally how to use them for making comparisons. YLLs,YLDs and DALYs can be used for different illnesses, and at different age levels.
+This section is dedicated to a closer look at what are the components of the health metrics, how to build them and finally how to use them for making countries comparison. YLLs,YLDs and DALYs can be used for different illnesses, and at different age levels.
 
 ## Components
 
-Two fundamental components are used for calculating the DALYs: - life tables - life expectancy
+Two fundamental components are used for calculating the DALYs:
+
+- life tables
+- life expectancy
 
 Both of these elements are key for achieving a high level value of the state of health of a population.
 
 ### Life tables
 
-The life tables are selected among the most frequently used, more information about how to build a like table can be found in the #sec-tools of this book.
+The life tables are selected among the most frequently used, more information about how to build a like table can be found in the @sec-appendix_a of this book.
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+xmart <- read_csv("data/xmart.csv",skip = 1)
+
+xmart %>% head
+```
+
+```{r}
+xmart_yrs <- read_csv("data/xmart.csv")
+xmart_yrs <- xmart_yrs[-1,]%>%
+  janitor::clean_names()%>%
+  pivot_longer(cols=3:17,names_to="years",values_to="values")%>%
+  mutate(values=as.numeric(values))
+
+xmart_yrs %>% names
+```
+
+```{r}
+xmart_yrs
+```
+
+```{r}
+xmart_tidy <- xmart %>%
+  janitor::clean_names()%>%
+  pivot_longer(cols = 3:17,names_to="sex",values_to="values") %>% 
+  full_join(xmart_yrs,by=c("indicator"="x1","age_group"="x2","values")) %>%
+  mutate(age_group=sub("&lt;","",age_group),
+         sex=gsub("_\\d+","",sex),
+         sex=ifelse(sex=="both_sexes","both",sex),
+         years=sub("x","",years),
+         years=gsub("_\\d+","",years))
+
+
+xmart_tidy%>%count(indicator)
+```
+
+```{r}
+xmart_tidy %>%
+  filter(sex=="both",
+         indicator=="ex - expectation of life at age x")%>%
+         #age_group=="1 year")%>%
+  ggplot(aes(years,values,group=indicator))+
+  geom_line()+
+  facet_wrap(vars(age_group))
+```
 
 ### Life expectancy
 
@@ -22,7 +70,7 @@ The life expectancy rates are calculated with consideration of the probability o
 
 ## How to build the metrics
 
-In this section a practical calculation of the health metrics is done for the practitioner to be able to replicate this calculation for further analysis based on thses key elements.
+In this section a practical calculation of the health metrics is done for the practitioner to be able to replicate this calculation for further analysis based on these key elements.
 
 ### YLLs
 

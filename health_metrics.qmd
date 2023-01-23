@@ -10,3 +10,7 @@ To establish the well being, meant as the healthy life defying the state of heal
 In addition, this level is used to improve the proportion of countries who are in need of a better health status recognition. To be more specific, the focus on the numbers of years can help identify the areas where most of the years are lost and need for improvement, whether in facilities, research or investments.
 
 An improvement of health at a Global level is reached when the definition of a **healthy file** is met in most of the countries where it wasn't before.
+
+Furthermore, what we want to analyze are a series of data that are produced taking into account the tables of mortality and future life expectancy these are defined as means that these metrics have been considered important for assessing the state of health of one point population
+
+What we refer to are the health metrics and which refer to the number of years lost due to an increase in mortality or in any case to a mortality trend that is above a certain general level which we can consider as the level optimal health globally.
