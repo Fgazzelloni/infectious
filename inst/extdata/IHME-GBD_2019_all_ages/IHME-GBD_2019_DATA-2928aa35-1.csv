@@ -1,0 +1,55 @@
+measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
+1,Deaths,80,France,3,Both,22,All ages,426,"Tracheal, bronchus, and lung cancer",1,Number,2019,40194.55475684156,42760.532744713055,37107.37343780846
+1,Deaths,80,France,3,Both,22,All ages,429,Breast cancer,1,Number,2019,15326.230244113533,16868.154695990786,13075.492818949351
+1,Deaths,80,France,3,Both,22,All ages,441,Colon and rectum cancer,1,Number,2019,25496.71745053587,27995.554205315642,22330.210016549783
+1,Deaths,80,France,3,Both,22,All ages,322,Lower respiratory infections,1,Number,2019,23095.58038686324,26341.810303533362,18484.927359238554
+1,Deaths,80,France,3,Both,22,All ages,494,Stroke,1,Number,2019,44812.5320170381,50592.024476674436,37076.01688794837
+1,Deaths,95,United Kingdom,3,Both,22,All ages,322,Lower respiratory infections,1,Number,2019,41877.34316802532,44863.79081514926,36342.97029504581
+1,Deaths,80,France,3,Both,22,All ages,974,Diabetes and kidney diseases,1,Number,2019,25507.053432836645,28130.131104783697,21420.32469235841
+1,Deaths,81,Germany,3,Both,22,All ages,543,Alzheimer's disease and other dementias,1,Number,2019,49556.53248682596,130251.91123907568,12294.624036624817
+1,Deaths,95,United Kingdom,3,Both,22,All ages,426,"Tracheal, bronchus, and lung cancer",1,Number,2019,42836.88570597639,44845.248973710455,39930.92733710938
+1,Deaths,95,United Kingdom,3,Both,22,All ages,429,Breast cancer,1,Number,2019,15255.84041557628,16105.845254413929,13899.866875266165
+1,Deaths,95,United Kingdom,3,Both,22,All ages,441,Colon and rectum cancer,1,Number,2019,24219.75099297416,25338.48021129381,22210.035508250767
+1,Deaths,95,United Kingdom,3,Both,22,All ages,494,Stroke,1,Number,2019,50633.44593681205,54037.915836817636,44199.449801640876
+1,Deaths,81,Germany,3,Both,22,All ages,426,"Tracheal, bronchus, and lung cancer",1,Number,2019,53968.018217226316,57286.835399716474,50506.27023507827
+1,Deaths,81,Germany,3,Both,22,All ages,429,Breast cancer,1,Number,2019,21652.347758302203,23510.289949858652,19397.9136236349
+1,Deaths,81,Germany,3,Both,22,All ages,441,Colon and rectum cancer,1,Number,2019,37551.53805292512,40326.30865911273,34130.672877451325
+1,Deaths,95,United Kingdom,3,Both,22,All ages,509,Chronic obstructive pulmonary disease,1,Number,2019,43944.693618954334,49041.74167479637,37735.55437947216
+1,Deaths,1,Global,3,Both,22,All ages,426,"Tracheal, bronchus, and lung cancer",1,Number,2019,2042639.7363892663,2193268.972765379,1879241.239817795
+1,Deaths,1,Global,3,Both,22,All ages,429,Breast cancer,1,Number,2019,700659.9334364465,751555.0798023511,647383.8082149149
+1,Deaths,1,Global,3,Both,22,All ages,441,Colon and rectum cancer,1,Number,2019,1085797.4989815422,1149678.5408239884,1002795.4112963527
+1,Deaths,95,United Kingdom,3,Both,22,All ages,689,Road injuries,1,Number,2019,2695.707359382657,2785.755297297424,2597.4662130294996
+1,Deaths,95,United Kingdom,3,Both,22,All ages,974,Diabetes and kidney diseases,1,Number,2019,14190.813708508802,15026.616606193491,12621.242434948317
+1,Deaths,1,Global,3,Both,22,All ages,322,Lower respiratory infections,1,Number,2019,2493199.8842711323,2736184.331352105,2268183.4785341863
+1,Deaths,95,United Kingdom,3,Both,22,All ages,543,Alzheimer's disease and other dementias,1,Number,2019,32424.861210163406,83575.29249809458,8094.939934529719
+1,Deaths,1,Global,3,Both,22,All ages,494,Stroke,1,Number,2019,6552724.533525118,7015138.626045481,5995200.363738036
+1,Deaths,1,Global,3,Both,22,All ages,543,Alzheimer's disease and other dementias,1,Number,2019,1623275.874940988,4205718.716796304,407465.2866101208
+1,Deaths,1,Global,3,Both,22,All ages,509,Chronic obstructive pulmonary disease,1,Number,2019,3280636.1918563284,3572366.9963334207,2902854.653962032
+1,Deaths,1,Global,3,Both,22,All ages,689,Road injuries,1,Number,2019,1198289.2139143439,1304831.0346139988,1060041.4765981948
+1,Deaths,1,Global,3,Both,22,All ages,974,Diabetes and kidney diseases,1,Number,2019,2988924.0061406814,3183099.8369660806,2772621.211332642
+1,Deaths,80,France,3,Both,22,All ages,543,Alzheimer's disease and other dementias,1,Number,2019,46007.879500444295,111471.6650830211,11987.563676218197
+1,Deaths,86,Italy,3,Both,22,All ages,322,Lower respiratory infections,1,Number,2019,12392.756978560863,13493.127127366188,10345.882329671123
+1,Deaths,81,Germany,3,Both,22,All ages,322,Lower respiratory infections,1,Number,2019,25095.77659045659,27833.00085198778,21763.628405414755
+1,Deaths,86,Italy,3,Both,22,All ages,441,Colon and rectum cancer,1,Number,2019,24877.28567080252,26457.114488681513,22016.358484093114
+1,Deaths,86,Italy,3,Both,22,All ages,494,Stroke,1,Number,2019,67292.9422930983,74599.77892082489,56409.40947462165
+1,Deaths,86,Italy,3,Both,22,All ages,509,Chronic obstructive pulmonary disease,1,Number,2019,28079.646864957387,30850.81813348195,23681.857775328826
+1,Deaths,81,Germany,3,Both,22,All ages,509,Chronic obstructive pulmonary disease,1,Number,2019,39894.44472696304,45759.570288612085,34589.24145787468
+1,Deaths,86,Italy,3,Both,22,All ages,689,Road injuries,1,Number,2019,5273.361795800027,5517.3661543191065,4890.417318082176
+1,Deaths,102,United States of America,3,Both,22,All ages,322,Lower respiratory infections,1,Number,2019,81921.24117885678,87403.67124946018,72235.6163942145
+1,Deaths,81,Germany,3,Both,22,All ages,689,Road injuries,1,Number,2019,4467.515475132401,4734.760201614352,4216.657947930256
+1,Deaths,80,France,3,Both,22,All ages,509,Chronic obstructive pulmonary disease,1,Number,2019,17570.347045282044,21390.8259627791,14285.345356975522
+1,Deaths,102,United States of America,3,Both,22,All ages,509,Chronic obstructive pulmonary disease,1,Number,2019,195825.35093588097,212292.6776809803,161219.94651487112
+1,Deaths,86,Italy,3,Both,22,All ages,974,Diabetes and kidney diseases,1,Number,2019,38107.17722046161,41074.982802198756,32317.309540659615
+1,Deaths,80,France,3,Both,22,All ages,689,Road injuries,1,Number,2019,4236.5315507754085,4502.679284554898,3922.164668295209
+1,Deaths,102,United States of America,3,Both,22,All ages,689,Road injuries,1,Number,2019,41361.75555096267,42527.60723858695,39444.60982995834
+1,Deaths,81,Germany,3,Both,22,All ages,494,Stroke,1,Number,2019,71654.17627585577,78561.3964300111,62277.73676317681
+1,Deaths,81,Germany,3,Both,22,All ages,974,Diabetes and kidney diseases,1,Number,2019,57597.08587814161,62228.88690141931,50401.68747088626
+1,Deaths,102,United States of America,3,Both,22,All ages,426,"Tracheal, bronchus, and lung cancer",1,Number,2019,206196.08601415978,214277.09281692063,193717.0303201511
+1,Deaths,102,United States of America,3,Both,22,All ages,429,Breast cancer,1,Number,2019,55021.44496004034,57899.831690945095,51007.53406831234
+1,Deaths,102,United States of America,3,Both,22,All ages,441,Colon and rectum cancer,1,Number,2019,84026.42755219115,87516.126528038,77987.47802867918
+1,Deaths,102,United States of America,3,Both,22,All ages,494,Stroke,1,Number,2019,189455.86239135556,205368.67102429425,165594.1569772112
+1,Deaths,102,United States of America,3,Both,22,All ages,974,Diabetes and kidney diseases,1,Number,2019,184938.5000257588,194571.01084007445,167771.7216926296
+1,Deaths,102,United States of America,3,Both,22,All ages,543,Alzheimer's disease and other dementias,1,Number,2019,143918.69511521648,354959.3769019079,37067.09912004091
+1,Deaths,86,Italy,3,Both,22,All ages,426,"Tracheal, bronchus, and lung cancer",1,Number,2019,36974.68630452813,38885.62372927909,33918.17262091747
+1,Deaths,86,Italy,3,Both,22,All ages,429,Breast cancer,1,Number,2019,14450.339182469681,15499.242721885124,12591.421223224144
+1,Deaths,86,Italy,3,Both,22,All ages,543,Alzheimer's disease and other dementias,1,Number,2019,48762.7541896487,127992.55539296733,12450.33730277324

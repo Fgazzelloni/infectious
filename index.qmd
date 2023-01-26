@@ -2,6 +2,6 @@
 
 Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis are the topics of this book.
 
-Here you'll find everything you need to analyze the state of health of a country and compare it with that of other countries. You will also be able to evaluate the best model for
+Here you will find everything you need to analyze the state of health of a country and compare it with that of other countries. You will also be able to evaluate the best model for predicting future trends.
 
-The author of this book is Federica Gazzelloni who is an actuary and a statistician graduated from the Sapienza of Rome who is also a collaborator of the Institute of Health and Metric evaluations (IHME).
+The author of this book is **Federica Gazzelloni** who is an actuary and a statistician graduated from the Sapienza of Rome, in Italy. She is also a collaborator of the **Institute for Health Metrics and Evaluation (IHME)** , which inspired this work to serve as a guideline for making health metrics analysis and spatial model analysis for evaluating the spread of infectious diseases.

@@ -23,45 +23,57 @@ book:
     - index.qmd
     - intro.qmd
     
-    - part: health_metrics.qmd
+    - part: ch10HealthMetrics.qmd
       chapters:
-        - metrics_hm.qmd
-        - components_hm.qmd
-        - causes_hm.qmd
+        - ch11Metrics.qmd
+        - ch12Components.qmd
+        - ch13Causes.qmd
         
-    - part: modeling.qmd
+    - part: ch20Modeling.qmd
       chapters:
-        - techniques_md.qmd
-        - packages_md.qmd
-        - prediction_md.qmd
+        - ch21Techniques.qmd
+        - ch22Packages.qmd
+        - ch23Prediction.qmd
         
-    - part: data_visualizations.qmd
+    - part: ch30DataVisualizations.qmd
       chapters:
-        - application_dv.qmd
-        - spatials_dv.qmd
-        - examples_dv.qmd 
+        - ch31Application.qmd
+        - ch32Spatials.qmd
+        - ch33Examples.qmd 
         
-    - part: case_studies.qmd
+    - part: ch40CaseStudies.qmd
       chapters:
-        - covid19_cs.qmd
-        - health_cs.qmd
-        - summary_cs.qmd  
+        - ch41Covid19.qmd
+        - ch42Health.qmd
+        - ch43Summary.qmd  
         
     - conclusions.qmd
     - references.qmd   
     
   appendices:
-    - appendix_a.qmd
-    - appendix_b.qmd  
+    - appendixA.qmd
+    - appendixB.qmd  
 
 bibliography: references.bib
 
 format:
   html:
     theme: cosmo
-    code-link: true 
   pdf:
     documentclass: scrreprt
+    include-in-header: 
+      text: |
+        \usepackage{makeidx}
+        \makeindex
+    include-after-body: 
+      text: |
+        \printindex
+# format:
+#   html:
+#     theme: cosmo
+#     code-link: true 
+#   pdf:
+#     documentclass: scrreprt
     
     author-meta: "Federica Gazzelloni"
     callout-appearance: simple   

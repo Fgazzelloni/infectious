@@ -1,0 +1,5 @@
+# YLLs, YLDs and DALYs {#sec-ch11Metrics}
+
+-   A closer look at the metrics, their usage and potentiality for improvements
+
+In this section are shown the methods used for building three key metrics: YLLs, YLDs and DALYs. These will be used throughout the book for making comparisons among the state of health of different countries.

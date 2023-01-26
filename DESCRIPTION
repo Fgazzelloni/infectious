@@ -18,6 +18,7 @@ Suggests:
     htmltools,
     jpeg,
     knitr,
+    rmarkdown,
     sessioninfo
 Remotes:
     tidyverse/dplyr,
@@ -26,4 +27,6 @@ Remotes:
     tidyverse/purrr
 Encoding: UTF-8
 License: MIT + file LICENSE
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
+LazyData: true
+VignetteBuilder: knitr

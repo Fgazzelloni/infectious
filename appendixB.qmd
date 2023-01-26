@@ -1,0 +1,43 @@
+# Tools used to make this book {#sec-appendixB}
+
+To set up the environment for replicating the code used in this book the R language is needed as well as R and Rstudio IDE environments. The following sections contain the directions for installing **R** and **RStudio**, how to set up a book with **quarto** and how to use **GitHub** as a version saver source.
+
+## RStudio installation
+
+Download and install R: Download and install RStudio IDE:
+
+## Info on how to setup this project in quarto
+
+[quarto](https://quarto.org/) is the new version of **Rmarkdown**, it can be used for making notes, presentations, websites, books and more.
+
+In this project the book has been made in quarto and version saved on github.
+
+https://quarto.org/docs/publishing/github-pages.html In RStudio create a new project on a new directory and in terminal type: `add git` `quarto book project`
+
+The automated process will create a `_quarto.yml` file, the top of the file will look like this one:
+
+`project:` `type: book`
+
+On terminal type: `quarto preview`
+
+It creates a folder `_book`
+
+# github later:
+
+# source: https://happygitwithr.com/existing-github-last.html
+
+# connect with github
+
+# create a github repo with the same name from github website
+
+# then type
+
+usethis::use_git() \# this pushes all files in R to a remote folder designed to github repo
+
+# in terminal connect with github repo
+
+git init \# git remote add origin https://github.com/Fgazzelloni/infectious.git \# git branch -M main \# git push -u origin main \#\
+\#\
+\# \# publish your book on github pages \# \# change the \_quarto.yml file into: \# project: \# type: book \# output-dir: docs \# \# add a .nojekyll file ...(terminal) \# touch .nojekyll \# \# then type \# quarto render \# \# some issues might arise if more than one \# \# calculation is made inside a single cunck \# \# split the cuncks! \# \# quarto render creates a folder \# docs
+
+## GitHub useful commands

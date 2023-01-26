@@ -1,1 +1,0 @@
-# Spatial data modeling {#sec-spatials_dv}
