@@ -28,6 +28,7 @@ book:
         - ch11Metrics.qmd
         - ch12Components.qmd
         - ch13Causes.qmd
+        - ch14Metrics2.qmd
         
     - part: ch20Modeling.qmd
       chapters:
@@ -59,6 +60,7 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
+    code-link: true
   pdf:
     documentclass: scrreprt
     include-in-header: 
@@ -68,15 +70,12 @@ format:
     include-after-body: 
       text: |
         \printindex
-# format:
-#   html:
-#     theme: cosmo
-#     code-link: true 
-#   pdf:
-#     documentclass: scrreprt
+    cite-method: biblatex    
     
     author-meta: "Federica Gazzelloni"
     callout-appearance: simple   
 
 editor: visual
+execute: 
+  echo: true
 

@@ -1,0 +1,11 @@
+# Healthy life expectancy (HALE) {#sec-ch14Metrics2}
+
+-   Description and calculation
+
+It adjusts overall life expectancy by the amount of time lived in less than perfect health. This is calculated by subtracting from the life expectancy a figure which is the number of years lived with disability multiplied by a weighting to represent the effect of the disability.[^ch14metrics2-1]
+
+[^ch14metrics2-1]: [www.healthknowledge.org.uk](https://www.healthknowledge.org.uk/e-learning/health-information/population-health-specialists/lifetables-hales-dalys-pylls#:~:text=Health%20Adjusted%20Life%20Expectancy%20(HALE)&text=It%20adjusts%20overall%20life%20expectancy,the%20effect%20of%20the%20disability.)
+
+More info [^ch14metrics2-2]
+
+[^ch14metrics2-2]: about the methodology https://www.un.org/esa/sustdev/natlinfo/indicators/methodology_sheets/health/health_life_expectancy.pdf

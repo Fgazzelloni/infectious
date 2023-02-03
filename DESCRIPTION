@@ -11,6 +11,7 @@ Depends:
 Imports:
     janitor,
     sf,
+    tibble,
     tidymodels,
     tidyverse,
     viridis

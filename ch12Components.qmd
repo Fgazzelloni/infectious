@@ -20,13 +20,13 @@ The life tables are selected among the most frequently used, more information ab
 
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)
-xmart <- read_csv("data/xmart.csv",skip = 1)
+xmart <- read_csv("data-raw/xmart.csv",skip = 1)
 
 xmart %>% head
 ```
 
 ```{r}
-xmart_yrs <- read_csv("data/xmart.csv")
+xmart_yrs <- read_csv("data-raw/xmart.csv")
 xmart_yrs <- xmart_yrs[-1,]%>%
   janitor::clean_names()%>%
   pivot_longer(cols=3:17,names_to="years",values_to="values")%>%
@@ -76,7 +76,7 @@ In this section a practical calculation of the health metrics is done for the pr
 
 The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death.
 
-Life expectancy for this book calculations is from [worlddata](https://www.worlddata.info/life-expectancy.php#by-population)
+@reiner2022
 
 ### YLDs
 

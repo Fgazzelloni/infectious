@@ -1,0 +1,16 @@
+citHeader("To cite infectious in publications use: Federica Gazzelloni, collaborator Institute for Health Metrics and Evaluation (IHME). Actuary, Italy. Orcid https://orcid.org/0000-0002-4285-611X.")
+
+citEntry(
+  entry    = "Article",
+  title    = ,
+  author   = ,
+  journal  = ,
+  year     = ,
+  volume   = ,
+  number   = ,
+  pages    = ,
+  url      = ,
+  textVersion = paste(
+
+  )
+)

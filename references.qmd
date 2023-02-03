@@ -1,13 +1,13 @@
 # References {.unnumbered}
 
 ::: {#refs}
+https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/ghe2019_cod_methods.pdf
 :::
 
-https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/ghe2019_cod_methods.pdf
 
 
 life tables:
 
-- https://apps.who.int/gho/data/node.main.LIFECOUNTRY?lang=en
+-   https://apps.who.int/gho/data/node.main.LIFECOUNTRY?lang=en
 
-- https://ghdx.healthdata.org/record/ihme-data/gbd-2019-life-tables-1950-2019
+-   https://ghdx.healthdata.org/record/ihme-data/gbd-2019-life-tables-1950-2019
