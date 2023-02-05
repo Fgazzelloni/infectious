@@ -8,7 +8,7 @@
 data
 data-raw
 scripts
-inst/doc
+inst/extdata
 components_hm_files
 R
 man
