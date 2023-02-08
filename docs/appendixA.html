@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.313">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Health metrics and the spread of infectious diseases - Appendix A — Life tables and Life expectancy</title>
 <style>
 code{white-space: pre-wrap;}
@@ -20,8 +17,89 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -41,8 +119,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -60,30 +137,21 @@ ul.task-list li input[type="checkbox"] {
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-
-
+}</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 </head>
-
 <body class="nav-sidebar floating">
 
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
       <h1 class="quarto-secondary-nav-title">Appendix A — Life tables and Life expectancy</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Health metrics and the spread of infectious diseases</a> 
         <div class="sidebar-tools-main">
@@ -98,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
   </div>
@@ -115,8 +183,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch11Metrics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">YLLs, YLDs and DALYs</span></a>
   </div>
@@ -137,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./ch20Modeling.html" class="sidebar-item-text sidebar-link">Modeling</a>
@@ -145,8 +213,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch21Techniques.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Techniques</span></a>
   </div>
@@ -162,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./ch30DataVisualizations.html" class="sidebar-item-text sidebar-link">Data Visualizations</a>
@@ -170,8 +238,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch31Application.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Application of the model results</span></a>
   </div>
@@ -187,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./ch40CaseStudies.html" class="sidebar-item-text sidebar-link">Case Studies</a>
@@ -195,8 +263,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch41Covid19.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Covid19</span></a>
   </div>
@@ -212,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./conclusions.html" class="sidebar-item-text sidebar-link">Conclusions</a>
@@ -230,8 +298,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./appendixA.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Life tables and Life expectancy</span></a>
   </div>
@@ -242,19 +310,19 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+</div>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#life-tables-components" id="toc-life-tables-components" class="nav-link active" data-scroll-target="#life-tables-components"><span class="toc-section-number">A.0.1</span>  Life tables components</a></li>
+  <li><a href="#life-expectancy" id="toc-life-expectancy" class="nav-link" data-scroll-target="#life-expectancy"><span class="toc-section-number">A.1</span>  Life expectancy</a></li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fgazzelloni/infectious/edit/main/appendixA.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/fgazzelloni/infectious/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title"><span id="sec-appendixA" class="quarto-section-identifier d-none d-lg-block">Appendix A — Life tables and Life expectancy</span></h1>
 </div>
 
@@ -268,13 +336,148 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-</header>
+</header><p>Back in the 1700s the Swiss mathematician and physicist Daniel Bernoulli (1700 - 1782) developed the use of a life table model by differentiating life tables based on specific causes of death <span class="citation" data-cites="kovacheva2017"><span>“Life Table - an Overview | ScienceDirect Topics”</span> (<a href="#ref-lifetab" role="doc-biblioref">n.d.</a>)</span>.</p>
+<p>Originally made by the English scientist John Graunt (1620-1674), for the analysis of the mortality of the population of London and the impact of different diseases.</p>
+<p>Life tables contain fundamental statistics for the calculation of probabilities of deaths and the computation of life expectancy at birth and at different ages.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://www.jstor.org/stable/community.24736608?searchText=life+tables&amp;searchUri=%2Faction%2FdoBasicSearch%3FQuery%3Dlife%2Btables%26efqs%3DeyJjdHkiOlsiWTI5dWRISnBZblYwWldSZmFXMWhaMlZ6Il19%26image_search_referrer%3Dglobal&amp;ab_segments=0%2FSYC-6744_basic_search%2Ftest-1&amp;refreqid=fastly-default%3Ac770f9049f8754dad03896e1b52df20c&amp;searchkey=1675639441064"><img src="images/appendixA_life_tables.png" class="img-fluid figure-img" style="width:55.0%"></a></p>
+<p></p><figcaption class="figure-caption">“Life tables”, William Farr (England 1859)</figcaption><p></p>
+</figure>
+</div>
+<section id="life-tables-components" class="level3" data-number="A.0.1"><h3 data-number="A.0.1" class="anchored" data-anchor-id="life-tables-components">
+<span class="header-section-number">A.0.1</span> Life tables components</h3>
+<p>More recent life tables are standardized to be used for a population of 100 000 at age 0.</p>
+<p><span class="math inline">\(l_x\)</span> survivors at age <span class="math inline">\(x\)</span> it starts with a value of 100 000</p>
+<p><span class="math inline">\(d_x\)</span> deceased at age <span class="math inline">\(x\)</span></p>
+<p><span class="math inline">\(q_x\)</span> probability of deaths</p>
+<p><span class="math inline">\(p_x\)</span> probability of survive</p>
+<p><span class="math display">\[p_x=1-q_x\]</span></p>
+<p>Let’s start constructing a life table</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.4.0      ✔ purrr   0.3.5 
+✔ tibble  3.1.8      ✔ dplyr   1.0.10
+✔ tidyr   1.2.1      ✔ stringr 1.5.0 
+✔ readr   2.1.3      ✔ forcats 0.5.2 
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">infectious</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/infectious/man/Glifetables.html">Glifetables</a></span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">indicator</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 2
+  indicator                                                n
+  &lt;chr&gt;                                                &lt;int&gt;
+1 ex - expectation of life at age x                      285
+2 lx - number of people left alive at age x              495
+3 ndx - number of people dying between ages x and x+n    285
+4 nLx - person-years lived between ages x and x+n        285
+5 nMx - age-specific death rate between ages x and x+n   285
+6 nqx - probability of dying between ages x and x+n      495
+7 Tx - person-years lived above age x                    285</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">lx</span> <span class="op">&lt;-</span> <span class="fu">infectious</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/infectious/man/Glifetables.html">Glifetables</a></span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">indicator</span><span class="op">==</span><span class="st">"lx - number of people left alive at age x"</span>,</span>
+<span>         <span class="va">year</span><span class="op">==</span><span class="st">"2019"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">lx</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span><span class="op">==</span><span class="st">"female"</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">age_group</span><span class="op">)</span></span>
+<span><span class="va">lx_f</span> <span class="op">&lt;-</span> <span class="va">lx</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span><span class="op">==</span><span class="st">"female"</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span>lx<span class="op">=</span><span class="va">value</span><span class="op">)</span></span>
+<span><span class="va">lx_m</span> <span class="op">&lt;-</span> <span class="va">lx</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span><span class="op">==</span><span class="st">"male"</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span>lx<span class="op">=</span><span class="va">value</span><span class="op">)</span></span>
+<span><span class="va">px</span><span class="op">=</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">/</span><span class="fu">lag</span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">x</span>,</span>
+<span>           lx <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">lx_f</span><span class="op">)</span>,</span>
+<span>           dx <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/diff.html">diff</a></span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">)</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>           <span class="va">px</span>,</span>
+<span>           qx <span class="op">=</span> <span class="fl">1</span> <span class="op">-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lead</a></span><span class="op">(</span><span class="va">px</span><span class="op">)</span>,</span>
+<span>           Lx <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span> <span class="op">+</span> <span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="op">/</span><span class="fl">2</span>,</span>
+<span>                  <span class="fl">5</span><span class="op">*</span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">[</span><span class="op">-</span><span class="fl">1</span><span class="op">]</span> <span class="op">+</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lead</a></span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">[</span><span class="op">-</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="op">/</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              x     lx    dx        px          qx        Lx
+1        1 year 100000  4278        NA 0.042783388  97860.83
+2     1-4 years  95722  1346 0.9572166 0.014064138 475242.70
+3     5-9 years  94375   214 0.9859359 0.002264391 471342.84
+4   10-14 years  94162   166 0.9977356 0.001758090 470394.72
+5  15-19  years  93996   553 0.9982419 0.005885446 468597.83
+6   20-24 years  93443   833 0.9941146 0.008917104 465131.71
+7   25-29 years  92610  1113 0.9910829 0.012018199 460266.10
+8   30-34 years  91497  1431 0.9879818 0.015639276 453906.24
+9   35-39 years  90066  2086 0.9843607 0.023158110 445114.50
+10  40-44 years  87980  2990 0.9768419 0.033984449 432425.23
+11  45-49 years  84990  4189 0.9660156 0.049284212 414478.68
+12  50-54 years  80801  5783 0.9507158 0.071576594 389548.29
+13  55-59 years  75018  7803 0.9284234 0.104015719 355581.96
+14  60-64 years  67215  9757 0.8959843 0.145155739 311682.79
+15  65-69 years  57458 11431 0.8548443 0.198949086 258713.07
+16  70-74 years  46027 13039 0.8010509 0.283280697 197538.52
+17  75-79 years  32988 13011 0.7167193 0.394421830 132413.74
+18  80-84 years  19977 10612 0.6055782 0.531223477  73354.63
+19    85+ years   9365     0 0.4687765          NA        NA</code></pre>
+</div>
+</div>
+<p>-</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">infectious</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/infectious/man/Glifetables.html">Glifetables</a></span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">indicator</span><span class="op">==</span><span class="st">"nLx - person-years lived between ages x and x+n"</span>,</span>
+<span>         <span class="va">year</span><span class="op">==</span><span class="st">"2019"</span>,</span>
+<span>         <span class="va">sex</span><span class="op">==</span><span class="st">"female"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 19 × 5
+   indicator                                       age_group  sex    value year 
+   &lt;chr&gt;                                           &lt;chr&gt;      &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;
+ 1 nLx - person-years lived between ages x and x+n 1 year     fema… 9.70e4 2019 
+ 2 nLx - person-years lived between ages x and x+n 1-4 years  fema… 3.80e5 2019 
+ 3 nLx - person-years lived between ages x and x+n 5-9 years  fema… 4.71e5 2019 
+ 4 nLx - person-years lived between ages x and x+n 10-14 yea… fema… 4.70e5 2019 
+ 5 nLx - person-years lived between ages x and x+n 15-19  ye… fema… 4.69e5 2019 
+ 6 nLx - person-years lived between ages x and x+n 20-24 yea… fema… 4.65e5 2019 
+ 7 nLx - person-years lived between ages x and x+n 25-29 yea… fema… 4.60e5 2019 
+ 8 nLx - person-years lived between ages x and x+n 30-34 yea… fema… 4.54e5 2019 
+ 9 nLx - person-years lived between ages x and x+n 35-39 yea… fema… 4.45e5 2019 
+10 nLx - person-years lived between ages x and x+n 40-44 yea… fema… 4.32e5 2019 
+11 nLx - person-years lived between ages x and x+n 45-49 yea… fema… 4.14e5 2019 
+12 nLx - person-years lived between ages x and x+n 50-54 yea… fema… 3.90e5 2019 
+13 nLx - person-years lived between ages x and x+n 55-59 yea… fema… 3.56e5 2019 
+14 nLx - person-years lived between ages x and x+n 60-64 yea… fema… 3.12e5 2019 
+15 nLx - person-years lived between ages x and x+n 65-69 yea… fema… 2.59e5 2019 
+16 nLx - person-years lived between ages x and x+n 70-74 yea… fema… 1.98e5 2019 
+17 nLx - person-years lived between ages x and x+n 75-79 yea… fema… 1.32e5 2019 
+18 nLx - person-years lived between ages x and x+n 80-84 yea… fema… 7.34e4 2019 
+19 nLx - person-years lived between ages x and x+n 85+ years  fema… 3.84e4 2019 </code></pre>
+</div>
+</div>
+</section><section id="life-expectancy" class="level2" data-number="A.1"><h2 data-number="A.1" class="anchored" data-anchor-id="life-expectancy">
+<span class="header-section-number">A.1</span> Life expectancy</h2>
+<p>Life expectancy is the expected number of years a person will live, based on current age and prevailing mortality rates. There are several methods to calculate life expectancy, but one common approach is to use the actuarial life table, which is a statistical table that provides the mortality rates for a population at different ages. The following steps can be used to calculate life expectancy using a life table:</p>
+<p>Identify the relevant mortality rates for the population and time period of interest. Calculate the probability of surviving to each age, given the mortality rates. Multiply the probability of surviving to each age by the remaining life expectancy at that age to obtain the expected number of years of life remaining at each age. Sum the expected number of years of life remaining at each age to obtain the total life expectancy. Note that life expectancy is a statistical estimate and can be influenced by many factors, such as lifestyle, health, and environmental factors, so actual individual life expectancies can vary widely.</p>
+<p>Here are some key references for calculating life expectancy:</p>
+<ol type="1">
+<li><p>United Nations World Population Prospects - The UN provides detailed life tables and population data, including life expectancy, for countries and regions around the world.</p></li>
+<li><p>Centers for Disease Control and Prevention (CDC) - The CDC provides life tables for the United States, as well as information on how life expectancy is calculated and factors that affect it.</p></li>
+<li><p>World Health Organization (WHO) - The WHO provides information on global health and life expectancy, including data and reports on trends in life expectancy and mortality.</p></li>
+<li><p>Actuarial Science textbooks - Books such as “Actuarial Mathematics” by Bowers, Gerber, Hickman, Jones, and Nesbitt, or “An Introduction to Actuarial Mathematics” by Michel Millar, provide comprehensive coverage of the methods and mathematics used in calculating life expectancy.</p></li>
+<li><p>Journal articles - Articles in actuarial and demographic journals, such as the North American Actuarial Journal or Demographic Research, often provide in-depth coverage of the latest research and methods for calculating life expectancy.</p></li>
+</ol>
 
 
-
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-kovacheva2017" class="csl-entry" role="doc-biblioentry">
+Kovacheva, Ts. P. 2017. <span>“Life Tables - Key Parameters and Relationships Between Them.”</span> <em>International Mathematical Forum</em> 12: 469–79. <a href="https://doi.org/10.12988/imf.2017.7225">https://doi.org/10.12988/imf.2017.7225</a>.
+</div>
+<div id="ref-lifetab" class="csl-entry" role="doc-biblioentry">
+<span>“Life Table - an Overview | ScienceDirect Topics.”</span> n.d. <a href="https://www.sciencedirect.com/topics/medicine-and-dentistry/life-table">https://www.sciencedirect.com/topics/medicine-and-dentistry/life-table</a>.
+</div>
+</div>
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -406,9 +609,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./references.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">References</span>
       </a>          
@@ -420,13 +621,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis was written by <a href="https://federicagazzelloni.netlify.app/">Federica Gazzelloni</a>.</div>   
     <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
-
 
 
 </body></html>

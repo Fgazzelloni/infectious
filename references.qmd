@@ -1,13 +1,11 @@
 # References {.unnumbered}
 
-::: {#refs}
-https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/ghe2019_cod_methods.pdf
-:::
-
-
+-   https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/ghe2019_cod_methods.pdf
 
 life tables:
 
 -   https://apps.who.int/gho/data/node.main.LIFECOUNTRY?lang=en
 
 -   https://ghdx.healthdata.org/record/ihme-data/gbd-2019-life-tables-1950-2019
+
+-   https://www.sciencedirect.com/topics/medicine-and-dentistry/life-table#:\~:text=SURVIVAL%20THROUGH%20TIME-,The%20life%20table%20is%20historic%2C%20having%20been%20used%20for%20survival,end%20of%20each%20time%20interval.

@@ -300,15 +300,15 @@ quarto book project</code></pre>
   type: book</code></pre>
 <p>On terminal type: <code>quarto preview</code></p>
 <p>It creates a folder <code>_book</code></p>
-<section id="github-later" class="level4" data-number="B.2.1.1">
-<h4 data-number="B.2.1.1" class="anchored" data-anchor-id="github-later"><span class="header-section-number">B.2.1.1</span> github later:</h4>
+<section id="add-github-later" class="level4" data-number="B.2.1.1">
+<h4 data-number="B.2.1.1" class="anchored" data-anchor-id="add-github-later"><span class="header-section-number">B.2.1.1</span> Add Github later:</h4>
 <p>source: https://happygitwithr.com/existing-github-last.html</p>
 <p>connect with github</p>
 <p>create a github repo with the same name from github website</p>
 <p>then type</p>
-<p>usethis::use_git()</p>
+<pre><code>usethis::use_git()</code></pre>
 <p>this pushes all files in R to a remote folder designed to github repo</p>
-<p>in terminal connect with github repo</p>
+<p>in terminal connect with the github repo</p>
 <pre><code>git init 
 git remote add origin</code></pre>
 <p>https://github.com/Fgazzelloni/infectious.git</p>
@@ -321,12 +321,12 @@ git push -u origin main </code></pre>
 <p>change the <code>quarto.yml</code> file into:</p>
 <pre><code>project: 
   type: book 
-  utput-dir: docs </code></pre>
-<p>add a .nojekyll file …(terminal)</p>
+  output-dir: docs </code></pre>
+<p>add a .nojekyll file, type in terminal:</p>
 <pre><code>touch .nojekyll </code></pre>
 <p>then type</p>
 <pre><code>quarto render </code></pre>
-<p>some issues might arise if more than one calculation is made inside a single cunck split the cuncks!</p>
+<p>some issues might arise if more than one calculation is made inside a single chunks split the chunks!</p>
 <p>quarto render creates a folder <code>docs</code></p>
 
 

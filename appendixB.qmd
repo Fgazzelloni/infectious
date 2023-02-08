@@ -12,11 +12,11 @@ Download and install R: Download and install RStudio IDE:
 
 In this project the book has been made in quarto and version saved on github.
 
-https://quarto.org/docs/publishing/github-pages.html 
+https://quarto.org/docs/publishing/github-pages.html
 
 ### GitHub useful commands
 
-In RStudio create a new project on a new directory and in terminal type: 
+In RStudio create a new project on a new directory and in terminal type:
 
     add git
     quarto book project
@@ -30,7 +30,7 @@ On terminal type: `quarto preview`
 
 It creates a folder `_book`
 
-#### github later:
+#### Add Github later:
 
 source: https://happygitwithr.com/existing-github-last.html
 
@@ -40,38 +40,37 @@ create a github repo with the same name from github website
 
 then type
 
-usethis::use_git()
+    usethis::use_git()
 
 this pushes all files in R to a remote folder designed to github repo
 
-in terminal connect with github repo
+in terminal connect with the github repo
 
     git init 
     git remote add origin
-    
-https://github.com/Fgazzelloni/infectious.git 
+
+https://github.com/Fgazzelloni/infectious.git
 
     git branch -M main 
     git push -u origin main 
+    
 
-### Publish your book on github pages 
+### Publish your book on github pages
 
-change the `quarto.yml` file into: 
+change the `quarto.yml` file into:
 
     project: 
       type: book 
-      utput-dir: docs 
+      output-dir: docs 
 
-add a .nojekyll file ...(terminal) 
+add a .nojekyll file, type in terminal:
 
     touch .nojekyll 
-    
-then type 
+
+then type
 
     quarto render 
 
-some issues might arise if more than one  calculation is made inside a single cunck split the cuncks! 
+some issues might arise if more than one calculation is made inside a single chunks split the chunks!
 
 quarto render creates a folder `docs`
-
-

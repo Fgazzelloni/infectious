@@ -2,6 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+.Rbuildignore
 /.quarto/
 .httr-oauth
 .DS_Store
@@ -12,4 +13,3 @@ inst/extdata
 components_hm_files
 R
 man
-.Rbuildignore
