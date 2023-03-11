@@ -13,3 +13,10 @@ inst/extdata
 components_hm_files
 R
 man
+*.aux
+*.bcf
+*.idx
+*.log
+*.pdf
+*.tex
+*.toc
