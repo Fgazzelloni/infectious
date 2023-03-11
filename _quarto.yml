@@ -61,6 +61,10 @@ format:
   html:
     theme: cosmo
     code-link: true
+    code-copy: true
+    code-fold: true
+    linkcolor: "pink"
+    # backgroundcolor: "white"
   pdf:
     documentclass: scrreprt
     include-in-header: 
