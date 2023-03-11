@@ -3,3 +3,45 @@
 -   How to use the metrics
 
 -   Overview of the causes and risks
+
+The causes and risks associated with the burden of diseases and injuries can vary depending on the specific health condition or injury in question. However, some common causes and risk factors include:
+
+1.  Lifestyle choices: Poor diet, physical inactivity, tobacco use, and excessive alcohol consumption are major risk factors for many chronic diseases and injuries, including heart disease, stroke, cancer, and liver disease.
+
+2.  Environmental factors: Exposure to pollutants, such as air pollution and toxic chemicals, can increase the risk of certain diseases and injuries.
+
+3.  Infections: Many diseases, such as tuberculosis, HIV/AIDS, and malaria, are caused by infectious agents.
+
+4.  Poverty: People living in poverty are often more susceptible to health problems due to limited access to healthcare, healthy food, and safe living conditions.
+
+5.  Aging: As people get older, they are at increased risk for many health problems, including chronic diseases and disabilities.
+
+6.  Genetics: Some diseases and injuries are caused by genetic factors, such as genetic predisposition to certain cancers.
+
+7.  Injuries: Injuries, such as falls, road traffic accidents, and violence, can also contribute to the burden of diseases and injuries.
+
+It is important to note that the causes and risk factors for a particular health condition can be complex and interrelated. For example, poverty and lack of access to healthcare can increase the risk of infectious diseases, while poor diet and physical inactivity can increase the risk of chronic diseases. Addressing the underlying causes and risk factors of diseases and injuries is a key component of public health interventions and can help reduce the overall burden of disease.
+
+Here is an example of how the DALY metric can be used for prevention in R:
+
+Suppose we have data on the number of cases of a particular disease, as well as the average number of years of life lost due to this disease. We can use this information to calculate the total number of DALYs lost due to this disease.
+
+```{r}
+# Load the library 'dplyr'
+library(dplyr)
+
+# Create a data frame with the number of cases and average years of life lost
+df <- data.frame(cases = c(100, 200, 300),
+                 years_lost = c(5, 10, 15))
+
+# Calculate the number of DALYs lost
+df <- df %>% mutate(dalys = cases * years_lost)
+
+# Sum the total number of DALYs lost
+total_dalys <- sum(df$dalys)
+
+```
+
+In this example, we first create a data frame with the number of cases of the disease and the average years of life lost for each case. Then, we use the mutate() function from the dplyr library to calculate the number of DALYs lost for each case. Finally, we use the sum() function to find the total number of DALYs lost for the entire population.
+
+This information can be used to inform public health interventions to prevent the spread of this disease and reduce the number of DALYs lost. For example, the information could be used to prioritize resources for disease control and prevention activities, such as health education campaigns, vaccination programs, and screening and treatment programs.

@@ -1,1 +1,165 @@
 # Covid19 {#sec-ch41Covid19}
+
+## Infectious Diseases the invisible enemies
+
+The infective agent begins to thrive and multiply throughout the body [see @broemeling2021]. Its prolifaration can be fast or slow depending on the type of organism. Every infectious disease has an incubation period, the length of time the pathogen is established until appearance of symptoms of the disease.
+
+Factors influencing infection
+
+-   quantity of invading germs (dose of the infection)
+
+-   the virulence of the infection
+
+-   the condition of the body's immune system
+
+-   contact with source of infection for contagious diseases
+
+Microorganisms adapt far more rapidly than humans as the scene shifts
+
+A bacterial generation ranges from 20-30 minutes, for viruses it's much smaller
+
+> Who is going to adapt to whom?
+
+Virus means **poisonous substance** ranging from 20 to 400 nm in diameter can be observed only with a electron microscope. Outside of a living cell is a dormant particle of strange shapes. When manage to get inside the cell it starts replicating killing the cell or skewing its functions.
+
+
+The Bayesian Analysis of Infectious Diseases: COVID-19 and Beyond book is a comprehensive resource that covers the use of Bayesian analysis in the modeling of infectious diseases, including COVID-19. 
+
+In the context of modeling COVID-19 in R, the following steps can be taken:
+
+Define the model structure: The first step is to define the model structure, which involves specifying the underlying mechanisms of disease spread and the parameters of interest. For COVID-19, the model structure might include the number of susceptible individuals, the number of infected individuals, the number of recovered individuals, and the rate of disease transmission.
+
+Specify the prior distributions: The next step is to specify the prior distributions for the parameters of interest. This involves defining the prior beliefs about the values of the parameters based on available data and expert knowledge. In the case of COVID-19, this might include prior beliefs about the rate of disease transmission, the incubation period, and the rate of recovery.
+
+Collect data: The next step is to collect relevant data on the spread of the disease. This might include the number of confirmed cases, the number of hospitalizations, and the number of deaths.
+
+Implement the model in R: Once the model structure and prior distributions have been specified, the model can be implemented in R using a variety of packages, including Stan, JAGS, or MCMCpack.
+
+Estimate the parameters: The next step is to use the data and the model to estimate the parameters of interest. This can be done using Bayesian Markov Chain Monte Carlo (MCMC) methods, which involve drawing a large number of samples from the posterior distributions of the parameters.
+
+Evaluate the model: The final step is to evaluate the performance of the model, which involves comparing the model predictions with the observed data and checking the validity of the model assumptions.
+
+This is a general outline of the steps involved in modeling COVID-19 in R using Bayesian analysis. The specific details of the implementation will depend on the particular model structure and data being used.
+
+
+Suppose we have data on the number of confirmed cases of COVID-19 in a region for a period of time, and we want to model the spread of the disease.
+
+**Step 1**: Define the model structure
+
+We can use the Susceptible-Infected-Recovered (SIR) model to describe the spread of the disease, where S represents the number of susceptible individuals, I represents the number of infected individuals, and R represents the number of recovered individuals. The model structure can be described as follows:
+
+$$dS/dt = -beta * S * I / N$$
+$$dI/dt = beta * S * I / N - gamma * I$$
+$$dR/dt = gamma * I$$
+
+where beta is the rate of transmission, gamma is the rate of recovery, and N is the total population.
+
+**Step 2**: Specify the prior distributions
+
+We can specify the prior distributions for beta and gamma using expert knowledge and available data. For example, we might specify a gamma distribution with a mean of 0.1 and a standard deviation of 0.05 for beta, and a gamma distribution with a mean of 0.05 and a standard deviation of 0.02 for gamma.
+
+**Step 3**: Collect data
+
+We can collect data on the number of confirmed cases of COVID-19 in the region for a period of time.
+
+**Step 4**: Implement the model in R
+
+We can use the `{rstan}` package in R to implement the model, as follows:
+
+```{r}
+#| eval: false
+# Load the rethinking package
+library(rethinking)
+library(rstan)
+library(tidyverse)
+
+# Load the data
+source("inst/scripts/covid19_sim_data.R")
+data <- out
+
+# Define the model
+SIR_model <- function(data) {
+  # Define the priors
+  beta <- dnorm(0, 0.01)
+  gamma <- dnorm(0, 0.01)
+  I0 <- dnorm(0, 0.01)
+
+  # Define the model
+  S <- numeric(length(data$Time))
+  I <- numeric(length(data$Time))
+  R <- numeric(length(data$Time))
+  S[1] <- 1 - I0
+  I[1] <- I0
+  for (t in 2:length(data$Time)) {
+    S[t] <- S[t - 1] - beta * S[t - 1] * I[t - 1]
+    I[t] <- I[t - 1] + beta * S[t - 1] * I[t - 1] - gamma * I[t - 1]
+    R[t] <- R[t - 1] + gamma * I[t - 1]
+  }
+
+  # Likelihood
+  dpois(data$y, lambda = I)
+}
+
+```
+
+
+
+
+**Step 5**: Estimate the parameters
+
+We can use the `sampling` function in the `{rstan}` package to estimate the parameters, as follows:
+
+```{r}
+#| eval: false
+data <- alist(
+  time<- data$time,
+  S<-data$S,
+  I<-data$I,
+  R<-data$R
+)
+
+```
+
+
+**Step 6**: Evaluate the model
+
+We can evaluate the performance of the model by comparing the model predictions with the observed data and checking the validity
+
+
+
+```{r}
+#| eval: false
+# Plot the observed data and the model predictions
+library(ggplot2)
+
+predictions <- extract(results)$I
+
+data.frame(Time = data$Time, 
+           Observed = data$y, 
+           Predicted = predictions) %>%
+  ggplot(aes(x = Time, y = Observed)) +
+  geom_line(aes(y = Predicted, color = "Predicted")) +
+  geom_line(aes(y = Observed, color = "Observed"), 
+            linetype = "dashed") +
+  scale_color_discrete(name = NULL, labels = c("Predicted", "Observed")) +
+  labs(x = "Time", y = "Number of Confirmed Cases") +
+  theme_bw()
+
+# Calculate the goodness-of-fit measures
+rmse <- sqrt(mean((data$y - predictions)^2))
+mae <- mean(abs(data$y - predictions))
+r2 <- cor(data$y, predictions)^2
+cat("RMSE:", rmse, "\n")
+cat("MAE:", mae, "\n")
+cat("R-squared:", r2, "\n")
+
+# Plot the posterior distribution of the parameters
+library(bayesplot)
+mcmc_areas(results, pars = c("beta", "gamma", "I0"),
+           prob = 0.89, ROPE = c(0.05, 0.1),
+           prob_lines = TRUE, prob_args = list(col = "red"),
+           rope_args = list(col = "blue"),
+           main = "Posterior Distribution of Parameters")
+
+```
+

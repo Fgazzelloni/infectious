@@ -1,5 +1,19 @@
 # References {.unnumbered}
 
+Here are a few sources that provide more information on the health metrics of DALY, YLL, YLD, and HALE:
+
+World Health Organization (WHO): The WHO provides comprehensive information on the health metrics of DALY, YLL, and YLD, including definitions, calculation methods, and applications.
+
+Global Burden of Disease (GBD) Study: The GBD study is an ongoing research effort that provides comprehensive information on the burden of diseases, injuries, and risk factors at the global, regional, and country levels. It is based on data from a wide range of sources and provides estimates of the number of DALYs, YLLs, and YLDs for hundreds of diseases and injuries.
+
+Institute for Health Metrics and Evaluation (IHME): The IHME is a research institute that conducts the GBD study and provides data and tools for understanding the health of populations around the world.
+
+Journal of Public Health: The Journal of Public Health is a peer-reviewed publication that provides a platform for research on public health and health policy. It includes articles that provide further insights into the use and application of DALY, YLL, YLD, and HALE, as well as other health metrics.
+
+These sources can provide more information on the health metrics of DALY, YLL, YLD, and HALE, as well as provide a deeper understanding of how these metrics are used in public health and health policy.
+
+see Who documentation:
+
 -   https://cdn.who.int/media/docs/default-source/gho-documents/global-health-estimates/ghe2019_cod_methods.pdf
 
 life tables:
@@ -8,4 +22,4 @@ life tables:
 
 -   https://ghdx.healthdata.org/record/ihme-data/gbd-2019-life-tables-1950-2019
 
--   https://www.sciencedirect.com/topics/medicine-and-dentistry/life-table#:\~:text=SURVIVAL%20THROUGH%20TIME-,The%20life%20table%20is%20historic%2C%20having%20been%20used%20for%20survival,end%20of%20each%20time%20interval.
+-   https://www.sciencedirect.com/topics/medicine-and-dentistry/life-table

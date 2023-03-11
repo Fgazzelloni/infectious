@@ -357,7 +357,7 @@ div.csl-indent {
 <p>This section is dedicated to a closer look at what are the components of the health metrics, how to build them and finally how to use them for making countries comparison. YLLs,YLDs and DALYs can be used for different cause of deaths and disabilities, at different age levels.</p>
 <section id="components" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="components">
 <span class="header-section-number">3.1</span> Components</h2>
-<p>Two fundamental components are used for calculating the DALYs:</p>
+<p>Two fundamental components are used for calculating the metrics:</p>
 <ul>
 <li>life tables</li>
 <li>life expectancy</li>
@@ -365,126 +365,35 @@ div.csl-indent {
 <p>Both of these elements are key for achieving the highest value of prediction of the state of health of a population.</p>
 <section id="life-tables" class="level3" data-number="3.1.1"><h3 data-number="3.1.1" class="anchored" data-anchor-id="life-tables">
 <span class="header-section-number">3.1.1</span> Life tables</h3>
-<p>The life tables are selected among the most frequently used, more information about how to build a like table can be found in the <span class="quarto-unresolved-ref">?sec-appendix_a</span> of this book.</p>
+<p>The life tables are selected among the most frequently used, more information about how to build a like table can be found in the <span class="quarto-unresolved-ref">?sec-appendixA</span> of this book.</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="va">xmart</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data-raw/xmart.csv"</span>,skip <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">xmart</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="va">head</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/fgazzelloni/infectious">infectious</a></span><span class="op">)</span></span>
+<span><span class="fu">infectious</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/infectious/man/Glifetables.html">Glifetables</a></span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="va">head</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 17
-  Indicator      Age G…¹ Both …² Male.…³ Femal…⁴ Both …⁵ Male.…⁶ Femal…⁷ Both …⁸
-  &lt;chr&gt;          &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-1 nMx - age-spe… &amp;lt;1 … 4.78e-2 5.13e-2 4.41e-2 5.66e-2 6.02e-2 5.27e-2 6.75e-2
-2 nMx - age-spe… 1-4 ye… 3.61e-3 3.67e-3 3.55e-3 4.63e-3 4.67e-3 4.58e-3 6.43e-3
-3 nMx - age-spe… 5-9 ye… 4.61e-4 4.69e-4 4.53e-4 6.68e-4 6.75e-4 6.62e-4 1.15e-3
-4 nMx - age-spe… 10-14 … 3.70e-4 3.87e-4 3.52e-4 4.98e-4 5.16e-4 4.79e-4 8.27e-4
-5 nMx - age-spe… 15-19 … 1.32e-3 1.46e-3 1.18e-3 2.22e-3 2.74e-3 1.67e-3 1.88e-3
-6 nMx - age-spe… 20-24 … 2.01e-3 2.22e-3 1.79e-3 3.41e-3 4.47e-3 2.27e-3 2.87e-3
-# … with 8 more variables: Male...10 &lt;dbl&gt;, Female...11 &lt;dbl&gt;,
-#   `Both sexes...12` &lt;dbl&gt;, Male...13 &lt;dbl&gt;, Female...14 &lt;dbl&gt;,
-#   `Both sexes...15` &lt;dbl&gt;, Male...16 &lt;dbl&gt;, Female...17 &lt;dbl&gt;, and
-#   abbreviated variable names ¹​`Age Group`, ²​`Both sexes...3`, ³​Male...4,
-#   ⁴​Female...5, ⁵​`Both sexes...6`, ⁶​Male...7, ⁷​Female...8, ⁸​`Both sexes...9`</code></pre>
+<pre><code># A tibble: 6 × 5
+  indicator                                           age_g…¹ sex    value year 
+  &lt;chr&gt;                                               &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;
+1 nMx - age-specific death rate between ages x and x… 1 year  both  0.0478 2019 
+2 nMx - age-specific death rate between ages x and x… 1 year  male  0.0513 2019 
+3 nMx - age-specific death rate between ages x and x… 1 year  fema… 0.0441 2019 
+4 nMx - age-specific death rate between ages x and x… 1 year  both  0.0566 2015 
+5 nMx - age-specific death rate between ages x and x… 1 year  male  0.0602 2015 
+6 nMx - age-specific death rate between ages x and x… 1 year  fema… 0.0528 2015 
+# … with abbreviated variable name ¹​age_group</code></pre>
 </div>
 </div>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmart_yrs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data-raw/xmart.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>New names:
-Rows: 134 Columns: 17
-── Column specification
-──────────────────────────────────────────────────────── Delimiter: "," chr
-(17): ...1, ...2, 2019...3, 2019...4, 2019...5, 2015...6, 2015...7, 2015...
-ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
-Specify the column types or set `show_col_types = FALSE` to quiet this message.
-• `` -&gt; `...1`
-• `` -&gt; `...2`
-• `2019` -&gt; `2019...3`
-• `2019` -&gt; `2019...4`
-• `2019` -&gt; `2019...5`
-• `2015` -&gt; `2015...6`
-• `2015` -&gt; `2015...7`
-• `2015` -&gt; `2015...8`
-• `2010` -&gt; `2010...9`
-• `2010` -&gt; `2010...10`
-• `2010` -&gt; `2010...11`
-• `2005` -&gt; `2005...12`
-• `2005` -&gt; `2005...13`
-• `2005` -&gt; `2005...14`
-• `2000` -&gt; `2000...15`
-• `2000` -&gt; `2000...16`
-• `2000` -&gt; `2000...17`</code></pre>
-</div>
-<details><summary>Code</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmart_yrs</span> <span class="op">&lt;-</span> <span class="va">xmart_yrs</span><span class="op">[</span><span class="op">-</span><span class="fl">1</span>,<span class="op">]</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://sfirke.github.io/janitor/reference/clean_names.html">clean_names</a></span><span class="op">(</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols<span class="op">=</span><span class="fl">3</span><span class="op">:</span><span class="fl">17</span>,names_to<span class="op">=</span><span class="st">"years"</span>,values_to<span class="op">=</span><span class="st">"values"</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>values<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">values</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">xmart_yrs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="va">names</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>[1] "x1"     "x2"     "years"  "values"</code></pre>
-</div>
-</div>
-<div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmart_yrs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1,995 × 4
-   x1                                                   x2         years  values
-   &lt;chr&gt;                                                &lt;chr&gt;      &lt;chr&gt;   &lt;dbl&gt;
- 1 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2019… 0.0478
- 2 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2019… 0.0513
- 3 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2019… 0.0441
- 4 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2015… 0.0566
- 5 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2015… 0.0602
- 6 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2015… 0.0527
- 7 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2010… 0.0675
- 8 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2010… 0.0723
- 9 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2010… 0.0625
-10 nMx - age-specific death rate between ages x and x+n &amp;lt;1 year x2005… 0.0822
-# … with 1,985 more rows</code></pre>
-</div>
-</div>
-<div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmart_tidy</span> <span class="op">&lt;-</span> <span class="va">xmart</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://sfirke.github.io/janitor/reference/clean_names.html">clean_names</a></span><span class="op">(</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols <span class="op">=</span> <span class="fl">3</span><span class="op">:</span><span class="fl">17</span>,names_to<span class="op">=</span><span class="st">"sex"</span>,values_to<span class="op">=</span><span class="st">"values"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">xmart_yrs</span>,by<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"indicator"</span><span class="op">=</span><span class="st">"x1"</span>,<span class="st">"age_group"</span><span class="op">=</span><span class="st">"x2"</span>,<span class="st">"values"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>age_group<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">sub</a></span><span class="op">(</span><span class="st">"&amp;lt;"</span>,<span class="st">""</span>,<span class="va">age_group</span><span class="op">)</span>,</span>
-<span>         sex<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">gsub</a></span><span class="op">(</span><span class="st">"_\\d+"</span>,<span class="st">""</span>,<span class="va">sex</span><span class="op">)</span>,</span>
-<span>         sex<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">sex</span><span class="op">==</span><span class="st">"both_sexes"</span>,<span class="st">"both"</span>,<span class="va">sex</span><span class="op">)</span>,</span>
-<span>         years<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">sub</a></span><span class="op">(</span><span class="st">"x"</span>,<span class="st">""</span>,<span class="va">years</span><span class="op">)</span>,</span>
-<span>         years<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">gsub</a></span><span class="op">(</span><span class="st">"_\\d+"</span>,<span class="st">""</span>,<span class="va">years</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>Warning in full_join(., xmart_yrs, by = c(indicator = "x1", age_group = "x2", : Each row in `x` is expected to match at most 1 row in `y`.
-ℹ Row 556 of `x` matches multiple rows.
-ℹ If multiple matches are expected, set `multiple = "all"` to silence this
-  warning.</code></pre>
-</div>
-<details><summary>Code</summary><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmart_tidy</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">indicator</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 7 × 2
-  indicator                                                n
-  &lt;chr&gt;                                                &lt;int&gt;
-1 Tx - person-years lived above age x                    285
-2 ex - expectation of life at age x                      285
-3 lx - number of people left alive at age x              495
-4 nLx - person-years lived between ages x and x+n        285
-5 nMx - age-specific death rate between ages x and x+n   285
-6 ndx - number of people dying between ages x and x+n    285
-7 nqx - probability of dying between ages x and x+n      495</code></pre>
-</div>
-</div>
-<div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmart_tidy</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">Glifetables</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span><span class="op">==</span><span class="st">"both"</span>,</span>
 <span>         <span class="va">indicator</span><span class="op">==</span><span class="st">"ex - expectation of life at age x"</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>         <span class="co">#age_group=="1 year")%&gt;%</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">years</span>,<span class="va">values</span>,group<span class="op">=</span><span class="va">indicator</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">year</span>,<span class="va">value</span>,group<span class="op">=</span><span class="va">indicator</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">age_group</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">age_group</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<p><img src="ch12Components_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+<p><img src="ch12Components_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="life-expectancy" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="life-expectancy">
@@ -495,14 +404,35 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <p>In this section a practical calculation of the health metrics is done for the practitioner to be able to replicate this calculation for further analysis based on these key elements.</p>
 <section id="ylls" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="ylls">
 <span class="header-section-number">3.2.1</span> YLLs</h3>
-<p>The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death.</p>
-<p><span class="citation" data-cites="reiner2022">Reiner and Hay (<a href="#ref-reiner2022" role="doc-biblioref">2022</a>)</span></p>
+<p>The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death <span class="citation" data-cites="reiner2022">(see <a href="#ref-reiner2022" role="doc-biblioref">Reiner and Hay 2022</a>)</span></p>
+<p>The components of YLL (Years of Life Lost) include several factors that contribute to the calculation of premature death due to a disease or injury. These components are:</p>
+<p>Age at death: The age at which a person died due to a disease or injury is a crucial component of YLL. The earlier the age at death, the greater the impact on potential years of life lost.</p>
+<p>Life expectancy: The expected age at death in a population without the disease or injury is an important component of YLL. This value is used to compare the actual age at death with the expected age at death and determine the number of years of life lost.</p>
+<p>Standard life expectancy: To make comparisons across populations and over time, YLL is often expressed relative to a standard life expectancy, typically set at an age of 70 years.</p>
+<p>Population size: The size of the population affected by a disease or injury is another important component of YLL. A larger population will have a greater impact on overall YLL, regardless of the age at death.</p>
+<p>Cause of death: The cause of death is also considered when calculating YLL, as different causes may have different impacts on potential years of life lost.</p>
+<p>By taking these factors into account, YLL provides a measure of the potential years of life lost due to premature death caused by a disease or injury. It is an important component of the DALY, which provides a comprehensive view of the overall burden of disease on a population.</p>
 </section><section id="ylds" class="level3" data-number="3.2.2"><h3 data-number="3.2.2" class="anchored" data-anchor-id="ylds">
 <span class="header-section-number">3.2.2</span> YLDs</h3>
+<p>The components of YLD (Years Lived with Disability) include several factors that contribute to the calculation of the number of years lived with a disability due to a disease or injury. These components are:</p>
+<p>Prevalence: The prevalence of a condition is the number of cases of a particular disease or injury present in a population at a given time. This is an important component of YLD as it determines the number of people who are affected by a disease or injury and the overall impact on the population.</p>
+<p>Disability weight: The disability weight reflects the severity of the disability caused by a disease or injury. It is used to quantify the impact of a condition on quality of life, with higher weights assigned to more severe conditions.</p>
+<p>Age: The age of the person affected by a disease or injury is also considered when calculating YLD. Conditions that occur at an earlier age will have a greater impact on the number of years lived with disability.</p>
+<p>Population size: The size of the population affected by a disease or injury is another important component of YLD. A larger population will have a greater impact on overall YLD, regardless of the age of the affected individuals.</p>
+<p>Duration of disability: The duration of disability is also considered when calculating YLD. Conditions that last for a longer period of time will have a greater impact on the number of years lived with disability.</p>
+<p>By taking these factors into account, YLD provides a measure of the number of years lived with a disability due to a disease or injury. It is an important component of the DALY, which provides a comprehensive view of the overall burden of disease on a population.</p>
 </section><section id="dalys" class="level3" data-number="3.2.3"><h3 data-number="3.2.3" class="anchored" data-anchor-id="dalys">
 <span class="header-section-number">3.2.3</span> DALYs</h3>
+<p>Both YLL and YLD are components of the DALY and are used to provide a comprehensive assessment of the impact of disease and injury on a population. By combining YLL and YLD, the DALY takes into account both premature death and the impact of disease or injury on quality of life, providing a more comprehensive view of the overall burden of disease.</p>
 </section></section><section id="how-to-use-the-metrics" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="how-to-use-the-metrics">
 <span class="header-section-number">3.3</span> How to use the metrics</h2>
+<p>The health metrics of DALY, YLL, and YLD can be used in several ways to help prioritize public health interventions, evaluate the impact of diseases and injuries, and inform public health decision-making. Some common uses of these metrics include:</p>
+<p>Prioritizing public health interventions: By calculating the overall burden of disease in a population, public health practitioners can prioritize which diseases and injuries to address first. This helps allocate resources and target interventions to the areas of greatest need.</p>
+<p>Evaluating the impact of diseases and injuries: These metrics can be used to measure the impact of diseases and injuries on individuals and populations and to track changes over time. This information can help inform public health decision-making and allocate resources more effectively.</p>
+<p>Comparing the burden of disease across populations: DALY, YLL, and YLD can be used to compare the burden of disease across populations and between different regions. This information can help identify disparities in health outcomes and inform targeted public health interventions.</p>
+<p>Evaluating the effectiveness of public health programs: These metrics can be used to evaluate the impact of public health programs and to assess the effectiveness of public health interventions. This information can help public health practitioners identify areas for improvement and make necessary changes to ensure that programs are achieving their goals.</p>
+<p>Monitoring global health trends: DALY, YLL, and YLD can also be used to monitor global health trends and track changes in the burden of disease over time. This information can be used to inform global health policies and allocate resources to address emerging health threats.</p>
+<p>Overall, the health metrics of DALY, YLL, and YLD provide valuable information for public health practitioners, researchers, and policy makers to help prioritize and allocate resources, evaluate the impact of diseases and injuries, and inform public health decision-making.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">

@@ -7,3 +7,66 @@
 -   Packages and functions to use for the analysis
 
 -   Attempt at predicting the future
+
+## Model description
+
+This book aims at providing a simple explanation at how to model a fast growing phenomenon such as in the case of the spread of infectious diseases. In addition, a further look will be provided at the evolution of the infection in some specific countries.
+
+A **stochastic process**, or random process [see @dobrow2016] is the type of model which attempt to replicate uncertain outcomes. At opposite, in a **deterministic system** the outcome is obtained from a given input, and for this reason it is reproducible.
+
+The spread of a virus can be seen as a random process, since the number of individuals who are infected at any given time can change randomly. The exact number of individuals who will be infected in the future cannot be determined with certainty, since it depends on various factors such as the contagiousness of the virus, the behavior of individuals, and the efficacy of mitigation measures.
+
+A deterministic model, on the other hand, could be used to model the spread of a virus under certain conditions, such as a fixed number of individuals, constant contagiousness, and no mitigation measures. This type of model can be used to make predictions about the spread of a virus under certain assumptions, but it will not account for the randomness and uncertainty associated with real-world scenarios.
+
+Most models used to study the spread of a virus are a **combination of both deterministic and stochastic models**. For example, the SIR (Susceptible-Infected-Recovered) model is a deterministic model that describes the dynamics of the spread of a virus, but it also includes stochastic elements such as random interactions between individuals.
+
+### The spread of COVID-19
+
+Here is a model example of the spread of COVID-19 using a stochastic process. In this example, we'll use a simple SEIR (Susceptible-Exposed-Infected-Recovered) model to simulate the spread of the virus in a population. The SEIR model divides a population into four compartments based on their status with respect to the virus: susceptible, exposed, infected, and recovered.
+
+First, we'll load the necessary packages and define some parameters for our model:
+
+```{r}
+library(deSolve)
+
+# Define parameters
+N <- 1e6  # Total population
+beta <- 0.5  # Transmission rate
+gamma <- 0.1  # Recovery rate
+t_exp <- 5  # Latent period
+
+# Initial conditions
+init <- c(S = N - 1, E = 1, I = 0, R = 0)
+
+# Define the SEIR model
+seir_model <- function(t, y, parameters) {
+  with(as.list(y), {
+    dS <- -beta * S * I / N
+    dE <- beta * S * I / N - (1 / t_exp) * E
+    dI <- (1 / t_exp) * E - gamma * I
+    dR <- gamma * I
+    return(list(c(dS, dE, dI, dR)))
+  })
+}
+```
+
+Next, we'll use the ode function from the deSolve package to solve the ODEs and simulate the spread of the virus over a period of 365 days:
+
+```{r}
+# Solve the ODEs
+times <- seq(0, 365, by = 1)
+result <- ode(y = init, times = times, func = seir_model)
+
+# Plot the results
+library(ggplot2)
+ggplot(as.data.frame(result), aes(time, I, color = "Infected")) +
+  geom_line() +
+  geom_line(aes(time, R, color = "Recovered")) +
+  geom_line(aes(time, S, color = "Susceptible")) +
+  geom_line(aes(time, E, color = "Exposed")) +
+  scale_color_discrete(name = "Compartment") +
+  labs(x = "Time (days)", y = "Number of individuals") +
+  theme_bw()
+```
+
+In this example, many factors are not taken into account. In reality, the spread of a virus is much more complex and influenced by many factors such as human behavior, government policies, and healthcare systems.

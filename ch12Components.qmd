@@ -7,7 +7,7 @@ This section is dedicated to a closer look at what are the components of the hea
 
 ## Components
 
-Two fundamental components are used for calculating the DALYs:
+Two fundamental components are used for calculating the metrics:
 
 -   life tables
 -   life expectancy
@@ -16,52 +16,25 @@ Both of these elements are key for achieving the highest value of prediction of 
 
 ### Life tables
 
-The life tables are selected among the most frequently used, more information about how to build a like table can be found in the @sec-appendix_a of this book.
+The life tables are selected among the most frequently used, more information about how to build a like table can be found in the @sec-appendixA of this book.
 
-```{r message=FALSE, warning=FALSE}
+```{r}
+#| message: false 
+#| warning: false
 library(tidyverse)
-xmart <- read_csv("data-raw/xmart.csv",skip = 1)
-
-xmart %>% head
+library(infectious)
+infectious::Glifetables%>%head
 ```
 
 ```{r}
-xmart_yrs <- read_csv("data-raw/xmart.csv")
-xmart_yrs <- xmart_yrs[-1,]%>%
-  janitor::clean_names()%>%
-  pivot_longer(cols=3:17,names_to="years",values_to="values")%>%
-  mutate(values=as.numeric(values))
-
-xmart_yrs %>% names
-```
-
-```{r}
-xmart_yrs
-```
-
-```{r}
-xmart_tidy <- xmart %>%
-  janitor::clean_names()%>%
-  pivot_longer(cols = 3:17,names_to="sex",values_to="values") %>% 
-  full_join(xmart_yrs,by=c("indicator"="x1","age_group"="x2","values")) %>%
-  mutate(age_group=sub("&lt;","",age_group),
-         sex=gsub("_\\d+","",sex),
-         sex=ifelse(sex=="both_sexes","both",sex),
-         years=sub("x","",years),
-         years=gsub("_\\d+","",years))
-
-
-xmart_tidy%>%count(indicator)
-```
-
-```{r}
-xmart_tidy %>%
+Glifetables %>%
   filter(sex=="both",
          indicator=="ex - expectation of life at age x")%>%
          #age_group=="1 year")%>%
-  ggplot(aes(years,values,group=indicator))+
+  ggplot(aes(year,value,group=indicator))+
   geom_line()+
-  facet_wrap(vars(age_group))
+  facet_wrap(vars(age_group))+
+  theme_bw()
 ```
 
 ### Life expectancy
@@ -74,12 +47,54 @@ In this section a practical calculation of the health metrics is done for the pr
 
 ### YLLs
 
-The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death.
+The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death [see @reiner2022]
 
-@reiner2022
+The components of YLL (Years of Life Lost) include several factors that contribute to the calculation of premature death due to a disease or injury. These components are:
+
+Age at death: The age at which a person died due to a disease or injury is a crucial component of YLL. The earlier the age at death, the greater the impact on potential years of life lost.
+
+Life expectancy: The expected age at death in a population without the disease or injury is an important component of YLL. This value is used to compare the actual age at death with the expected age at death and determine the number of years of life lost.
+
+Standard life expectancy: To make comparisons across populations and over time, YLL is often expressed relative to a standard life expectancy, typically set at an age of 70 years.
+
+Population size: The size of the population affected by a disease or injury is another important component of YLL. A larger population will have a greater impact on overall YLL, regardless of the age at death.
+
+Cause of death: The cause of death is also considered when calculating YLL, as different causes may have different impacts on potential years of life lost.
+
+By taking these factors into account, YLL provides a measure of the potential years of life lost due to premature death caused by a disease or injury. It is an important component of the DALY, which provides a comprehensive view of the overall burden of disease on a population.
 
 ### YLDs
 
+The components of YLD (Years Lived with Disability) include several factors that contribute to the calculation of the number of years lived with a disability due to a disease or injury. These components are:
+
+Prevalence: The prevalence of a condition is the number of cases of a particular disease or injury present in a population at a given time. This is an important component of YLD as it determines the number of people who are affected by a disease or injury and the overall impact on the population.
+
+Disability weight: The disability weight reflects the severity of the disability caused by a disease or injury. It is used to quantify the impact of a condition on quality of life, with higher weights assigned to more severe conditions.
+
+Age: The age of the person affected by a disease or injury is also considered when calculating YLD. Conditions that occur at an earlier age will have a greater impact on the number of years lived with disability.
+
+Population size: The size of the population affected by a disease or injury is another important component of YLD. A larger population will have a greater impact on overall YLD, regardless of the age of the affected individuals.
+
+Duration of disability: The duration of disability is also considered when calculating YLD. Conditions that last for a longer period of time will have a greater impact on the number of years lived with disability.
+
+By taking these factors into account, YLD provides a measure of the number of years lived with a disability due to a disease or injury. It is an important component of the DALY, which provides a comprehensive view of the overall burden of disease on a population.
+
 ### DALYs
 
+Both YLL and YLD are components of the DALY and are used to provide a comprehensive assessment of the impact of disease and injury on a population. By combining YLL and YLD, the DALY takes into account both premature death and the impact of disease or injury on quality of life, providing a more comprehensive view of the overall burden of disease.
+
 ## How to use the metrics
+
+The health metrics of DALY, YLL, and YLD can be used in several ways to help prioritize public health interventions, evaluate the impact of diseases and injuries, and inform public health decision-making. Some common uses of these metrics include:
+
+Prioritizing public health interventions: By calculating the overall burden of disease in a population, public health practitioners can prioritize which diseases and injuries to address first. This helps allocate resources and target interventions to the areas of greatest need.
+
+Evaluating the impact of diseases and injuries: These metrics can be used to measure the impact of diseases and injuries on individuals and populations and to track changes over time. This information can help inform public health decision-making and allocate resources more effectively.
+
+Comparing the burden of disease across populations: DALY, YLL, and YLD can be used to compare the burden of disease across populations and between different regions. This information can help identify disparities in health outcomes and inform targeted public health interventions.
+
+Evaluating the effectiveness of public health programs: These metrics can be used to evaluate the impact of public health programs and to assess the effectiveness of public health interventions. This information can help public health practitioners identify areas for improvement and make necessary changes to ensure that programs are achieving their goals.
+
+Monitoring global health trends: DALY, YLL, and YLD can also be used to monitor global health trends and track changes in the burden of disease over time. This information can be used to inform global health policies and allocate resources to address emerging health threats.
+
+Overall, the health metrics of DALY, YLL, and YLD provide valuable information for public health practitioners, researchers, and policy makers to help prioritize and allocate resources, evaluate the impact of diseases and injuries, and inform public health decision-making.
