@@ -63,8 +63,9 @@ format:
     code-link: true
     code-copy: true
     code-fold: true
+    code-summary: "Show the code"
+    code-block-border-left: "pink"
     linkcolor: "pink"
-    # backgroundcolor: "white"
   pdf:
     documentclass: scrreprt
     include-in-header: 
