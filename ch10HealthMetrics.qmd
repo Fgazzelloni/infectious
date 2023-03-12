@@ -7,7 +7,7 @@ The numbers of years of life lost by a population in comparison to other countri
 
 The part of the population who do not meet this age, but dies earlier, contributes as a building block of the numbers of years of life lost (YLLs), as well as for all that is related with a healthy living, the numbers of years spent dealing with a disability contribute to increasing the numbers of years lived with disabilities for a country's population.
 
-To establish a *healthy life status for a country*, meant as the healthy life defying the state of health of a population, the sum of the two values YLLs and YLDs releases the key metric of DALYs. This metric value is used to quickly identify the level of health of a population compared to a Global review based on the latest findings of the most updated studies.
+TTo establish a *healthy life status* for a country, meaning the state of health of a population, the sum of the two values YLLs and YLDs is used to obtain the key metric of DALYs. This metric value is used to quickly identify the level of health of a population compared to a Global review based on the latest findings of the most updated studies.
 
 In addition, this level is used to improve the proportion of countries who are in need of a better health status recognition. To be more specific, the focus on the numbers of years can help identify the areas where most of the years are lost and need for improvement, whether in facilities, research or investments.
 
