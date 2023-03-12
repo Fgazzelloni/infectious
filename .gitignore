@@ -8,7 +8,7 @@
 .DS_Store
 data
 data-raw
-scripts
+inst/scripts
 inst/extdata
 components_hm_files
 R
@@ -20,3 +20,8 @@ man
 *.pdf
 *.tex
 *.toc
+*.bbl
+*.blg
+*.ilg
+*.ind
+*.run.xml

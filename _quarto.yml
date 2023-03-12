@@ -83,4 +83,6 @@ format:
 editor: visual
 execute: 
   echo: true
+  message: false
+  warning: false
 

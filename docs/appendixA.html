@@ -354,20 +354,8 @@ div.csl-indent {
 <p><span class="math display">\[p_x=1-q_x\]</span></p>
 <p>Let’s start constructing a life table</p>
 <div class="cell">
-<details><summary>Show the code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.0     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.1     ✔ tibble    3.2.0
-✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-✔ purrr     1.0.1     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the ]8;;http://conflicted.r-lib.org/conflicted package]8;; to force all conflicts to become errors</code></pre>
-</div>
-<details><summary>Show the code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">infectious</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/infectious/man/Glifetables.html">Glifetables</a></span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<details><summary>Show the code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="fu">infectious</span><span class="fu">::</span><span class="va">Glifetables</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">indicator</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 2
@@ -383,57 +371,56 @@ div.csl-indent {
 </div>
 </div>
 <div class="cell">
-<details><summary>Show the code</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">lx</span> <span class="op">&lt;-</span> <span class="fu">infectious</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/infectious/man/Glifetables.html">Glifetables</a></span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">indicator</span><span class="op">==</span><span class="st">"lx - number of people left alive at age x"</span>,</span>
-<span>         <span class="va">year</span><span class="op">==</span><span class="st">"2019"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Show the code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">lx</span> <span class="op">&lt;-</span> <span class="fu">infectious</span><span class="fu">::</span><span class="va">Glifetables</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">indicator</span> <span class="op">==</span> <span class="st">"lx - number of people left alive at age x"</span>,</span>
+<span>         <span class="va">year</span> <span class="op">==</span> <span class="st">"2019"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
-<details><summary>Show the code</summary><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">lx</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span><span class="op">==</span><span class="st">"female"</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">age_group</span><span class="op">)</span></span>
-<span><span class="va">lx_f</span> <span class="op">&lt;-</span> <span class="va">lx</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span><span class="op">==</span><span class="st">"female"</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span>lx<span class="op">=</span><span class="va">value</span><span class="op">)</span></span>
-<span><span class="va">lx_m</span> <span class="op">&lt;-</span> <span class="va">lx</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span><span class="op">==</span><span class="st">"male"</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span>lx<span class="op">=</span><span class="va">value</span><span class="op">)</span></span>
-<span><span class="va">px</span><span class="op">=</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">/</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lag</a></span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Show the code</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">lx</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span> <span class="op">==</span> <span class="st">"female"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">age_group</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">lx_f</span> <span class="op">&lt;-</span> <span class="va">lx</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span> <span class="op">==</span> <span class="st">"female"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span>lx <span class="op">=</span> <span class="va">value</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">lx_m</span> <span class="op">&lt;-</span> <span class="va">lx</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span> <span class="op">==</span> <span class="st">"male"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span>lx <span class="op">=</span> <span class="va">value</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">px</span> <span class="op">=</span> <span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span> <span class="op">/</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lag</a></span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
-<details><summary>Show the code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">x</span>,</span>
-<span>           lx <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">lx_f</span><span class="op">)</span>,</span>
-<span>           dx <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/diff.html">diff</a></span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">)</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span>,</span>
-<span>           <span class="va">px</span>,</span>
-<span>           qx <span class="op">=</span> <span class="fl">1</span> <span class="op">-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lead</a></span><span class="op">(</span><span class="va">px</span><span class="op">)</span>,</span>
-<span>           Lx <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span> <span class="op">+</span> <span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="op">/</span><span class="fl">2</span>,</span>
-<span>                  <span class="fl">5</span><span class="op">*</span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">[</span><span class="op">-</span><span class="fl">1</span><span class="op">]</span> <span class="op">+</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lead</a></span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">[</span><span class="op">-</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="op">/</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Show the code</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>  <span class="va">x</span>,</span>
+<span>  lx <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">lx_f</span><span class="op">)</span>,</span>
+<span>  dx <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/diff.html">diff</a></span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">)</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  <span class="va">px</span>,</span>
+<span>  qx <span class="op">=</span> <span class="fl">1</span> <span class="op">-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lead</a></span><span class="op">(</span><span class="va">px</span><span class="op">)</span>,</span>
+<span>  Lx <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span> <span class="op">+</span> <span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="fl">2</span>,</span>
+<span>         <span class="fl">5</span> <span class="op">*</span> <span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">[</span><span class="op">-</span><span class="fl">1</span><span class="op">]</span> <span class="op">+</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lead</a></span><span class="op">(</span><span class="va">lx_f</span><span class="op">$</span><span class="va">lx</span><span class="op">[</span><span class="op">-</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="va">head</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
-<pre><code>              x     lx    dx        px          qx        Lx
-1        1 year 100000  4278        NA 0.042783388  97860.83
-2     1-4 years  95722  1346 0.9572166 0.014064138 475242.70
-3     5-9 years  94375   214 0.9859359 0.002264391 471342.84
-4   10-14 years  94162   166 0.9977356 0.001758090 470394.72
-5  15-19  years  93996   553 0.9982419 0.005885446 468597.83
-6   20-24 years  93443   833 0.9941146 0.008917104 465131.71
-7   25-29 years  92610  1113 0.9910829 0.012018199 460266.10
-8   30-34 years  91497  1431 0.9879818 0.015639276 453906.24
-9   35-39 years  90066  2086 0.9843607 0.023158110 445114.50
-10  40-44 years  87980  2990 0.9768419 0.033984449 432425.23
-11  45-49 years  84990  4189 0.9660156 0.049284212 414478.68
-12  50-54 years  80801  5783 0.9507158 0.071576594 389548.29
-13  55-59 years  75018  7803 0.9284234 0.104015719 355581.96
-14  60-64 years  67215  9757 0.8959843 0.145155739 311682.79
-15  65-69 years  57458 11431 0.8548443 0.198949086 258713.07
-16  70-74 years  46027 13039 0.8010509 0.283280697 197538.52
-17  75-79 years  32988 13011 0.7167193 0.394421830 132413.74
-18  80-84 years  19977 10612 0.6055782 0.531223477  73354.63
-19    85+ years   9365     0 0.4687765          NA        NA</code></pre>
+<pre><code>             x     lx   dx        px          qx        Lx
+1       1 year 100000 4278        NA 0.042783388  97860.83
+2    1-4 years  95722 1346 0.9572166 0.014064138 475242.70
+3    5-9 years  94375  214 0.9859359 0.002264391 471342.84
+4  10-14 years  94162  166 0.9977356 0.001758090 470394.72
+5 15-19  years  93996  553 0.9982419 0.005885446 468597.83
+6  20-24 years  93443  833 0.9941146 0.008917104 465131.71</code></pre>
 </div>
 </div>
-<p>-</p>
 <div class="cell">
-<details><summary>Show the code</summary><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">infectious</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/infectious/man/Glifetables.html">Glifetables</a></span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">indicator</span><span class="op">==</span><span class="st">"nLx - person-years lived between ages x and x+n"</span>,</span>
-<span>         <span class="va">year</span><span class="op">==</span><span class="st">"2019"</span>,</span>
-<span>         <span class="va">sex</span><span class="op">==</span><span class="st">"female"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Show the code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">infectious</span><span class="fu">::</span><span class="va">Glifetables</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span></span>
+<span>    <span class="va">indicator</span> <span class="op">==</span> <span class="st">"nLx - person-years lived between ages x and x+n"</span>,</span>
+<span>    <span class="va">year</span> <span class="op">==</span> <span class="st">"2019"</span>,</span>
+<span>    <span class="va">sex</span> <span class="op">==</span> <span class="st">"female"</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 19 × 5
    indicator                                       age_group  sex    value year 

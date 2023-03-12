@@ -25,6 +25,8 @@ $$p_x=1-q_x$$
 Let's start constructing a life table
 
 ```{r}
+#| warning: false
+#| message: false
 library(tidyverse)
 infectious::Glifetables %>%
   count(indicator)
@@ -32,36 +34,48 @@ infectious::Glifetables %>%
 
 ```{r}
 lx <- infectious::Glifetables %>%
-  distinct()%>%
-  filter(indicator=="lx - number of people left alive at age x",
-         year=="2019")
+  distinct() %>%
+  filter(indicator == "lx - number of people left alive at age x",
+         year == "2019")
 ```
 
 ```{r}
-x <- lx%>%filter(sex=="female")%>%select(x=age_group)
-lx_f <- lx%>%filter(sex=="female")%>%select(lx=value)
-lx_m <- lx%>%filter(sex=="male")%>%select(lx=value)
-px=lx_f$lx/lag(lx_f$lx)
+x <- lx %>% 
+  filter(sex == "female") %>% 
+  select(x = age_group)
+
+lx_f <- lx %>% 
+  filter(sex == "female") %>% 
+  select(lx = value)
+
+lx_m <- lx %>% 
+  filter(sex == "male") %>% 
+  select(lx = value)
+
+px = lx_f$lx / lag(lx_f$lx)
 ```
 
 ```{r}
-data.frame(x,
-           lx = round(lx_f),
-           dx = round(c(-diff(lx_f$lx), 0)),
-           px,
-           qx = 1 - lead(px),
-           Lx = c((lx_f$lx[1] + (lx_f$lx[2]))/2,
-                  5*(lx_f$lx[-1] + lead(lx_f$lx[-1]))/2))
+data.frame(
+  x,
+  lx = round(lx_f),
+  dx = round(c(-diff(lx_f$lx), 0)),
+  px,
+  qx = 1 - lead(px),
+  Lx = c((lx_f$lx[1] + (lx_f$lx[2])) / 2,
+         5 * (lx_f$lx[-1] + lead(lx_f$lx[-1])) / 2)
+) %>% head
 ```
 
-\-
 
 ```{r}
 infectious::Glifetables %>%
-  distinct()%>%
-  filter(indicator=="nLx - person-years lived between ages x and x+n",
-         year=="2019",
-         sex=="female")
+  distinct() %>%
+  filter(
+    indicator == "nLx - person-years lived between ages x and x+n",
+    year == "2019",
+    sex == "female"
+  )
 ```
 
 ## Life expectancy
