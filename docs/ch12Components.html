@@ -320,9 +320,7 @@ div.csl-indent {
 <li>
 <a href="#components" id="toc-components" class="nav-link active" data-scroll-target="#components"><span class="toc-section-number">3.1</span>  Components</a>
   <ul class="collapse">
-<li><a href="#life-tables-and-life-expectancy" id="toc-life-tables-and-life-expectancy" class="nav-link" data-scroll-target="#life-tables-and-life-expectancy"><span class="toc-section-number">3.1.1</span>  Life tables and life expectancy</a></li>
-  <li><a href="#life-tables" id="toc-life-tables" class="nav-link" data-scroll-target="#life-tables"><span class="toc-section-number">3.1.2</span>  Life tables</a></li>
-  <li><a href="#life-expectancy" id="toc-life-expectancy" class="nav-link" data-scroll-target="#life-expectancy"><span class="toc-section-number">3.1.3</span>  Life expectancy</a></li>
+<li><a href="#life-tables-and-life-expectancy" id="toc-life-tables-and-life-expectancy" class="nav-link" data-scroll-target="#life-tables-and-life-expectancy"><span class="toc-section-number">3.1.1</span>  Life tables and Life expectancy</a></li>
   </ul>
 </li>
   <li>
@@ -367,15 +365,15 @@ div.csl-indent {
 <p>By taking these factors into account, YLL provides a measure of the potential years of life lost due to premature death caused by a disease or injury. It is a crucial component of the DALY, which provides a comprehensive view of the overall burden of disease on a population.</p>
 <p><br></p>
 <section id="life-tables-and-life-expectancy" class="level3" data-number="3.1.1"><h3 data-number="3.1.1" class="anchored" data-anchor-id="life-tables-and-life-expectancy">
-<span class="header-section-number">3.1.1</span> Life tables and life expectancy</h3>
+<span class="header-section-number">3.1.1</span> Life tables and Life expectancy</h3>
 <p>Two fundamental components are used for calculating the metrics:</p>
 <ul>
 <li>life tables</li>
 <li>life expectancy</li>
 </ul>
 <p>Both of these elements are key for achieving the highest value of prediction of the state of health of a population.</p>
-</section><section id="life-tables" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="life-tables">
-<span class="header-section-number">3.1.2</span> Life tables</h3>
+<section id="life-tables" class="level4" data-number="3.1.1.1"><h4 data-number="3.1.1.1" class="anchored" data-anchor-id="life-tables">
+<span class="header-section-number">3.1.1.1</span> Life tables</h4>
 <p>The life tables are selected among the most frequently used, more information about how to build a like table can be found in the <a href="appendixA.html"><span>Appendix&nbsp;A</span></a> of this book.</p>
 <div class="cell">
 <details><summary>Show the code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
@@ -407,10 +405,10 @@ div.csl-indent {
 <p><img src="ch12Components_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="life-expectancy" class="level3" data-number="3.1.3"><h3 data-number="3.1.3" class="anchored" data-anchor-id="life-expectancy">
-<span class="header-section-number">3.1.3</span> Life expectancy</h3>
+</section><section id="life-expectancy" class="level4" data-number="3.1.1.2"><h4 data-number="3.1.1.2" class="anchored" data-anchor-id="life-expectancy">
+<span class="header-section-number">3.1.1.2</span> Life expectancy</h4>
 <p>The life expectancy rates are calculated with consideration of the probability of survival based on key parameter such as age, and deaths probabilities for that age. More info about how to calculate the life expectancy can be found #sec-tools of this book.</p>
-</section></section><section id="how-to-build-the-metrics" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="how-to-build-the-metrics">
+</section></section></section><section id="how-to-build-the-metrics" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="how-to-build-the-metrics">
 <span class="header-section-number">3.2</span> How to build the metrics</h2>
 <p>In this section a practical calculation of the health metrics is done for the practitioner to be able to replicate this calculation for further analysis based on these key elements.</p>
 <section id="ylls" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="ylls">
