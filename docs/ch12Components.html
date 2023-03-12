@@ -320,8 +320,9 @@ div.csl-indent {
 <li>
 <a href="#components" id="toc-components" class="nav-link active" data-scroll-target="#components"><span class="toc-section-number">3.1</span>  Components</a>
   <ul class="collapse">
-<li><a href="#life-tables" id="toc-life-tables" class="nav-link" data-scroll-target="#life-tables"><span class="toc-section-number">3.1.1</span>  Life tables</a></li>
-  <li><a href="#life-expectancy" id="toc-life-expectancy" class="nav-link" data-scroll-target="#life-expectancy"><span class="toc-section-number">3.1.2</span>  Life expectancy</a></li>
+<li><a href="#life-tables-and-life-expectancy" id="toc-life-tables-and-life-expectancy" class="nav-link" data-scroll-target="#life-tables-and-life-expectancy"><span class="toc-section-number">3.1.1</span>  Life tables and life expectancy</a></li>
+  <li><a href="#life-tables" id="toc-life-tables" class="nav-link" data-scroll-target="#life-tables"><span class="toc-section-number">3.1.2</span>  Life tables</a></li>
+  <li><a href="#life-expectancy" id="toc-life-expectancy" class="nav-link" data-scroll-target="#life-expectancy"><span class="toc-section-number">3.1.3</span>  Life expectancy</a></li>
   </ul>
 </li>
   <li>
@@ -357,15 +358,25 @@ div.csl-indent {
 <p>This section is dedicated to a closer look at what are the components of the health metrics, how to build them and finally how to use them for making countries comparison. YLLs,YLDs and DALYs can be used for different cause of deaths and disabilities, at different age levels.</p>
 <section id="components" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="components">
 <span class="header-section-number">3.1</span> Components</h2>
+<p>The calculation of YLL (Years of Life Lost) is based on several factors that contribute to premature death. The components are as follows:</p>
+<p><strong>Age at death</strong>: The age at which a person dies due to a disease or injury is a crucial component of YLL. The earlier the age at death, the more significant the impact on potential years of life lost.</p>
+<p><strong>Life expectancy</strong>: YLL is determined by the expected age at death in a population without disease or injury. This value is used to compare the actual age at death with the expected age at death and determine the number of years of life lost.</p>
+<p><strong>Standard life expectancy</strong>: To make comparisons across populations and over time, YLL is often expressed relative to a standard life expectancy, typically set at an age of 70 years.</p>
+<p><strong>Population size</strong>: The size of the population affected by a disease or injury is another critical component of YLL. A larger population will have a greater impact on overall YLL, regardless of age at death.</p>
+<p><strong>Cause of death</strong>: The cause of death is also considered when calculating YLL, as different causes may have different impacts on potential years of life lost.</p>
+<p>By taking these factors into account, YLL provides a measure of the potential years of life lost due to premature death caused by a disease or injury. It is a crucial component of the DALY, which provides a comprehensive view of the overall burden of disease on a population.</p>
+<p><br></p>
+<section id="life-tables-and-life-expectancy" class="level3" data-number="3.1.1"><h3 data-number="3.1.1" class="anchored" data-anchor-id="life-tables-and-life-expectancy">
+<span class="header-section-number">3.1.1</span> Life tables and life expectancy</h3>
 <p>Two fundamental components are used for calculating the metrics:</p>
 <ul>
 <li>life tables</li>
 <li>life expectancy</li>
 </ul>
 <p>Both of these elements are key for achieving the highest value of prediction of the state of health of a population.</p>
-<section id="life-tables" class="level3" data-number="3.1.1"><h3 data-number="3.1.1" class="anchored" data-anchor-id="life-tables">
-<span class="header-section-number">3.1.1</span> Life tables</h3>
-<p>The life tables are selected among the most frequently used, more information about how to build a like table can be found in the <a href="#sec-appendixA"><span class="quarto-unresolved-ref">sec-appendixA</span></a> of this book.</p>
+</section><section id="life-tables" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="life-tables">
+<span class="header-section-number">3.1.2</span> Life tables</h3>
+<p>The life tables are selected among the most frequently used, more information about how to build a like table can be found in the <a href="appendixA.html"><span>Appendix&nbsp;A</span></a> of this book.</p>
 <div class="cell">
 <details><summary>Show the code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/fgazzelloni/infectious">infectious</a></span><span class="op">)</span></span>
@@ -396,8 +407,8 @@ div.csl-indent {
 <p><img src="ch12Components_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="life-expectancy" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="life-expectancy">
-<span class="header-section-number">3.1.2</span> Life expectancy</h3>
+</section><section id="life-expectancy" class="level3" data-number="3.1.3"><h3 data-number="3.1.3" class="anchored" data-anchor-id="life-expectancy">
+<span class="header-section-number">3.1.3</span> Life expectancy</h3>
 <p>The life expectancy rates are calculated with consideration of the probability of survival based on key parameter such as age, and deaths probabilities for that age. More info about how to calculate the life expectancy can be found #sec-tools of this book.</p>
 </section></section><section id="how-to-build-the-metrics" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="how-to-build-the-metrics">
 <span class="header-section-number">3.2</span> How to build the metrics</h2>

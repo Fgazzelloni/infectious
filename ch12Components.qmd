@@ -7,6 +7,24 @@ This section is dedicated to a closer look at what are the components of the hea
 
 ## Components
 
+The calculation of YLL (Years of Life Lost) is based on several factors that contribute to premature death. The components are as follows:
+
+**Age at death**: The age at which a person dies due to a disease or injury is a crucial component of YLL. The earlier the age at death, the more significant the impact on potential years of life lost.
+
+**Life expectancy**: YLL is determined by the expected age at death in a population without disease or injury. This value is used to compare the actual age at death with the expected age at death and determine the number of years of life lost.
+
+**Standard life expectancy**: To make comparisons across populations and over time, YLL is often expressed relative to a standard life expectancy, typically set at an age of 70 years.
+
+**Population size**: The size of the population affected by a disease or injury is another critical component of YLL. A larger population will have a greater impact on overall YLL, regardless of age at death.
+
+**Cause of death**: The cause of death is also considered when calculating YLL, as different causes may have different impacts on potential years of life lost.
+
+By taking these factors into account, YLL provides a measure of the potential years of life lost due to premature death caused by a disease or injury. It is a crucial component of the DALY, which provides a comprehensive view of the overall burden of disease on a population.
+
+\
+
+### Life tables and Life expectancy
+
 Two fundamental components are used for calculating the metrics:
 
 -   life tables
@@ -14,7 +32,7 @@ Two fundamental components are used for calculating the metrics:
 
 Both of these elements are key for achieving the highest value of prediction of the state of health of a population.
 
-### Life tables
+#### Life tables
 
 The life tables are selected among the most frequently used, more information about how to build a like table can be found in the @sec-appendixA of this book.
 
@@ -37,7 +55,7 @@ Glifetables %>%
   theme_bw()
 ```
 
-### Life expectancy
+#### Life expectancy
 
 The life expectancy rates are calculated with consideration of the probability of survival based on key parameter such as age, and deaths probabilities for that age. More info about how to calculate the life expectancy can be found #sec-tools of this book.
 
