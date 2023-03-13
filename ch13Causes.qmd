@@ -44,6 +44,6 @@ total_dalys <- sum(df$dalys)
 
 ```
 
-In this example, we first create a data frame with the number of cases of the disease and the average years of life lost for each case. Then, we use the mutate() function from the dplyr library to calculate the number of DALYs lost for each case. Finally, we use the sum() function to find the total number of DALYs lost for the entire population.
+In this example, the number of cases of the disease and the average years of life lost for each case are used to calculate the number of DALYs lost for each case. Finally, the total number of DALYs lost for the entire population.
 
 This information can be used to inform public health interventions to prevent the spread of this disease and reduce the number of DALYs lost. For example, the information could be used to prioritize resources for disease control and prevention activities, such as health education campaigns, vaccination programs, and screening and treatment programs.

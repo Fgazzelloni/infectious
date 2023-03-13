@@ -67,7 +67,6 @@ data.frame(
 ) %>% head
 ```
 
-
 ```{r}
 infectious::Glifetables %>%
   distinct() %>%
