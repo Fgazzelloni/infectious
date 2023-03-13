@@ -6,23 +6,25 @@
 
 Conditions and injuries that are associated with the burden of disease and injury vary according to their specific causes and risks. However, some common causes and risk factors include:
 
-1.  Lifestyle choices: Poor diet, physical inactivity, tobacco use, and excessive alcohol consumption are major risk factors for many chronic diseases and injuries, including heart disease, stroke, cancer, and liver disease.
+-   **Lifestyle choices**: Poor diet, physical inactivity, tobacco use, and excessive alcohol consumption are major risk factors for many chronic diseases and injuries, including heart disease, stroke, cancer, and liver disease.
 
-2.  Environmental factors: Exposure to pollutants, such as air pollution and toxic chemicals, can increase the risk of certain diseases and injuries.
+-   **Environmental factors**: Exposure to pollutants, such as air pollution and toxic chemicals, can increase the risk of certain diseases and injuries.
 
-3.  Infections: Many diseases, such as tuberculosis, HIV/AIDS, and malaria, are caused by infectious agents.
+-   **Infections**: Many diseases, such as tuberculosis, HIV/AIDS, and malaria, are caused by infectious agents.
 
-4.  Poverty: People living in poverty are often more susceptible to health problems due to limited access to healthcare, healthy food, and safe living conditions.
+-   **Poverty**: People living in poverty are often more susceptible to health problems due to limited access to healthcare, healthy food, and safe living conditions.
 
-5.  Aging: As people get older, they are at an increased risk of many health problems, including chronic diseases and disabilities.
+-   **Aging**: As people get older, they are at an increased risk of many health problems, including chronic diseases and disabilities.
 
-6.  Genetics: Some diseases and injuries are caused by genetic factors, such as a genetic predisposition to certain cancers.
+-   **Genetics**: Some diseases and injuries are caused by genetic factors, such as a genetic predisposition to certain cancers.
 
-7.  Injuries: Injuries, such as falls, road traffic accidents, and violence, can also contribute to the burden of diseases and injuries.
+-   **Injuries**: Injuries, such as falls, road traffic accidents, and violence, can also contribute to the burden of diseases and injuries.
+
+\
 
 A particular health condition can have multiple causes and risk factors. For example, poverty and lack of access to healthcare can increase the risk of infectious diseases, while poor diet and physical inactivity can increase the risk of chronic diseases. Addressing the underlying causes and risk factors for diseases and injuries is a key component of public health interventions and can help reduce the overall burden of disease.
 
-Here is an example of how the DALY metric can be used for prevention in R:
+As an example here is shown how the DALY metric can be used for prevention:
 
 Suppose we have data on the number of cases of a particular disease, as well as the average number of years of life lost due to this disease. We can use this information to calculate the total number of DALYs lost due to this disease.
 
