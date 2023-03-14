@@ -317,17 +317,16 @@ div.csl-indent {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#ylls" id="toc-ylls" class="nav-link active" data-scroll-target="#ylls"><span class="toc-section-number">3.0.1</span>  YLLs</a></li>
-  <li><a href="#ylds" id="toc-ylds" class="nav-link" data-scroll-target="#ylds"><span class="toc-section-number">3.0.2</span>  YLDs</a></li>
-  <li><a href="#dalys" id="toc-dalys" class="nav-link" data-scroll-target="#dalys"><span class="toc-section-number">3.0.3</span>  DALYs</a></li>
-  <li><a href="#how-to-use-the-metrics" id="toc-how-to-use-the-metrics" class="nav-link" data-scroll-target="#how-to-use-the-metrics"><span class="toc-section-number">3.1</span>  How to use the metrics</a></li>
+<li><a href="#ylls-components" id="toc-ylls-components" class="nav-link active" data-scroll-target="#ylls-components"><span class="toc-section-number">3.0.1</span>  YLLs components</a></li>
+  <li><a href="#ylds-components" id="toc-ylds-components" class="nav-link" data-scroll-target="#ylds-components"><span class="toc-section-number">3.0.2</span>  YLDs components</a></li>
+  <li><a href="#dalys-components" id="toc-dalys-components" class="nav-link" data-scroll-target="#dalys-components"><span class="toc-section-number">3.0.3</span>  DALYs components</a></li>
   <li>
-<a href="#components" id="toc-components" class="nav-link" data-scroll-target="#components"><span class="toc-section-number">3.2</span>  Components</a>
+<a href="#build-the-metrics" id="toc-build-the-metrics" class="nav-link" data-scroll-target="#build-the-metrics"><span class="toc-section-number">3.1</span>  Build the metrics</a>
   <ul class="collapse">
-<li><a href="#life-tables-and-life-expectancy" id="toc-life-tables-and-life-expectancy" class="nav-link" data-scroll-target="#life-tables-and-life-expectancy"><span class="toc-section-number">3.2.1</span>  Life tables and Life expectancy</a></li>
+<li><a href="#life-tables-and-life-expectancy" id="toc-life-tables-and-life-expectancy" class="nav-link" data-scroll-target="#life-tables-and-life-expectancy"><span class="toc-section-number">3.1.1</span>  Life tables and Life expectancy</a></li>
   </ul>
 </li>
-  <li><a href="#how-to-build-the-metrics" id="toc-how-to-build-the-metrics" class="nav-link" data-scroll-target="#how-to-build-the-metrics"><span class="toc-section-number">3.3</span>  How to build the metrics</a></li>
+  <li><a href="#how-to-build-the-ylls-a-practical-example" id="toc-how-to-build-the-ylls-a-practical-example" class="nav-link" data-scroll-target="#how-to-build-the-ylls-a-practical-example"><span class="toc-section-number">3.2</span>  How to build the YLLs: a practical example</a></li>
   </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fgazzelloni/infectious/edit/main/ch12Components.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/fgazzelloni/infectious/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
@@ -350,8 +349,8 @@ div.csl-indent {
 <li>How to use them and where to find them</li>
 </ul>
 <p>This section is dedicated to a closer look at what are the components of the health metrics, how to build them and finally how to use them for making countries comparison. YLLs, YLDs and DALYs can be used for different cause of deaths and disabilities, at different age levels.</p>
-<section id="ylls" class="level3" data-number="3.0.1"><h3 data-number="3.0.1" class="anchored" data-anchor-id="ylls">
-<span class="header-section-number">3.0.1</span> YLLs</h3>
+<section id="ylls-components" class="level3" data-number="3.0.1"><h3 data-number="3.0.1" class="anchored" data-anchor-id="ylls-components">
+<span class="header-section-number">3.0.1</span> YLLs components</h3>
 <p>The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death <span class="citation" data-cites="reiner2022">(see <a href="#ref-reiner2022" role="doc-biblioref">Reiner and Hay 2022</a>)</span></p>
 <p>The components of YLL (Years of Life Lost) include several factors that contribute to the calculation of premature death due to a disease or injury. These components are:</p>
 <p><strong>Age at death</strong>: The age at which a person died due to a disease or injury is a crucial component of YLL. The earlier the age at death, the greater the impact on potential years of life lost.</p>
@@ -360,8 +359,8 @@ div.csl-indent {
 <p><strong>Population size</strong>: The size of the population affected by a disease or injury is another important component of YLL. A larger population will have a greater impact on overall YLL, regardless of the age at death.</p>
 <p><strong>Cause of death</strong>: The cause of death is also considered when calculating YLL, as different causes may have different impacts on potential years of life lost.</p>
 <p>By taking these factors into account, YLL provides a measure of the potential years of life lost due to premature death caused by a disease or injury. It is an important component of the DALY, which provides a comprehensive view of the overall burden of disease on a population.</p>
-</section><section id="ylds" class="level3" data-number="3.0.2"><h3 data-number="3.0.2" class="anchored" data-anchor-id="ylds">
-<span class="header-section-number">3.0.2</span> YLDs</h3>
+</section><section id="ylds-components" class="level3" data-number="3.0.2"><h3 data-number="3.0.2" class="anchored" data-anchor-id="ylds-components">
+<span class="header-section-number">3.0.2</span> YLDs components</h3>
 <p>The components of YLD (Years Lived with Disability) include several factors that contribute to the calculation of the number of years lived with a disability due to a disease or injury. These components are:</p>
 <p><strong>Prevalence</strong>: The prevalence of a condition is the number of cases of a particular disease or injury present in a population at a given time. This is an important component of YLD as it determines the number of people who are affected by a disease or injury and the overall impact on the population.</p>
 <p><strong>Disability weight</strong>: The disability weight reflects the severity of the disability caused by a disease or injury. It is used to quantify the impact of a condition on quality of life, with higher weights assigned to more severe conditions.</p>
@@ -369,67 +368,168 @@ div.csl-indent {
 <p><strong>Population size</strong>: The size of the population affected by a disease or injury is another important component of YLD. A larger population will have a greater impact on overall YLD, regardless of the age of the affected individuals.</p>
 <p><strong>Duration of disability</strong>: The duration of disability is also considered when calculating YLD. Conditions that last for a longer period of time will have a greater impact on the number of years lived with disability.</p>
 <p>By taking these factors into account, YLD provides a measure of the number of years lived with a disability due to a disease or injury. It is an important component of the DALY, which provides a comprehensive view of the overall burden of disease on a population.</p>
-</section><section id="dalys" class="level3" data-number="3.0.3"><h3 data-number="3.0.3" class="anchored" data-anchor-id="dalys">
-<span class="header-section-number">3.0.3</span> DALYs</h3>
+</section><section id="dalys-components" class="level3" data-number="3.0.3"><h3 data-number="3.0.3" class="anchored" data-anchor-id="dalys-components">
+<span class="header-section-number">3.0.3</span> DALYs components</h3>
 <p>Both YLL and YLD are components of the DALY and are used to provide a comprehensive assessment of the impact of disease and injury on a population. By combining YLL and YLD, the DALY takes into account both premature death and the impact of disease or injury on quality of life, providing a more comprehensive view of the overall burden of disease.</p>
-</section><section id="how-to-use-the-metrics" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="how-to-use-the-metrics">
-<span class="header-section-number">3.1</span> How to use the metrics</h2>
-<p>The health metrics of DALY, YLL, and YLD can be used in several ways to help prioritize public health interventions, evaluate the impact of diseases and injuries, and inform public health decision-making. Some common uses of these metrics include:</p>
-<p><strong>Prioritizing public health interventions</strong>: By calculating the overall burden of disease in a population, public health practitioners can prioritize which diseases and injuries to address first. This helps allocate resources and target interventions to the areas of greatest need.</p>
-<p><strong>Evaluating the impact of diseases and injuries</strong>: These metrics can be used to measure the impact of diseases and injuries on individuals and populations and to track changes over time. This information can help inform public health decision-making and allocate resources more effectively.</p>
-<p><strong>Comparing the burden of disease across populations</strong>: DALY, YLL, and YLD can be used to compare the burden of disease across populations and between different regions. This information can help identify disparities in health outcomes and inform targeted public health interventions.</p>
-<p><strong>Evaluating the effectiveness of public health programs</strong>: These metrics can be used to evaluate the impact of public health programs and to assess the effectiveness of public health interventions. This information can help public health practitioners identify areas for improvement and make necessary changes to ensure that programs are achieving their goals.</p>
-<p><strong>Monitoring global health trends</strong>: DALY, YLL, and YLD can also be used to monitor global health trends and track changes in the burden of disease over time. This information can be used to inform global health policies and allocate resources to address emerging health threats.</p>
-<p>Overall, the health metrics of DALY, YLL, and YLD provide valuable information for public health practitioners, researchers, and policy makers to help prioritize and allocate resources, evaluate the impact of diseases and injuries, and inform public health decision-making.</p>
-</section><section id="components" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="components">
-<span class="header-section-number">3.2</span> Components</h2>
-<section id="life-tables-and-life-expectancy" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="life-tables-and-life-expectancy">
-<span class="header-section-number">3.2.1</span> Life tables and Life expectancy</h3>
-<p>Two fundamental components are used for calculating the metrics:</p>
+</section><section id="build-the-metrics" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="build-the-metrics">
+<span class="header-section-number">3.1</span> Build the metrics</h2>
+<section id="life-tables-and-life-expectancy" class="level3" data-number="3.1.1"><h3 data-number="3.1.1" class="anchored" data-anchor-id="life-tables-and-life-expectancy">
+<span class="header-section-number">3.1.1</span> Life tables and Life expectancy</h3>
+<p>Two fundamental components are used for calculating the YLL are:</p>
 <ul>
 <li>life tables</li>
 <li>life expectancy</li>
 </ul>
 <p>Both of these elements are key for achieving the highest value of prediction of the state of health of a population.</p>
-<section id="life-tables" class="level4" data-number="3.2.1.1"><h4 data-number="3.2.1.1" class="anchored" data-anchor-id="life-tables">
-<span class="header-section-number">3.2.1.1</span> Life tables</h4>
+<section id="life-tables" class="level4" data-number="3.1.1.1"><h4 data-number="3.1.1.1" class="anchored" data-anchor-id="life-tables">
+<span class="header-section-number">3.1.1.1</span> Life tables</h4>
 <p>The life tables are selected among the most frequently used, more information about how to build a like table can be found in the <a href="appendixA.html"><span>Appendix&nbsp;A</span></a> of this book.</p>
 <div class="cell">
 <details><summary>Show the code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/fgazzelloni/infectious">infectious</a></span><span class="op">)</span></span>
-<span><span class="fu">infectious</span><span class="fu">::</span><span class="va">Glifetables</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="va">head</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 5
-  indicator                                           age_g…¹ sex    value year 
-  &lt;chr&gt;                                               &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;
-1 nMx - age-specific death rate between ages x and x… 1 year  both  0.0478 2019 
-2 nMx - age-specific death rate between ages x and x… 1 year  male  0.0513 2019 
-3 nMx - age-specific death rate between ages x and x… 1 year  fema… 0.0441 2019 
-4 nMx - age-specific death rate between ages x and x… 1 year  both  0.0566 2015 
-5 nMx - age-specific death rate between ages x and x… 1 year  male  0.0602 2015 
-6 nMx - age-specific death rate between ages x and x… 1 year  fema… 0.0528 2015 
-# … with abbreviated variable name ¹​age_group</code></pre>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/fgazzelloni/infectious">infectious</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
-</div>
+<p><strong>Glifetables</strong> contains five variables:</p>
+<ul>
+<li>
+<p>indicator:</p>
 <div class="cell">
-<details><summary>Show the code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">Glifetables</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">sex</span><span class="op">==</span><span class="st">"both"</span>,</span>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 1
+  indicator                                           
+  &lt;chr&gt;                                               
+1 Tx - person-years lived above age x                 
+2 ex - expectation of life at age x                   
+3 lx - number of people left alive at age x           
+4 nLx - person-years lived between ages x and x+n     
+5 nMx - age-specific death rate between ages x and x+n
+6 ndx - number of people dying between ages x and x+n 
+7 nqx - probability of dying between ages x and x+n   </code></pre>
+</div>
+</div>
+</li>
+<li><p>age group:</p></li>
+</ul>
+<div class="cell">
+<details><summary>Show the code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span> <span class="co">#| echo: false</span></span>
+<span>    <span class="va">Glifetables</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">age_group</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">age_group</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 19 × 1
+   age_group
+   &lt;chr&gt;    
+ 1 "1"      
+ 2 "1-4"    
+ 3 "10-14"  
+ 4 "15-19 " 
+ 5 "20-24"  
+ 6 "25-29"  
+ 7 "30-34"  
+ 8 "35-39"  
+ 9 "40-44"  
+10 "45-49"  
+11 "5-9"    
+12 "50-54"  
+13 "55-59"  
+14 "60-64"  
+15 "65-69"  
+16 "70-74"  
+17 "75-79"  
+18 "80-84"  
+19 "85+"    </code></pre>
+</div>
+</div>
+<ul>
+<li>sex</li>
+</ul>
+<div class="cell">
+<details><summary>Show the code</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span> <span class="co">#| echo: false</span></span>
+<span>    <span class="va">Glifetables</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">sex</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">sex</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 1
+  sex   
+  &lt;chr&gt; 
+1 both  
+2 female
+3 male  </code></pre>
+</div>
+</div>
+<ul>
+<li>value</li>
+</ul>
+<div class="cell">
+<details><summary>Show the code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span> <span class="co">#| echo: false</span></span>
+<span>    <span class="va">Glifetables</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">life_expectancy</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      0       0    4168  434406  108212 6328709 </code></pre>
+</div>
+</div>
+<ul>
+<li>year</li>
+</ul>
+<div class="cell">
+<details><summary>Show the code</summary><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span> <span class="co">#| echo: false</span></span>
+<span>    <span class="va">Glifetables</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 1
+  year 
+  &lt;chr&gt;
+1 2000 
+2 2005 
+3 2010 
+4 2015 
+5 2019 </code></pre>
+</div>
+</div>
+</section><section id="life-expectancy" class="level4" data-number="3.1.1.2"><h4 data-number="3.1.1.2" class="anchored" data-anchor-id="life-expectancy">
+<span class="header-section-number">3.1.1.2</span> Life expectancy</h4>
+<p>The life expectancy rates are calculated with consideration of the probability of survival based on key parameter such as age, and deaths probabilities for that age. More info about how to calculate the life expectancy can be found in the <a href="appendixA.html"><span>Appendix&nbsp;A</span></a> section of this book.</p>
+<p>This visualization of the <code>ex - expectation of life at age x</code> shows for each age group its changing level across the years.</p>
+<div class="cell">
+<details><summary>Show the code</summary><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">Glifetables</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="co">#sex=="both",</span></span>
 <span>         <span class="va">indicator</span><span class="op">==</span><span class="st">"ex - expectation of life at age x"</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>         <span class="co">#age_group=="1 year")%&gt;%</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">year</span>,<span class="va">value</span>,group<span class="op">=</span><span class="va">indicator</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">year</span>,<span class="va">life_expectancy</span>,group<span class="op">=</span><span class="va">age_group</span>,color<span class="op">=</span><span class="va">age_group</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">age_group</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">sex</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"ex - expectation of life at age x"</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<p><img src="ch12Components_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+<p><img src="ch12Components_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="life-expectancy" class="level4" data-number="3.2.1.2"><h4 data-number="3.2.1.2" class="anchored" data-anchor-id="life-expectancy">
-<span class="header-section-number">3.2.1.2</span> Life expectancy</h4>
-<p>The life expectancy rates are calculated with consideration of the probability of survival based on key parameter such as age, and deaths probabilities for that age. More info about how to calculate the life expectancy can be found #sec-tools of this book.</p>
-</section></section></section><section id="how-to-build-the-metrics" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="how-to-build-the-metrics">
-<span class="header-section-number">3.3</span> How to build the metrics</h2>
+</section></section></section><section id="how-to-build-the-ylls-a-practical-example" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="how-to-build-the-ylls-a-practical-example">
+<span class="header-section-number">3.2</span> How to build the YLLs: a practical example</h2>
 <p>In this section a practical calculation of the health metrics is done for the practitioner to be able to replicate this calculation for further analysis based on these key elements.</p>
+<div class="cell">
+<details><summary>Show the code</summary><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">Germany_lungc</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">Glifetables</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>          <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">2019</span>,</span>
+<span>                 <span class="va">indicator</span><span class="op">==</span><span class="st">"ex - expectation of life at age x"</span><span class="op">)</span>, </span>
+<span>          by<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"age_group"</span>,<span class="st">"sex"</span><span class="op">)</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">upper</span>,<span class="op">-</span><span class="va">lower</span>,<span class="op">-</span><span class="va">year</span>,<span class="op">-</span><span class="va">indicator</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">age_group</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="co"># View() #DataExplorer::profile_missing()</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">age_group</span><span class="op">)</span><span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>YLL<span class="op">=</span><span class="va">val</span><span class="op">*</span><span class="va">life_expectancy</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 60 × 5
+# Groups:   age_group [20]
+   sex    age_group    val life_expectancy   YLL
+   &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;           &lt;dbl&gt; &lt;dbl&gt;
+ 1 both   1         NA                63.2  NA  
+ 2 male   1         NA                63.3  NA  
+ 3 female 1         NA                63.2  NA  
+ 4 both   1-4       NA                65.3  NA  
+ 5 male   1-4       NA                65.6  NA  
+ 6 female 1-4       NA                65.0  NA  
+ 7 male   10-14      0.322            57.7  18.5
+ 8 female 10-14      0.457            57.0  26.1
+ 9 both   10-14      0.779            57.3  44.6
+10 male   15-19      1.27             NA    NA  
+# … with 50 more rows</code></pre>
+</div>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">

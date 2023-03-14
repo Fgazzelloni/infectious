@@ -34,7 +34,9 @@ devtools::document()
 # when filling the data .R script for explaining what's inside the dataset
 # a specific structure needs to be used (see examples)
 
-
+# when new data are added 
+# Build tab and ---> More ---> clean and install
+# to add the new data to NAMESPACE
 
 
 

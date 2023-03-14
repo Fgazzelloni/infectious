@@ -92,7 +92,7 @@ library(infectious)
 
 ```{r}
  #| echo: false
-    Glifetables%>%pull(value)%>%summary()
+    Glifetables%>%pull(life_expectancy)%>%summary()
 ```
 
 -   year
@@ -113,13 +113,25 @@ Glifetables %>%
   filter(#sex=="both",
          indicator=="ex - expectation of life at age x")%>%
          #age_group=="1 year")%>%
-  ggplot(aes(year,value,group=age_group,color=age_group))+
+  ggplot(aes(year,life_expectancy,group=age_group,color=age_group))+
   geom_line()+
   facet_wrap(vars(sex))+
   labs(title="ex - expectation of life at age x")+
   theme_bw()
 ```
 
-## How to build the DALYs: a practical example
+## How to build the YLLs: a practical example
 
 In this section a practical calculation of the health metrics is done for the practitioner to be able to replicate this calculation for further analysis based on these key elements.
+```{r}
+Germany_lungc%>%
+  full_join(Glifetables%>%
+          filter(year==2019,
+                 indicator=="ex - expectation of life at age x"), 
+          by=c("age_group","sex"))%>%
+  select(-upper,-lower,-year,-indicator)%>%
+  arrange(age_group)%>% # View() #DataExplorer::profile_missing()
+  group_by(age_group)%>%
+  mutate(YLL=val*life_expectancy)
+```
+

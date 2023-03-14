@@ -1,4 +1,4 @@
-# Preface {.unnumbered}
+# Preface {#sec-preface .unnumbered}
 
 Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis are the topics of this book.
 
