@@ -60,14 +60,16 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
-    code-link: true
+    #code-link: false
     code-copy: true
-    code-fold: true
-    code-summary: "Show the code"
+    code-fold: show
+    code-summary: "Hide code"
     code-block-border-left: "#ff66c4"
     code-overflow: wrap
     code-block-bg: "gray90"
     linkcolor: "#ff66c4"
+    smooth-scroll: true
+    link-external-newwindow: true
   pdf:
     documentclass: scrreprt
     include-in-header: 
@@ -83,6 +85,8 @@ format:
     callout-appearance: simple   
 
 editor: visual
+editor_options:
+  chunk_output_type: inline
 execute: 
   echo: true
   message: false

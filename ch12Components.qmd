@@ -59,7 +59,7 @@ Both of these elements are key for achieving the highest value of prediction of 
 The life tables are selected among the most frequently used, more information about how to build a like table can be found in the @sec-appendixA of this book.
 
 ```{r}
-#| message: false 
+#| message: false
 #| warning: false
 library(tidyverse)
 library(infectious)
@@ -67,40 +67,32 @@ library(infectious)
 
 **Glifetables** contains five variables:
 
--   indicator:
+1.  **indicator**:
 
-    ```{r}
-    #| echo: false
-    Glifetables%>%count(indicator)%>%select(indicator)
-    ```
+```{r}
+#| echo: false
+Glifetables %>%
+  count(indicator) %>%
+  select(indicator) %>%
+  knitr::kable()
+```
 
--   age group:
+2.  **age group**: from 1 to 85+ in 5-year classes
+
+3.  **sex:** female, male, and both
+
+4.  **value**
 
 ```{r}
  #| echo: false
-    Glifetables%>%count(age_group)%>%select(age_group)
+Glifetables %>%
+  mutate(indicator = sub(" -.*$", "", indicator)) %>%
+  group_by(indicator) %>%
+  summarize(value = round(mean(value), 3))
 ```
 
--   sex
+5.  **year**: from 2000 to 2019
 
-```{r}
- #| echo: false
-    Glifetables%>%count(sex)%>%select(sex)
-```
-
--   value
-
-```{r}
- #| echo: false
-    Glifetables%>%pull(life_expectancy)%>%summary()
-```
-
--   year
-
-```{r}
- #| echo: false
-    Glifetables%>%count(year)%>%select(year)
-```
 
 #### Life expectancy
 
@@ -110,28 +102,30 @@ This visualization of the `ex - expectation of life at age x` shows for each age
 
 ```{r}
 Glifetables %>%
-  filter(#sex=="both",
-         indicator=="ex - expectation of life at age x")%>%
-         #age_group=="1 year")%>%
-  ggplot(aes(year,life_expectancy,group=age_group,color=age_group))+
-  geom_line()+
-  facet_wrap(vars(sex))+
-  labs(title="ex - expectation of life at age x")+
+  filter(indicator == "ex - expectation of life at age x") %>%
+  ggplot(aes(year, value, group = age_group, color = age_group)) +
+  geom_line() +
+  facet_wrap(vars(sex)) +
+  labs(title = "ex - expectation of life at age x") +
   theme_bw()
 ```
 
 ## How to build the YLLs: a practical example
 
 In this section a practical calculation of the health metrics is done for the practitioner to be able to replicate this calculation for further analysis based on these key elements.
-```{r}
-Germany_lungc%>%
-  full_join(Glifetables%>%
-          filter(year==2019,
-                 indicator=="ex - expectation of life at age x"), 
-          by=c("age_group","sex"))%>%
-  select(-upper,-lower,-year,-indicator)%>%
-  arrange(age_group)%>% # View() #DataExplorer::profile_missing()
-  group_by(age_group)%>%
-  mutate(YLL=val*life_expectancy)
-```
 
+```{r}
+Germany_lungc %>%
+  full_join(
+    Glifetables %>%
+      filter(year == 2019,
+             indicator == "ex - expectation of life at age x") %>%
+      rename(life_expectancy = value),
+    by = c("age_group", "sex")
+  ) %>%
+  select(-upper, -lower, -year, -indicator) %>%
+  group_by(age_group) %>%
+  mutate(YLL = val * life_expectancy) %>%
+  filter(!is.na(YLL)) %>%
+  head()
+```
