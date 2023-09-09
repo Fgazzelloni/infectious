@@ -12,14 +12,13 @@ Download and install R: Download and install RStudio IDE:
 
 In this project the book has been made in quarto and version saved on github.
 
-https://quarto.org/docs/publishing/github-pages.html
+[Quarto publishing](https://quarto.org/docs/publishing/github-pages.html)
+
 
 ### GitHub useful commands
 
-In RStudio create a new project on a new directory and in terminal type:
-
-    add git
-    quarto book project
+You can do the same using the command line.
+In RStudio create a new project on a new directory, add git, and select `quarto book project`
 
 The automated process will create a `_quarto.yml` file, the top of the file will look like this one:
 
@@ -30,21 +29,17 @@ On terminal type: `quarto preview`
 
 It creates a folder `_book`
 
+
+
 #### Add Github later:
 
-source: https://happygitwithr.com/existing-github-last.html
-
-connect with github
-
-create a github repo with the same name from github website
-
-then type
+[existing-github-last](https://happygitwithr.com/existing-github-last.html) to connect with github create a github repo with the same name of your project then type
 
     usethis::use_git()
+    
+It asks you to commit all files in the RStudio project. This pushes all files in R to a remote folder designed to head to the github repo.
 
-this pushes all files in R to a remote folder designed to github repo
-
-in terminal connect with the github repo
+In terminal connect with the github repo:
 
     git init 
     git remote add origin
@@ -73,3 +68,67 @@ then type
 some issues might arise if more than one calculation is made inside a single chunks split the chunks!
 
 quarto render creates a folder `docs`
+
+---
+
+
+## Add a package
+
+    devtools::create("yourpkg")
+
+Now that you have your book done, you might need to add some customized data to use within your analysis.
+
+In order to do that, you'll need to just add data in the way that is usually done when inside a package.
+
+
+### Building blocks of the package inside the quarto book
+
+#### ADD DATA TO PACKAGE
+
+set the data from the original source and tidy appropriately
+
+    usethis::use_data_raw()
+
+it creates a .R script where to put the steps for get the data ready
+
+once data are ready
+
+    usethis::use_data(yourdata)
+
+It creates the R folder where the .R scripts of data documentation is located
+
+    usethis::use_r("yourdataset")
+
+read how to document your work
+
+    vignette("rd-other") # for datasets
+    vignette("rd")
+
+    devtools::document()
+    devtools::load_all(".")
+
+
+#### ADD PACKAGE INFO 
+
+so the ? (NAMESPACE) works
+
+    usethis::use_package_doc()
+    devtools::document()
+
+
+#### ADD DATA PACKAGE INFO 
+
+    usethis::use_r("yourdataset")
+    devtools::document()
+
+
+when filling the data .R script for explaining what's inside the dataset
+a specific structure needs to be used (see examples)
+
+when new data are added 
+
+Build tab and ---> More ---> clean and install (this is not there anymore whae you start with `devtools::create("yourpkg")`)
+to add the new data to NAMESPACE
+
+
+

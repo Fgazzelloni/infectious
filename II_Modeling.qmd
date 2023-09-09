@@ -1,4 +1,4 @@
-# Modeling {#sec-ch20Modeling}
+# Modeling {#sec-II_Modeling}
 
 -   Feature engineering
 
@@ -10,7 +10,7 @@
 
 ## Model description
 
-This book aims at providing a simple explanation at how to model a fast growing phenomenon such as in the case of the spread of infectious diseases. In addition, a further look will be provided at the evolution of the infection in some specific countries.
+This book aims at providing a simple explanation at how to model a fast growing phenomenon such as in the case of the spread of infectious diseases, or the performance of health metrics for some countries. In addition, a further look will be provided at the evolution of the infection in some specific countries, and how this influences the level of health metrics.
 
 A **stochastic process**, or random process [see @dobrow2016] is the type of model which attempt to replicate uncertain outcomes. At opposite, in a **deterministic system** the outcome is obtained from a given input, and for this reason it is reproducible.
 

@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Federica Gazzelloni">
-<meta name="dcterms.date" content="2022-12-16">
 
-<title>Health metrics and the spread of infectious diseases</title>
+<title>Health metrics and the spread of infectious diseases - Modeling</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +20,88 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -32,7 +112,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./05-Techniques.html" rel="next">
+<link href="./04-Metrics2.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -74,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Health metrics and the spread of infectious diseases</h1>
+      <h1 class="quarto-secondary-nav-title">Modeling</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -102,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -142,7 +223,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./II_Modeling.html" class="sidebar-item-text sidebar-link">Modeling</a>
+            <a href="./II_Modeling.html" class="sidebar-item-text sidebar-link active">Modeling</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -254,36 +335,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-preface" id="toc-sec-preface" class="nav-link active" data-scroll-target="#sec-preface">Preface</a></li>
+  <li><a href="#model-description" id="toc-model-description" class="nav-link active" data-scroll-target="#model-description">Model description</a>
+  <ul class="collapse">
+  <li><a href="#the-spread-of-covid-19" id="toc-the-spread-of-covid-19" class="nav-link" data-scroll-target="#the-spread-of-covid-19">The spread of COVID-19</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fgazzelloni/infectious/edit/main/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/fgazzelloni/infectious/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fgazzelloni/infectious/edit/main/II_Modeling.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/fgazzelloni/infectious/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Health metrics and the spread of infectious diseases</h1>
-<p class="subtitle lead">with machine learning applications and spatial model analysis</p>
+<h1 class="title"><span id="sec-ch20Modeling" class="quarto-section-identifier d-none d-lg-block">Modeling</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Federica Gazzelloni </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 16, 2022</p>
-    </div>
-  </div>
   
     
   </div>
@@ -291,15 +362,81 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<ul>
+<li><p>Feature engineering</p></li>
+<li><p>Model selection</p></li>
+<li><p>Packages and functions to use for the analysis</p></li>
+<li><p>Attempt at predicting the future</p></li>
+</ul>
+<section id="model-description" class="level2">
+<h2 class="anchored" data-anchor-id="model-description">Model description</h2>
+<p>This book aims at providing a simple explanation at how to model a fast growing phenomenon such as in the case of the spread of infectious diseases. In addition, a further look will be provided at the evolution of the infection in some specific countries.</p>
+<p>A <strong>stochastic process</strong>, or random process <span class="citation" data-cites="dobrow2016">(see <a href="#ref-dobrow2016" role="doc-biblioref">Dobrow 2016</a>)</span> is the type of model which attempt to replicate uncertain outcomes. At opposite, in a <strong>deterministic system</strong> the outcome is obtained from a given input, and for this reason it is reproducible.</p>
+<p>The spread of a virus can be seen as a random process, since the number of individuals who are infected at any given time can change randomly. The exact number of individuals who will be infected in the future cannot be determined with certainty, since it depends on various factors such as the contagiousness of the virus, the behavior of individuals, and the efficacy of mitigation measures.</p>
+<p>A deterministic model, on the other hand, could be used to model the spread of a virus under certain conditions, such as a fixed number of individuals, constant contagiousness, and no mitigation measures. This type of model can be used to make predictions about the spread of a virus under certain assumptions, but it will not account for the randomness and uncertainty associated with real-world scenarios.</p>
+<p>Most models used to study the spread of a virus are a <strong>combination of both deterministic and stochastic models</strong>. For example, the SIR (Susceptible-Infected-Recovered) model is a deterministic model that describes the dynamics of the spread of a virus, but it also includes stochastic elements such as random interactions between individuals.</p>
+<section id="the-spread-of-covid-19" class="level3">
+<h3 class="anchored" data-anchor-id="the-spread-of-covid-19">The spread of COVID-19</h3>
+<p>Here is a model example of the spread of COVID-19 using a stochastic process. In this example, we’ll use a simple SEIR (Susceptible-Exposed-Infected-Recovered) model to simulate the spread of the virus in a population. The SEIR model divides a population into four compartments based on their status with respect to the virus: susceptible, exposed, infected, and recovered.</p>
+<p>First, we’ll load the necessary packages and define some parameters for our model:</p>
+<div class="cell">
+<details open="">
+<summary>Hide code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(deSolve)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define parameters</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="fl">1e6</span>  <span class="co"># Total population</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>beta <span class="ot">&lt;-</span> <span class="fl">0.5</span>  <span class="co"># Transmission rate</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>gamma <span class="ot">&lt;-</span> <span class="fl">0.1</span>  <span class="co"># Recovery rate</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>t_exp <span class="ot">&lt;-</span> <span class="dv">5</span>  <span class="co"># Latent period</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Initial conditions</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>init <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">S =</span> N <span class="sc">-</span> <span class="dv">1</span>, <span class="at">E =</span> <span class="dv">1</span>, <span class="at">I =</span> <span class="dv">0</span>, <span class="at">R =</span> <span class="dv">0</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the SEIR model</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>seir_model <span class="ot">&lt;-</span> <span class="cf">function</span>(t, y, parameters) {</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">with</span>(<span class="fu">as.list</span>(y), {</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    dS <span class="ot">&lt;-</span> <span class="sc">-</span>beta <span class="sc">*</span> S <span class="sc">*</span> I <span class="sc">/</span> N</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    dE <span class="ot">&lt;-</span> beta <span class="sc">*</span> S <span class="sc">*</span> I <span class="sc">/</span> N <span class="sc">-</span> (<span class="dv">1</span> <span class="sc">/</span> t_exp) <span class="sc">*</span> E</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    dI <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">/</span> t_exp) <span class="sc">*</span> E <span class="sc">-</span> gamma <span class="sc">*</span> I</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    dR <span class="ot">&lt;-</span> gamma <span class="sc">*</span> I</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="fu">c</span>(dS, dE, dI, dR)))</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Next, we’ll use the ode function from the deSolve package to solve the ODEs and simulate the spread of the virus over a period of 365 days:</p>
+<div class="cell">
+<details open="">
+<summary>Hide code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Solve the ODEs</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>times <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">365</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">ode</span>(<span class="at">y =</span> init, <span class="at">times =</span> times, <span class="at">func =</span> seir_model)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the results</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">as.data.frame</span>(result), <span class="fu">aes</span>(time, I, <span class="at">color =</span> <span class="st">"Infected"</span>)) <span class="sc">+</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(time, R, <span class="at">color =</span> <span class="st">"Recovered"</span>)) <span class="sc">+</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(time, S, <span class="at">color =</span> <span class="st">"Susceptible"</span>)) <span class="sc">+</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(time, E, <span class="at">color =</span> <span class="st">"Exposed"</span>)) <span class="sc">+</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="at">name =</span> <span class="st">"Compartment"</span>) <span class="sc">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Time (days)"</span>, <span class="at">y =</span> <span class="st">"Number of individuals"</span>) <span class="sc">+</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="II_Modeling_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>In this example, many factors are not taken into account. In reality, the spread of a virus is much more complex and influenced by many factors such as human behavior, government policies, and healthcare systems.</p>
 
-<section id="sec-preface" class="level1 unnumbered">
-<p><img src="images/cover.png" title="Health metrics and the spread of infectious diseases" class="quarto-cover-image img-fluid"></p><h1 class="unnumbered">Preface</h1>
-<p>Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis are the topics of this book.</p>
-<p>Here you will find everything you need to analyze the state of health of a country and compare it with that of other countries. You will also be able to evaluate the best model for predicting future trends.</p>
-<p>The author of this book is <strong>Federica Gazzelloni</strong> actuary and a statistician by education and by training. She is also a collaborator of the <strong>Institute for Health Metrics and Evaluation (IHME)</strong> , which inspired this work to serve as a guideline for making health metrics and spatial model analysis for evaluating the state of health of a population and spread of infectious diseases.</p>
-<p>All data used in this book are from the <strong>Institute for Health Metrics and Evaluation (IHME)</strong>. <strong>GBD Results</strong>. Seattle, WA: IHME, University of Washington, 2020. Available from <a href="https://urldefense.com/v3/__https:/vizhub.healthdata.org/gbd-results/__;!!K-Hz7m0Vt54!l72IcmA_WDWDWqHLaUzVrt8XbheUn0_vWggtGDbhl4vxiT64nLrmzX32rCVfXnXUO6SO89nOjSnj5g$">https://vizhub.healthdata.org/gbd-results/</a>. (Accessed [January 2023]) and the <strong>World Health Organization (WHO)</strong>. <strong>Global Health Observatory data repository</strong>. Available from <a href="https://apps.who.int/gho/data/node.main.LIFECOUNTRY?lang=en">https://apps.who.int/gho/data/</a>.</p>
 
-
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-dobrow2016" class="csl-entry" role="doc-biblioentry">
+Dobrow, Robert P. 2016. <em>Introduction to Stochastic Processes with R</em>. John Wiley &amp; Sons.
+</div>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -452,10 +589,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./04-Metrics2.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Healthy life expectancy (HALE)</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./05-Techniques.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Techniques</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

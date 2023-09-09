@@ -1,4 +1,4 @@
-# Metrics components {#sec-ch12Components}
+# Metrics components {#sec-02-Components}
 
 -   Life tables and Life expectancy used in the book
 -   How to use them and where to find them
@@ -92,7 +92,6 @@ Glifetables %>%
 ```
 
 5.  **year**: from 2000 to 2019
-
 
 #### Life expectancy
 

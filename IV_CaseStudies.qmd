@@ -1,0 +1,15 @@
+# Case Studies {#sec-ch40CaseStudies}
+
+In this section we will be looking at two case studies:
+
+-   Covid19 spread of infection as a cause for increased DALY for selected countries.
+
+-   The state of health of selected countries.
+
+A systematic review study namely summarized the results of all studies containing DALYs, YLLs and YLDs metrics for the European countries from 2010 to 2019. The result of the review shown a steady improvement of the DALY metrics in almost all countries of Europe. Cardiovascular and neoplasms account for most of deaths and increase in numbers of years lost in EU 2019. Important improvements in some areas (e.g. transport injuries) are opposite ar the increasing level of diabetes spread in the population.
+
+<center>
+
+![](images/bubble_GBD_2019.png)
+
+<center>

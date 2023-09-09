@@ -1,4 +1,4 @@
-# Introduction {#sec-introduction}
+# Introduction {#sec-introduction .unnumbered}
 
 Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis, is a manual and a textbook for an introductory health data analysis course. It can also turn out to be a useful source code for both practitioners and data scientists.
 

@@ -60,6 +60,7 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
@@ -257,6 +258,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#github-useful-commands" id="toc-github-useful-commands" class="nav-link" data-scroll-target="#github-useful-commands"><span class="toc-section-number">B.2.1</span>  GitHub useful commands</a></li>
   <li><a href="#publish-your-book-on-github-pages" id="toc-publish-your-book-on-github-pages" class="nav-link" data-scroll-target="#publish-your-book-on-github-pages"><span class="toc-section-number">B.2.2</span>  Publish your book on github pages</a></li>
   </ul></li>
+  <li><a href="#add-a-package" id="toc-add-a-package" class="nav-link" data-scroll-target="#add-a-package"><span class="toc-section-number">B.3</span>  Add a package</a>
+  <ul class="collapse">
+  <li><a href="#building-blocks-of-the-package-inside-the-quarto-book" id="toc-building-blocks-of-the-package-inside-the-quarto-book" class="nav-link" data-scroll-target="#building-blocks-of-the-package-inside-the-quarto-book"><span class="toc-section-number">B.3.1</span>  Building blocks of the package inside the quarto book</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fgazzelloni/infectious/edit/main/appendixB.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/fgazzelloni/infectious/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -289,12 +294,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="B.2" class="anchored" data-anchor-id="info-on-how-to-setup-this-project-in-quarto"><span class="header-section-number">B.2</span> Info on how to setup this project in quarto</h2>
 <p><a href="https://quarto.org/">quarto</a> is the new version of <strong>Rmarkdown</strong>, it can be used for making notes, presentations, websites, books and more.</p>
 <p>In this project the book has been made in quarto and version saved on github.</p>
-<p>https://quarto.org/docs/publishing/github-pages.html</p>
+<p><a href="https://quarto.org/docs/publishing/github-pages.html">Quarto publishing</a></p>
 <section id="github-useful-commands" class="level3" data-number="B.2.1">
 <h3 data-number="B.2.1" class="anchored" data-anchor-id="github-useful-commands"><span class="header-section-number">B.2.1</span> GitHub useful commands</h3>
-<p>In RStudio create a new project on a new directory and in terminal type:</p>
-<pre><code>add git
-quarto book project</code></pre>
+<p>You can do the same using the command line. In RStudio create a new project on a new directory, add git, and select <code>quarto book project</code></p>
 <p>The automated process will create a <code>_quarto.yml</code> file, the top of the file will look like this one:</p>
 <pre><code>project:
   type: book</code></pre>
@@ -302,13 +305,10 @@ quarto book project</code></pre>
 <p>It creates a folder <code>_book</code></p>
 <section id="add-github-later" class="level4" data-number="B.2.1.1">
 <h4 data-number="B.2.1.1" class="anchored" data-anchor-id="add-github-later"><span class="header-section-number">B.2.1.1</span> Add Github later:</h4>
-<p>source: https://happygitwithr.com/existing-github-last.html</p>
-<p>connect with github</p>
-<p>create a github repo with the same name from github website</p>
-<p>then type</p>
+<p><a href="https://happygitwithr.com/existing-github-last.html">existing-github-last</a> to connect with github create a github repo with the same name of your project then type</p>
 <pre><code>usethis::use_git()</code></pre>
-<p>this pushes all files in R to a remote folder designed to github repo</p>
-<p>in terminal connect with the github repo</p>
+<p>It asks you to commit all files in the RStudio project. This pushes all files in R to a remote folder designed to head to the github repo.</p>
+<p>In terminal connect with the github repo:</p>
 <pre><code>git init 
 git remote add origin</code></pre>
 <p>https://github.com/Fgazzelloni/infectious.git</p>
@@ -328,8 +328,48 @@ git push -u origin main </code></pre>
 <pre><code>quarto render </code></pre>
 <p>some issues might arise if more than one calculation is made inside a single chunks split the chunks!</p>
 <p>quarto render creates a folder <code>docs</code></p>
+<hr>
+</section>
+</section>
+<section id="add-a-package" class="level2" data-number="B.3">
+<h2 data-number="B.3" class="anchored" data-anchor-id="add-a-package"><span class="header-section-number">B.3</span> Add a package</h2>
+<pre><code>devtools::create("yourpkg")</code></pre>
+<p>Now that you have your book done, you might need to add some customized data to use within your analysis.</p>
+<p>In order to do that, you’ll need to just add data in the way that is usually done when inside a package.</p>
+<section id="building-blocks-of-the-package-inside-the-quarto-book" class="level3" data-number="B.3.1">
+<h3 data-number="B.3.1" class="anchored" data-anchor-id="building-blocks-of-the-package-inside-the-quarto-book"><span class="header-section-number">B.3.1</span> Building blocks of the package inside the quarto book</h3>
+<section id="add-data-to-package" class="level4" data-number="B.3.1.1">
+<h4 data-number="B.3.1.1" class="anchored" data-anchor-id="add-data-to-package"><span class="header-section-number">B.3.1.1</span> ADD DATA TO PACKAGE</h4>
+<p>set the data from the original source and tidy appropriately</p>
+<pre><code>usethis::use_data_raw()</code></pre>
+<p>it creates a .R script where to put the steps for get the data ready</p>
+<p>once data are ready</p>
+<pre><code>usethis::use_data(yourdata)</code></pre>
+<p>It creates the R folder where the .R scripts of data documentation is located</p>
+<pre><code>usethis::use_r("yourdataset")</code></pre>
+<p>read how to document your work</p>
+<pre><code>vignette("rd-other") # for datasets
+vignette("rd")
+
+devtools::document()
+devtools::load_all(".")</code></pre>
+</section>
+<section id="add-package-info" class="level4" data-number="B.3.1.2">
+<h4 data-number="B.3.1.2" class="anchored" data-anchor-id="add-package-info"><span class="header-section-number">B.3.1.2</span> ADD PACKAGE INFO</h4>
+<p>so the ? (NAMESPACE) works</p>
+<pre><code>usethis::use_package_doc()
+devtools::document()</code></pre>
+</section>
+<section id="add-data-package-info" class="level4" data-number="B.3.1.3">
+<h4 data-number="B.3.1.3" class="anchored" data-anchor-id="add-data-package-info"><span class="header-section-number">B.3.1.3</span> ADD DATA PACKAGE INFO</h4>
+<pre><code>usethis::use_r("yourdataset")
+devtools::document()</code></pre>
+<p>when filling the data .R script for explaining what’s inside the dataset a specific structure needs to be used (see examples)</p>
+<p>when new data are added</p>
+<p>Build tab and —&gt; More —&gt; clean and install (this is not there anymore whae you start with <code>devtools::create("yourpkg")</code>) to add the new data to NAMESPACE</p>
 
 
+</section>
 </section>
 </section>
 
@@ -465,6 +505,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 
@@ -487,4 +541,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

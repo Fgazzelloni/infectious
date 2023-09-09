@@ -19,34 +19,35 @@ book:
   repo-branch: main
   repo-actions: [edit, issue]
   
+   
   chapters:
     - index.qmd
     - intro.qmd
     
-    - part: ch10HealthMetrics.qmd
+    - part: I_HealthMetrics.qmd
       chapters:
-        - ch11Metrics.qmd
-        - ch12Components.qmd
-        - ch13Causes.qmd
-        - ch14Metrics2.qmd
+        - 01-Metrics.qmd
+        - 02-Components.qmd
+        - 03-Causes.qmd
+        - 04-Metrics2.qmd
         
-    - part: ch20Modeling.qmd
+    - part: II_Modeling.qmd
       chapters:
-        - ch21Techniques.qmd
-        - ch22Packages.qmd
-        - ch23Prediction.qmd
+        - 05-Techniques.qmd
+        - 06-Packages.qmd
+        - 07-Prediction.qmd
         
-    - part: ch30DataVisualizations.qmd
+    - part: III_DataVisualizations.qmd
       chapters:
-        - ch31Application.qmd
-        - ch32Spatials.qmd
-        - ch33Examples.qmd 
+        - 08-Application.qmd
+        - 09-Spatials.qmd
+        - 10-Examples.qmd 
         
-    - part: ch40CaseStudies.qmd
+    - part: IV_CaseStudies.qmd
       chapters:
-        - ch41Covid19.qmd
-        - ch42Health.qmd
-        - ch43Summary.qmd  
+        - 11-Covid19.qmd
+        - 12-Health.qmd
+        - 13-Summary.qmd  
         
     - conclusions.qmd
     - references.qmd   

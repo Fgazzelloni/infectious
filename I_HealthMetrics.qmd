@@ -1,4 +1,4 @@
-# Health metrics {#sec-ch10HealthMetrics}
+# Health metrics {#sec-I_HealthMetrics}
 
 Health metrics are key variables to understand more about the state of health of a population. In this book we'll talk about how to calculate the **numbers of years of life lost (YLLs)** and the **numbers of years lived with disabilities (YLDs)**, to finally obtain the key metric of the **DALYs** which identify the numbers of years of life lost due to death or a disability status, namely **disability adjusted life years**.
 

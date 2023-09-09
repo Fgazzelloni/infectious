@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
@@ -275,7 +276,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Covid19 spread of infection as a cause for increased DALY for selected countries.</p></li>
 <li><p>The state of health of selected countries.</p></li>
 </ul>
-<p>A systematic review study namely <strong>The state of health in the European Union in 2019</strong>, <strong>João Vasco Santos et. all</strong> summarized the results of all studies containing DALYs, YLLs and YLDs metrics for the European countries from 2010 to 2019. The result of the review shown a steady improvement of the DALY metrics in almost all countries of Europe. Cardiovascular and neoplasms account for most of deaths and increase in numbers of years lost in EU 2019. Important improvements in some areas (e.g.&nbsp;transport injuries) are opposite ar the increasing level of diabetes spread in the population.</p>
+<p>A systematic review study namely summarized the results of all studies containing DALYs, YLLs and YLDs metrics for the European countries from 2010 to 2019. The result of the review shown a steady improvement of the DALY metrics in almost all countries of Europe. Cardiovascular and neoplasms account for most of deaths and increase in numbers of years lost in EU 2019. Important improvements in some areas (e.g.&nbsp;transport injuries) are opposite ar the increasing level of diabetes spread in the population.</p>
 <center>
 <p><img src="images/bubble_GBD_2019.png" class="img-fluid"></p>
 <center>
@@ -414,6 +415,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 <nav class="page-navigation">
@@ -438,4 +453,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
