@@ -1,4 +1,4 @@
-# infectious
+# infectious - ⚠️ Warning: this content is in development!
 
 <!-- badges: start -->
 
