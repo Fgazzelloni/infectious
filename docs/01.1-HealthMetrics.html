@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Federica Gazzelloni">
-<meta name="dcterms.date" content="2022-12-16">
 
-<title>Health metrics and the spread of infectious diseases</title>
+<title>Health metrics and the spread of infectious diseases - 1&nbsp; Health Metrics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./01.2-Components.html" rel="next">
+<link href="./01-Metrics_and_Evaluation.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Health metrics and the spread of infectious diseases</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Health Metrics</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -148,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01.1-HealthMetrics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Health Metrics</span></a>
+  <a href="./01.1-HealthMetrics.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Health Metrics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -282,36 +282,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#yll-years-of-life-lost" id="toc-yll-years-of-life-lost" class="nav-link active" data-scroll-target="#yll-years-of-life-lost"><span class="toc-section-number">1.1</span>  YLL (Years of Life Lost)</a></li>
+  <li><a href="#yld-years-lived-with-disability" id="toc-yld-years-lived-with-disability" class="nav-link" data-scroll-target="#yld-years-lived-with-disability"><span class="toc-section-number">1.2</span>  YLD (Years Lived with Disability)</a></li>
+  <li><a href="#daly-disability-adjusted-life-year" id="toc-daly-disability-adjusted-life-year" class="nav-link" data-scroll-target="#daly-disability-adjusted-life-year"><span class="toc-section-number">1.3</span>  DALY (Disability-Adjusted Life Year)</a></li>
+  <li><a href="#how-the-metrics-are-used" id="toc-how-the-metrics-are-used" class="nav-link" data-scroll-target="#how-the-metrics-are-used"><span class="toc-section-number">1.4</span>  How the metrics are used</a></li>
+  <li><a href="#hale-healthy-life-expectancy" id="toc-hale-healthy-life-expectancy" class="nav-link" data-scroll-target="#hale-healthy-life-expectancy"><span class="toc-section-number">1.5</span>  HALE (Healthy Life Expectancy)</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Fgazzelloni/infectious/edit/origin/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Fgazzelloni/infectious/edit/origin/01.1-HealthMetrics.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Health metrics and the spread of infectious diseases</h1>
-<p class="subtitle lead">with machine learning applications and spatial model analysis</p>
+<h1 class="title"><span id="sec-01.1HealthMetrics" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Health Metrics</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Federica Gazzelloni <a href="https://orcid.org/0000-0002-4285-611X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 16, 2022</p>
-    </div>
-  </div>
   
     
   </div>
@@ -319,15 +310,54 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<ul>
+<li>A closer look at the metrics, their usage and potentiality for improvements</li>
+</ul>
+<p>In this section are shown the methods used for building three key metrics: YLLs, YLDs and DALYs. These will be used throughout the book for making comparisons among the state of health of different countries.</p>
+<p>The health metrics, and their components are used to measure the burden of disease and quantify the impact of diseases and injuries on individuals and populations. These metrics can help prioritize public health interventions and evaluate the effectiveness of public health programs.</p>
+<section id="yll-years-of-life-lost" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="yll-years-of-life-lost"><span class="header-section-number">1.1</span> YLL (Years of Life Lost)</h2>
+<p>YLL (Years of Life Lost) measures the number of years a person would have lived if they had not died prematurely due to a disease or injury. YLL is calculated by subtracting the age at death from the expected age at death in a population without the disease or injury.</p>
+</section>
+<section id="yld-years-lived-with-disability" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="yld-years-lived-with-disability"><span class="header-section-number">1.2</span> YLD (Years Lived with Disability)</h2>
+<p>YLD (Years Lived with Disability) measures the number of years a person lives with a disability due to a disease or injury. It is calculated by multiplying the prevalence of a condition by the disability weight, which reflects the severity of the disability.</p>
+</section>
+<section id="daly-disability-adjusted-life-year" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="daly-disability-adjusted-life-year"><span class="header-section-number">1.3</span> DALY (Disability-Adjusted Life Year)</h2>
+<p>DALY (Disability-Adjusted Life Year) is a measure of overall disease burden and is calculated as the sum of years of potential life lost due to premature death (YLL) and years lived with disability (YLD). The DALY takes into account both the quantity and quality of life lost due to disease or injury.</p>
+<p>The YLL and YLD are components of the DALY, which are used to assess how diseases and injuries impact populations. As a result, @sec-ch12Components section provides a more comprehensive picture of the overall burden of disease by combining YLLs and YLDs in different life expectancy groups.</p>
+</section>
+<section id="how-the-metrics-are-used" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="how-the-metrics-are-used"><span class="header-section-number">1.4</span> How the metrics are used</h2>
+<p>The health metrics of DALY, YLL, and YLD can be used in several ways to help prioritize public health interventions, evaluate the impact of diseases and injuries, and inform public health decision-making. Some common uses of these metrics include:</p>
+<p><strong>Prioritizing public health interventions</strong>: By calculating the overall burden of disease in a population, public health practitioners can prioritize which diseases and injuries to address first. This helps allocate resources and target interventions to the areas of greatest need.</p>
+<p><strong>Evaluating the impact of diseases and injuries</strong>: These metrics can be used to measure the impact of diseases and injuries on individuals and populations and to track changes over time. This information can help inform public health decision-making and allocate resources more effectively.</p>
+<p><strong>Comparing the burden of disease across populations</strong>: DALY, YLL, and YLD can be used to compare the burden of disease across populations and between different regions. This information can help identify disparities in health outcomes and inform targeted public health interventions.</p>
+<p><strong>Evaluating the effectiveness of public health programs</strong>: These metrics can be used to evaluate the impact of public health programs and to assess the effectiveness of public health interventions. This information can help public health practitioners identify areas for improvement and make necessary changes to ensure that programs are achieving their goals.</p>
+<p><strong>Monitoring global health trends</strong>: DALY, YLL, and YLD can also be used to monitor global health trends and track changes in the burden of disease over time. This information can be used to inform global health policies and allocate resources to address emerging health threats.</p>
+<p>Overall, the health metrics of DALY, YLL, and YLD provide valuable information for public health practitioners, researchers, and policy makers to help prioritize and allocate resources, evaluate the impact of diseases and injuries, and inform public health decision-making.</p>
+</section>
+<section id="hale-healthy-life-expectancy" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="hale-healthy-life-expectancy"><span class="header-section-number">1.5</span> HALE (Healthy Life Expectancy)</h2>
+<ul>
+<li>Description and calculation</li>
+</ul>
+<p>The health metric of HALE (Healthy Life Expectancy) is a measure of overall health and well-being that takes into account both quantity and quality of life. It is a composite measure that combines years of life expectancy with a measure of the prevalence and severity of disability in a population. HALE provides a more comprehensive view of health outcomes than traditional measures of life expectancy, which only consider the quantity of life.</p>
+<p>The calculation of HALE typically involves estimating the number of years that an individual can expect to live in good health, taking into account the impact of diseases and injuries on quality of life. This information is then used to estimate the overall health status of a population.</p>
+<p>HALE is a useful tool for public health practitioners and policy makers, as it provides a more nuanced view of the health outcomes of a population. This information can help inform public health interventions and prioritize resources, as well as help track changes in health outcomes over time. Additionally, HALE can be used to compare the health outcomes of different populations and identify disparities in health outcomes, which can help inform targeted public health interventions.</p>
+<p>Overall, the HALE metric provides a valuable perspective on the overall health and well-being of a population, combining information about both quantity and quality of life to provide a comprehensive view of health outcomes.</p>
+<p>It adjusts overall life expectancy by the amount of time lived in less than perfect health. This is calculated by subtracting from the life expectancy a figure which is the number of years lived with disability multiplied by a weighting to represent the effect of the disability.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>More info <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 
-<section id="preface" class="level1 unnumbered">
-<p><img src="images/cover.png" title="Health metrics and the spread of infectious diseases" class="quarto-cover-image img-fluid"></p><h1 class="unnumbered">Preface</h1>
-<p>Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis are the topics of this book.</p>
-<p>Here you will find everything you need to analyze the state of health of a country and compare it with that of other countries. You will also be able to evaluate the best model for predicting future trends.</p>
-<p>The author of this book is <strong>Federica Gazzelloni</strong> actuary and a statistician by education and by training. She is also a collaborator of the <strong>Institute for Health Metrics and Evaluation (IHME)</strong> , which inspired this work to serve as a guideline for making health metrics and spatial model analysis for evaluating the state of health of a population and spread of infectious diseases.</p>
-<p>All data used in this book are from the <strong>Institute for Health Metrics and Evaluation (IHME)</strong>. <strong>GBD Results</strong>. Seattle, WA: IHME, University of Washington, 2020. Available from <a href="https://urldefense.com/v3/__https:/vizhub.healthdata.org/gbd-results/__;!!K-Hz7m0Vt54!l72IcmA_WDWDWqHLaUzVrt8XbheUn0_vWggtGDbhl4vxiT64nLrmzX32rCVfXnXUO6SO89nOjSnj5g$">https://vizhub.healthdata.org/gbd-results/</a>. (Accessed January 2023) and the <strong>World Health Organization (WHO)</strong>. <strong>Global Health Observatory data repository</strong>. Available from <a href="https://apps.who.int/gho/data/node.main.LIFECOUNTRY?lang=en">https://apps.who.int/gho/data/</a>.</p>
 
-
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p><a href="https://www.healthknowledge.org.uk/e-learning/health-information/population-health-specialists/lifetables-hales-dalys-pylls#:~:text=Health%20Adjusted%20Life%20Expectancy%20(HALE)&amp;text=It%20adjusts%20overall%20life%20expectancy,the%20effect%20of%20the%20disability.">www.healthknowledge.org.uk</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>about the methodology https://www.un.org/esa/sustdev/natlinfo/indicators/methodology_sheets/health/health_life_expectancy.pdf<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -480,10 +510,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./01-Metrics_and_Evaluation.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Health metrics</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./01.2-Components.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Metrics components</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

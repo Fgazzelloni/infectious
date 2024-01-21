@@ -1,4 +1,4 @@
-# Preface {#sec-preface .unnumbered}
+# Preface {.unnumbered}
 
 Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis are the topics of this book.
 
@@ -6,4 +6,4 @@ Here you will find everything you need to analyze the state of health of a count
 
 The author of this book is **Federica Gazzelloni** actuary and a statistician by education and by training. She is also a collaborator of the **Institute for Health Metrics and Evaluation (IHME)** , which inspired this work to serve as a guideline for making health metrics and spatial model analysis for evaluating the state of health of a population and spread of infectious diseases.
 
-All data used in this book are from the **Institute for Health Metrics and Evaluation (IHME)**. **GBD Results**. Seattle, WA: IHME, University of Washington, 2020. Available from [https://vizhub.healthdata.org/gbd-results/](https://urldefense.com/v3/__https:/vizhub.healthdata.org/gbd-results/__;!!K-Hz7m0Vt54!l72IcmA_WDWDWqHLaUzVrt8XbheUn0_vWggtGDbhl4vxiT64nLrmzX32rCVfXnXUO6SO89nOjSnj5g$). (Accessed \[January 2023\]) and the **World Health Organization (WHO)**. **Global Health Observatory data repository**. Available from [https://apps.who.int/gho/data/](https://apps.who.int/gho/data/node.main.LIFECOUNTRY?lang=en).
+All data used in this book are from the **Institute for Health Metrics and Evaluation (IHME)**. **GBD Results**. Seattle, WA: IHME, University of Washington, 2020. Available from [https://vizhub.healthdata.org/gbd-results/](https://urldefense.com/v3/__https:/vizhub.healthdata.org/gbd-results/__;!!K-Hz7m0Vt54!l72IcmA_WDWDWqHLaUzVrt8XbheUn0_vWggtGDbhl4vxiT64nLrmzX32rCVfXnXUO6SO89nOjSnj5g$). (Accessed January 2023) and the **World Health Organization (WHO)**. **Global Health Observatory data repository**. Available from [https://apps.who.int/gho/data/](https://apps.who.int/gho/data/node.main.LIFECOUNTRY?lang=en).

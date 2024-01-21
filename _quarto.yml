@@ -5,7 +5,19 @@ project:
 book:
   title: "Health metrics and the spread of infectious diseases"
   subtitle: "with machine learning applications and spatial model analysis"
-  author: "Federica Gazzelloni"
+  reader-mode: true
+  author: 
+    name: Federica Gazzelloni
+    orcid: 0000-0002-4285-611X
+  site-url: https://fgazzelloni.quarto.pub/hmsid/
+  repo-url: https://github.com/Fgazzelloni/infectious
+  repo-branch: origin
+  sharing: [twitter, facebook, linkedin]
+  publisher: "CRC Press"
+  publisher-place: "Boca Raton, FL."
+  repo-actions: [edit, issue]
+  cover-image: images/cover.png
+  favicon: images/cover.png
   date: "12/16/2022"
   page-navigation: true
   page-footer:
@@ -13,83 +25,102 @@ book:
       Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis was written by <a href="https://federicagazzelloni.netlify.app/">Federica Gazzelloni</a>.
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
-  cover-image: images/cover.png
-  favicon: images/cover.png
-  repo-url: https://github.com/fgazzelloni/infectious/
-  repo-branch: main
-  repo-actions: [edit, issue]
-  
-   
+
   chapters:
     - index.qmd
     - intro.qmd
     
-    - part: I_HealthMetrics.qmd
+    - part: 01-Metrics_and_Evaluation.qmd
       chapters:
-        - 01-Metrics.qmd
-        - 02-Components.qmd
-        - 03-Causes.qmd
-        - 04-Metrics2.qmd
+        - 01.1-HealthMetrics.qmd
+        - 01.2-Components.qmd
+        - 01.3-Causes_and_Risks.qmd
         
-    - part: II_Modeling.qmd
+    - part: 02-Modeling.qmd
       chapters:
-        - 05-Techniques.qmd
-        - 06-Packages.qmd
-        - 07-Prediction.qmd
+        - 02.1-Techniques.qmd
+        - 02.2-Packages.qmd
+        - 02.3-Prediction.qmd
         
-    - part: III_DataVisualizations.qmd
+    - part: 03-DataVisualizations.qmd
       chapters:
-        - 08-Application.qmd
-        - 09-Spatials.qmd
-        - 10-Examples.qmd 
+        - 03.1-Application.qmd
+        - 03.2-Spatials.qmd
+        - 03.3-Examples.qmd 
         
-    - part: IV_CaseStudies.qmd
+    - part: 04-CaseStudies.qmd
       chapters:
-        - 11-Covid19.qmd
-        - 12-Health.qmd
-        - 13-Summary.qmd  
+        - 04.1-Covid19.qmd
+        - 04.2-Health.qmd
+        - 04.3-Summary.qmd  
         
     - conclusions.qmd
     - references.qmd   
     
   appendices:
     - appendixA.qmd
-    - appendixB.qmd  
-
+    - appendixB.qmd 
+    - appendixC.qmd 
+    
+appendix-style: default     
+search: true    
+   
 bibliography: references.bib
+csl: apa-6th-edition.csl
 
 format:
+  pdf:
+    documentclass: scrreport
   html:
-    theme: cosmo
-    #code-link: false
+    theme:
+      - cosmo
+    include-in-header: 
+      text: | 
+        <script defer data-domain="" src=""></script>
+        <link rel = "shortcut icon" href = "favicon.ico" />
+        
+    smooth-scroll: true
+    code-link: true
+    code-overflow: wrap
     code-copy: true
     code-fold: show
     code-summary: "Hide code"
     code-block-border-left: "#ff66c4"
-    code-overflow: wrap
     code-block-bg: "gray90"
+    fig-align: center
+    fig-cap-location: bottom
+    fig-width: 8
+    fig-height: 5
     linkcolor: "#ff66c4"
-    smooth-scroll: true
-    link-external-newwindow: true
-  pdf:
-    documentclass: scrreprt
-    include-in-header: 
-      text: |
-        \usepackage{makeidx}
-        \makeindex
-    include-after-body: 
-      text: |
-        \printindex
-    cite-method: biblatex    
-    
-    author-meta: "Federica Gazzelloni"
+    link-external-newwindow: true    
     callout-appearance: simple   
+    author-meta: "Federica Gazzelloni"
 
 editor: visual
 editor_options:
   chunk_output_type: inline
+  
 execute: 
   echo: true
   message: false
   warning: false
+  
+  
+knitr:
+    opts_chunk:
+        collapse: false
+        message: false
+        warning: false
+        comment: "#>"
+        R.options:
+            knitr.graphics.auto_pdf: true
+              
+
+# bibliography:
+#     - references.bib
+#     - refpackages.bib
+# csl: C:/Users/Slava/Documents/tsar/springerbasicVL.csl
+
+
+
 

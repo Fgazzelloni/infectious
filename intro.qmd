@@ -1,11 +1,47 @@
-# Introduction {#sec-introduction .unnumbered}
+# Introduction {#sec-intro .unnumbered}
 
-Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis, is a manual and a textbook for an introductory health data analysis course. It can also turn out to be a useful source code for both practitioners and data scientists.
+-   What this book is all about
+-   How it can be used
+-   What is the main take away
 
-Public health metrics such as **DALYs**, **YLL**, and **YLD** are expressed in numbers of years of life lost or lived with disabilities whose sum expresses a key value generally used for ranking the health status of a population.
+*Health Metrics and the Spread of Infectious Diseases,* featuring machine learning applications and spatial model analysis, serves as a manual and textbook for introductory health data analysis courses. Additionally, it can be a valuable source code for practitioners and data scientists alike.
 
-A focus on the impact of recent infectious disease outbreaks, such as Covid19, on the state of health of the population, will be provided along with the most affected locations. The book is structured with an alternation of text and chunks of code in the R language to let the reader be a practitioner of real-world case studies on the topic.
+This book provides a set of tools for analyzing data of various types, but it is specifically designed for health data, such as the number of infections in a population or identifying the health status of a country.
 
-To be more specific, the metrics used to summarize the state of health of a population will be compared across other locations and a prediction level tested on a few key models will be provided. The idea is to use {tidymodels}, and {INLA} as modeling tools. Finally, the material contains some interesting spatial visualization, made using {ggplot2}, {leaflet}, {sf}, {rgdal} R packages, plus other main packages for allowing the user for a wider understanding of the potentiality of the R language for both spatial and health metrics.
+There are techniques that will be evaluated as the most appropriate for a certain type of analysis, while others, on the contrary, will be deprecated. It will be interesting to see which one is the most valuable for making predictions, while another should just be used for evaluating data consistency.
 
-The book is foreseen for practitioners at early stages and graduated students in STEM.
+Public health metrics, such as **Years of Life Lost (YLL)** and **Years lived with Disability (YLD)**, are examples of the key metrics discussed and used throughout this book. They are expressed in number of years of life lost or years lived with disabilities, and their sum represents a crucial value named **Disability Adjusted Life Years (DALYs)**. DALYs are generally used for ranking the health status of a population. The book covers the history of the development of health metrics and suggests alternatives, providing insights for health policymakers.
+
+To be more specific, the book compares the metrics used to summarize the health status of a population across different locations. It also tests prediction levels using key models. The initial tools are `{tidymodels}` and `{INLA}` for modeling, but other machine learning packages like `{mlr3}` and `{caret}` are also tested.
+
+In practice, the data will include information about humanity such as age, sex, life expectancy, mortality, and risk levels. The interesting part is related to the identification of the influence of some of the most dangerous infectious disease on the values of health metrics of a population, and this is done to practice the variation to eventually predict through model transfer techniques same pattern procedure on other countries. It's not the only application; more examples of model transfer applications are needed in research. (cit)
+
+A focus on the impact of recent infectious disease outbreaks, such as SARS-Covid19, on the state of health of the population, will be provided along with the most affected locations to compare results of both deterministic and Bayesian models. Risk factor analysis, also cover an important part of this book and aims at identifying the connection that would lead to an increase on the number of DALYs for specific population and look at providing suggestion for public health policy and practice [@GBD2020].
+
+The book is structured with an alternation of text and chunks of code, primarily in the R programming language, with hints for python translations in python found in appendix C, this is done to let the reader be a practitioner of real-world case studies on the topic.
+
+The material supports full exploratory data analysis and model data visualization, it contains the code for making some interesting spatial visualization, made using `{ggplot2}`, `{leaflet}`, `{sf}`, `{rgdal}` R packages, plus other main packages for theme user customization. The main reason is to unlock the potentiality of the R language for a wider understanding of both spatial and health metrics.
+
+The book is foreseen for practitioners at early stages and graduated students in STEM, but it will be useful for experts in the field who would love to have all the tools in one place to scan through as needed.
+
+The purpose of this book is to contribute to the scientific development of the field of metrics and evaluation [@murray2008]. It is divided in four main sections, each containing three chapters. The first section **Metrics and Evaluation** is introductory explaining the health metrics definition at first level, the second section **Modeling** goes a bit more inside the topic looking at the tools available, the third section **Data Visualization** allows the user to be able to visualize the results of the analysis, and finally the fourth section makes the things into practice providing **Case Studies**.
+
+In particular, in the `first section`, the first chapter **Health Metrics** dives into the different type of metrics, YLLs, YLDs, and DALYs, along with their history of development, provides a definition of the metrics and their usage. In this section there is also a mention of a fourth metric, the **HALY** or the **Health Adjusted Life Years**, this is a further improvement made in the development of the metrics and evaluation sector. 
+
+The second chapter **Metrics Components** looks at the key building blocks of the health metrics as important set of components for assuring consistency and to make sure that the values released are able to picture the real health status of a population. The key components are the *life expectancy*, the *mortality rate*, and the *weights of disabilities*. This chapter is supported by the appendix A where the beyond of the calculations are further explained.
+
+The third chapter evaluates the **Causes and Risks** that are involved with the possibility of the metrics increase in values, even in terms of identifying the most dangerous enemies acting in favour of it. Risks are also considered in order to stimulate alternative solutions for prevention and health policy development.
+
+The `second section` of the book is the the second level dive into the metrics evaluation, it is **Modeling**. A set of tools available for analysing trends, or phenomenon to catch missing values and attempt filling the missing data to provide an overall picture of the general trend. In the first chapter **Techniques** there is an overview of the different types of models that would be suitable to use, the second chapter **Packages** selects some of the R-packages to use for modeling, a hint for a python translation is in appandix C. Then chapter three shows how to make prediction.
+
+The third section of the book is all focused on **Data Visualization**, the first chapter shows the **Application**, the second chapter applies **Spatial Visualization** into modeling results. Then, the third chapter further allows the reader to be able to improve the knowledge acquired with some tailored examples.
+
+The `fourth section` of the book, **Case Studies** presents two main case studies, one is *Covid19* and the other one is the case of *Malaria*. To eventually summarize the variation of the health metrics when these two infectious diseases affect the population. 
+
+In **Conclusion**, the technique of modeling transfer learning shows as the foundation of model application to make prediction and to improve public policies.
+
+
+
+
+
+
