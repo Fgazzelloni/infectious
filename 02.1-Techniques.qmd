@@ -1,8 +1,15 @@
-# Techniques {#sec-05-Techniques}
+# Techniques {#sec-02.1-Techniques}
 
-- Data collection
-- Feature engineering
-- Model selection
+::: {.callout}
+## Learning Objectives: 
+
+- How to manipulate data through feature engineering
+- Select the most suitable model for your data
+- Learn how to apply machine learning algorithms
+:::
+
+
+## Data Analytics
 
 Collecting data to use in a research analysis involves a selection of sources and methods to use for optimizing computational time when downloading and reading the files.
 
@@ -15,6 +22,7 @@ The source of data is an important variable. Generally, data can be downloaded b
 Usually, available files are provided under various forms such as delimited type of files, .csv, .xls, .json, and other types.
 
 Here is an example of how to use an API for downloading a file directly onto your computer.
+
 ```{r}
 #| eval: false
 library(httr)
@@ -26,13 +34,14 @@ Once data is on your computer available and ready to use, the next step is to ha
 
 This step includes:
 
-- data manipulation/wrangling 
-- featuring engineering
-- exploratory data analysis
+-   data manipulation/wrangling
+-   featuring engineering
+-   exploratory data analysis
 
-Let's use the `{HistData}` package for an example on William Farr's Data on `Cholera` in London, 1849. This set of data contains information about the number of deaths due to Cholera in specific districts, the population density, the water provider and other variables. 
+Let's use the `{HistData}` package for an example on William Farr's Data on `Cholera` in London, 1849. This set of data contains information about the number of deaths due to Cholera in specific districts, the population density, the water provider and other variables.
 
 This is a type of dataset which can be considered ready to use for some type of models such as linear regression models, but it would require some adjustments if a Bayesian approach is desired.
+
 ```{r}
 #| message: false
 #| warning: false
@@ -42,7 +51,8 @@ Cholera <- HistData::Cholera
 Cholera%>%head
 ```
 
-If we are interested in the evolution of mortality due to Cholera. We might want to look at the regional level, how the annual deaths - all causes (`annual_deaths`), the death's rate per 10,000 inhabitants (`cholera_drate`), or  is distributed.
+If we are interested in the evolution of mortality due to Cholera. We might want to look at the regional level, how the annual deaths - all causes (`annual_deaths`), the death's rate per 10,000 inhabitants (`cholera_drate`), or is distributed.
+
 ```{r}
 data <- Cholera%>%
   select(region,cholera_drate,contains("death",ignore.case=T))
@@ -61,5 +71,3 @@ data %>%
   geom_density()+
   facet_wrap(~type)
 ```
-
-

@@ -2,98 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/index.html</loc>
-    <lastmod>2024-01-21T16:04:12.322Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.849Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/intro.html</loc>
-    <lastmod>2024-01-21T16:04:12.323Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.850Z</lastmod>
   </url>
   <url>
-    <loc>https://fgazzelloni.quarto.pub/hmsid/01-Metrics_and_Evaluation.html</loc>
-    <lastmod>2024-01-21T16:04:12.337Z</lastmod>
+    <loc>https://fgazzelloni.quarto.pub/hmsid/01-MetricsEvaluation.html</loc>
+    <lastmod>2024-01-21T21:01:47.851Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/01.1-HealthMetrics.html</loc>
-    <lastmod>2024-01-21T16:04:12.339Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.853Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/01.2-Components.html</loc>
-    <lastmod>2024-01-21T16:04:12.341Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.855Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/01.3-Causes_and_Risks.html</loc>
-    <lastmod>2024-01-21T16:04:12.343Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.856Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/02-Modeling.html</loc>
-    <lastmod>2024-01-21T16:04:12.352Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.859Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/02.1-Techniques.html</loc>
-    <lastmod>2024-01-21T16:04:12.360Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.861Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/02.2-Packages.html</loc>
-    <lastmod>2024-01-21T16:04:12.361Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.863Z</lastmod>
   </url>
   <url>
-    <loc>https://fgazzelloni.quarto.pub/hmsid/02.3-Prediction.html</loc>
-    <lastmod>2024-01-21T16:04:12.362Z</lastmod>
+    <loc>https://fgazzelloni.quarto.pub/hmsid/02.3-Predictions.html</loc>
+    <lastmod>2024-01-21T21:01:47.865Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/03-DataVisualizations.html</loc>
-    <lastmod>2024-01-21T16:04:12.363Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.866Z</lastmod>
   </url>
   <url>
-    <loc>https://fgazzelloni.quarto.pub/hmsid/03.1-Application.html</loc>
-    <lastmod>2024-01-21T16:04:12.367Z</lastmod>
+    <loc>https://fgazzelloni.quarto.pub/hmsid/03.1-Applications.html</loc>
+    <lastmod>2024-01-21T21:01:47.867Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/03.2-Spatials.html</loc>
-    <lastmod>2024-01-21T16:04:12.369Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.868Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/03.3-Examples.html</loc>
-    <lastmod>2024-01-21T16:04:12.370Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.870Z</lastmod>
   </url>
   <url>
-    <loc>https://fgazzelloni.quarto.pub/hmsid/04-CaseStudies.html</loc>
-    <lastmod>2024-01-21T16:04:12.371Z</lastmod>
+    <loc>https://fgazzelloni.quarto.pub/hmsid/04-InfectiousDiseases.html</loc>
+    <lastmod>2024-01-21T21:01:47.871Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/04.1-Covid19.html</loc>
-    <lastmod>2024-01-21T16:04:12.374Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.873Z</lastmod>
   </url>
   <url>
-    <loc>https://fgazzelloni.quarto.pub/hmsid/04.2-Health.html</loc>
-    <lastmod>2024-01-21T16:04:12.375Z</lastmod>
+    <loc>https://fgazzelloni.quarto.pub/hmsid/04.2-Malaria.html</loc>
+    <lastmod>2024-01-21T21:01:47.874Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/04.3-Summary.html</loc>
-    <lastmod>2024-01-21T16:04:12.376Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.875Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/conclusions.html</loc>
-    <lastmod>2024-01-21T16:04:12.377Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.876Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/references.html</loc>
-    <lastmod>2024-01-21T16:04:12.378Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.876Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/appendixA.html</loc>
-    <lastmod>2024-01-21T16:04:12.380Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.878Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/appendixB.html</loc>
-    <lastmod>2024-01-21T16:04:12.383Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.879Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/appendixC.html</loc>
-    <lastmod>2024-01-21T16:04:12.385Z</lastmod>
+    <lastmod>2024-01-21T21:01:47.880Z</lastmod>
   </url>
   <url>
     <loc>https://fgazzelloni.quarto.pub/hmsid/Health-metrics-and-the-spread-of-infectious-diseases.pdf</loc>
-    <lastmod>2024-01-21T16:04:10.067Z</lastmod>
+    <lastmod>2024-01-21T21:01:45.891Z</lastmod>
   </url>
 </urlset>

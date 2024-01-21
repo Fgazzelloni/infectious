@@ -30,7 +30,7 @@ book:
     - index.qmd
     - intro.qmd
     
-    - part: 01-Metrics_and_Evaluation.qmd
+    - part: 01-MetricsEvaluation.qmd
       chapters:
         - 01.1-HealthMetrics.qmd
         - 01.2-Components.qmd
@@ -40,18 +40,18 @@ book:
       chapters:
         - 02.1-Techniques.qmd
         - 02.2-Packages.qmd
-        - 02.3-Prediction.qmd
+        - 02.3-Predictions.qmd
         
     - part: 03-DataVisualizations.qmd
       chapters:
-        - 03.1-Application.qmd
+        - 03.1-Applications.qmd
         - 03.2-Spatials.qmd
         - 03.3-Examples.qmd 
         
-    - part: 04-CaseStudies.qmd
+    - part: 04-InfectiousDiseases.qmd
       chapters:
         - 04.1-Covid19.qmd
-        - 04.2-Health.qmd
+        - 04.2-Malaria.qmd
         - 04.3-Summary.qmd  
         
     - conclusions.qmd

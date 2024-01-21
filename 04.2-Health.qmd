@@ -1,1 +1,0 @@
-# The state of health {#sec-health_cs}

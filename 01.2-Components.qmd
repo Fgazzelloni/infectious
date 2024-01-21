@@ -1,13 +1,18 @@
 # Metrics components {#sec-02-Components}
 
+
+::: {.callout}
+## Learning Objectives: 
 -   Life tables and Life expectancy used in the book
--   How to use them and where to find them
+-   Mortality level and rates
+-   Identify the disability weights
+:::
 
 This section is dedicated to a closer look at what are the components of the health metrics, how to build them and finally how to use them for making countries comparison. YLLs, YLDs and DALYs can be used for different cause of deaths and disabilities, at different age levels.
 
 ### YLLs components
 
-The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death [see @reiner2022]
+The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death [@reiner2022]
 
 The components of YLL (Years of Life Lost) include several factors that contribute to the calculation of premature death due to a disease or injury. These components are:
 

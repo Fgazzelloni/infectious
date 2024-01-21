@@ -1,24 +1,18 @@
-# Modeling {#sec-II_Modeling}
+# Modelling {#sec-02-Modeling}
 
--   Feature engineering
+## Overview
 
--   Model selection
-
--   Packages and functions to use for the analysis
-
--   Attempt at predicting the future
-
-## Model description
-
-This book aims at providing a simple explanation at how to model a fast growing phenomenon such as in the case of the spread of infectious diseases, or the performance of health metrics for some countries. In addition, a further look will be provided at the evolution of the infection in some specific countries, and how this influences the level of health metrics.
-
-A **stochastic process**, or random process [see @dobrow2016] is the type of model which attempt to replicate uncertain outcomes. At opposite, in a **deterministic system** the outcome is obtained from a given input, and for this reason it is reproducible.
+This chapter provides a simple explanation on how to model a fast growing phenomenon such as in the case of the spread of infectious diseases, or on the contrary how a fast growing little impact can influence the performance of health metrics for some countries but doesn't affect the Global picture. More specifically, a further look will be provided at the evolution of the infection in some specific countries, and how this influences the overall level of health metrics.
 
 The spread of a virus can be seen as a random process, since the number of individuals who are infected at any given time can change randomly. The exact number of individuals who will be infected in the future cannot be determined with certainty, since it depends on various factors such as the contagiousness of the virus, the behavior of individuals, and the efficacy of mitigation measures.
 
 A deterministic model, on the other hand, could be used to model the spread of a virus under certain conditions, such as a fixed number of individuals, constant contagiousness, and no mitigation measures. This type of model can be used to make predictions about the spread of a virus under certain assumptions, but it will not account for the randomness and uncertainty associated with real-world scenarios.
 
+In general, a **stochastic process**, or random process [@dobrow2016] is the type of model which attempt to replicate uncertain outcomes. At opposite, in a **deterministic system** the outcome is obtained from a given input, and for this reason it is reproducible.
+
 Most models used to study the spread of a virus are a **combination of both deterministic and stochastic models**. For example, the SIR (Susceptible-Infected-Recovered) model is a deterministic model that describes the dynamics of the spread of a virus, but it also includes stochastic elements such as random interactions between individuals.
+
+
 
 ### The spread of COVID-19
 

@@ -1,0 +1,9 @@
+# Predicting the future {#sec-02.3-Predictions}
+
+
+::: {.callout}
+## Learning Objectives: 
+- How to use the Predict function
+- Evaluate prediction results
+- Improve predictions
+:::

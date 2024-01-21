@@ -50,7 +50,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01-Metrics_and_Evaluation.html" rel="next">
+<link href="./01-MetricsEvaluation.html" rel="next">
 <link href="./index.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -159,7 +159,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./01-Metrics_and_Evaluation.html" class="sidebar-item-text sidebar-link">Health metrics</a>
+            <a href="./01-MetricsEvaluation.html" class="sidebar-item-text sidebar-link">Metrics and Evaluation</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -184,7 +184,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./02-Modeling.html" class="sidebar-item-text sidebar-link">Modeling</a>
+            <a href="./02-Modeling.html" class="sidebar-item-text sidebar-link">Modelling</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -202,7 +202,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02.3-Prediction.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Predicting the future</span></a>
+  <a href="./02.3-Predictions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Predicting the future</span></a>
   </div>
 </li>
       </ul>
@@ -217,12 +217,12 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03.1-Application.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Application of the model results</span></a>
+  <a href="./03.1-Applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Application of the model results</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03.2-Spatials.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spatial data modeling</span></a>
+  <a href="./03.2-Spatials.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spatial data modeling and Visualization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -234,7 +234,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./04-CaseStudies.html" class="sidebar-item-text sidebar-link">Case Studies</a>
+            <a href="./04-InfectiousDiseases.html" class="sidebar-item-text sidebar-link">Infectious Diseases</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -242,17 +242,17 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04.1-Covid19.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Covid19</span></a>
+  <a href="./04.1-Covid19.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Covid19 Outbreaks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04.2-Health.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The state of health</span></a>
+  <a href="./04.2-Malaria.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The case of Malaria</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04.3-Summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./04.3-Summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary: the state of health</span></a>
   </div>
 </li>
       </ul>
@@ -319,27 +319,36 @@ div.csl-indent {
 
 </header>
 
+<div class="callout callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <ul>
 <li>What this book is all about</li>
 <li>How it can be used</li>
 <li>What is the main take away</li>
 </ul>
+</div>
+</div>
+</div>
 <p><em>Health Metrics and the Spread of Infectious Diseases,</em> featuring machine learning applications and spatial model analysis, serves as a manual and textbook for introductory health data analysis courses. Additionally, it can be a valuable source code for practitioners and data scientists alike.</p>
 <p>This book provides a set of tools for analyzing data of various types, but it is specifically designed for health data, such as the number of infections in a population or identifying the health status of a country.</p>
 <p>There are techniques that will be evaluated as the most appropriate for a certain type of analysis, while others, on the contrary, will be deprecated. It will be interesting to see which one is the most valuable for making predictions, while another should just be used for evaluating data consistency.</p>
 <p>Public health metrics, such as <strong>Years of Life Lost (YLL)</strong> and <strong>Years lived with Disability (YLD)</strong>, are examples of the key metrics discussed and used throughout this book. They are expressed in number of years of life lost or years lived with disabilities, and their sum represents a crucial value named <strong>Disability Adjusted Life Years (DALYs)</strong>. DALYs are generally used for ranking the health status of a population. The book covers the history of the development of health metrics and suggests alternatives, providing insights for health policymakers.</p>
 <p>To be more specific, the book compares the metrics used to summarize the health status of a population across different locations. It also tests prediction levels using key models. The initial tools are <code>{tidymodels}</code> and <code>{INLA}</code> for modeling, but other machine learning packages like <code>{mlr3}</code> and <code>{caret}</code> are also tested.</p>
 <p>In practice, the data will include information about humanity such as age, sex, life expectancy, mortality, and risk levels. The interesting part is related to the identification of the influence of some of the most dangerous infectious disease on the values of health metrics of a population, and this is done to practice the variation to eventually predict through model transfer techniques same pattern procedure on other countries. It’s not the only application; more examples of model transfer applications are needed in research. (cit)</p>
-<p>A focus on the impact of recent infectious disease outbreaks, such as SARS-Covid19, on the state of health of the population, will be provided along with the most affected locations to compare results of both deterministic and Bayesian models. Risk factor analysis, also cover an important part of this book and aims at identifying the connection that would lead to an increase on the number of DALYs for specific population and look at providing suggestion for public health policy and practice <span class="citation" data-cites="GBD2020">(<a href="references.html#ref-GBD2020" role="doc-biblioref">Vos et al., 2020</a>)</span>.</p>
-<p>The book is structured with an alternation of text and chunks of code, primarily in the R programming language, with hints for python translations in python found in appendix C, this is done to let the reader be a practitioner of real-world case studies on the topic.</p>
+<p>A focus on the impact of recent infectious disease outbreaks, such as SARS-Covid19, on the state of health of the population, will be provided along with the most affected locations to compare results of both <em>deterministic</em> and <em>stochastic</em> (Bayesian) models. Risk factor analysis, also cover an important part of this book and aims at identifying the connection that would lead to an increase on the number of DALYs for specific population and look at providing suggestion for public health policy and practice <span class="citation" data-cites="GBD2020">(<a href="references.html#ref-GBD2020" role="doc-biblioref">Vos et al., 2020</a>)</span>.</p>
+<p>The book is structured with an alternation of text and chunks of code, primarily in the R programming language; hints for translations in python is in appendix C. This is done to let the reader be a practitioner of real-world case studies on the topic.</p>
 <p>The material supports full exploratory data analysis and model data visualization, it contains the code for making some interesting spatial visualization, made using <code>{ggplot2}</code>, <code>{leaflet}</code>, <code>{sf}</code>, <code>{rgdal}</code> R packages, plus other main packages for theme user customization. The main reason is to unlock the potentiality of the R language for a wider understanding of both spatial and health metrics.</p>
 <p>The book is foreseen for practitioners at early stages and graduated students in STEM, but it will be useful for experts in the field who would love to have all the tools in one place to scan through as needed.</p>
 <p>The purpose of this book is to contribute to the scientific development of the field of metrics and evaluation <span class="citation" data-cites="murray2008">(<a href="references.html#ref-murray2008" role="doc-biblioref">Murray &amp; Frenk, 2008</a>)</span>. It is divided in four main sections, each containing three chapters. The first section <strong>Metrics and Evaluation</strong> is introductory explaining the health metrics definition at first level, the second section <strong>Modeling</strong> goes a bit more inside the topic looking at the tools available, the third section <strong>Data Visualization</strong> allows the user to be able to visualize the results of the analysis, and finally the fourth section makes the things into practice providing <strong>Case Studies</strong>.</p>
 <p>In particular, in the <code>first section</code>, the first chapter <strong>Health Metrics</strong> dives into the different type of metrics, YLLs, YLDs, and DALYs, along with their history of development, provides a definition of the metrics and their usage. In this section there is also a mention of a fourth metric, the <strong>HALY</strong> or the <strong>Health Adjusted Life Years</strong>, this is a further improvement made in the development of the metrics and evaluation sector.</p>
-<p>The second chapter <strong>Metrics Components</strong> looks at the key building blocks of the health metrics as important set of components for assuring consistency and to make sure that the values released are able to picture the real health status of a population. The key components are the <em>life expectancy</em>, the <em>mortality rate</em>, and the <em>weights of disabilities</em>. This chapter is supported by the appendix A where the beyond of the calculations are further explained.</p>
-<p>The third chapter evaluates the <strong>Causes and Risks</strong> that are involved with the possibility of the metrics increase in values, even in terms of identifying the most dangerous enemies acting in favour of it. Risks are also considered in order to stimulate alternative solutions for prevention and health policy development.</p>
-<p>The <code>second section</code> of the book is the the second level dive into the metrics evaluation, it is <strong>Modeling</strong>. A set of tools available for analysing trends, or phenomenon to catch missing values and attempt filling the missing data to provide an overall picture of the general trend. In the first chapter <strong>Techniques</strong> there is an overview of the different types of models that would be suitable to use, the second chapter <strong>Packages</strong> selects some of the R-packages to use for modeling, a hint for a python translation is in appandix C. Then chapter three shows how to make prediction.</p>
-<p>The third section of the book is all focused on <strong>Data Visualization</strong>, the first chapter shows the <strong>Application</strong>, the second chapter applies <strong>Spatial Visualization</strong> into modeling results. Then, the third chapter further allows the reader to be able to improve the knowledge acquired with some tailored examples.</p>
+<p>The second chapter <strong>Metrics Components</strong> looks at the key building blocks of the health metrics as important set of components for assuring consistency and to make sure that the values released are able to picture the real health status of a population. The key components are <em>life tables</em>, <em>life expectancy</em>, the <em>mortality level</em>, and the <em>weights of disabilities</em>. This chapter is supported by the <strong>appendix A</strong> where the beyond of the calculations are further explained.</p>
+<p>The third chapter evaluates the <strong>Causes and Risks</strong> that are involved with the possibility of the metrics increase in values, even in terms of identifying the most dangerous enemies acting in favor of it. Risks are also considered in order to stimulate alternative solutions for prevention and health policy development.</p>
+<p>The <code>second section</code> of the book is the the second level dive into the metrics evaluation, it is <strong>Modeling</strong>. A set of tools available for analyzing trends, or phenomenon to catch missing values and attempt filling the missing data to provide an overall picture of the general trend. In the first chapter <strong>Techniques</strong> there is an overview of the different types of models that would be suitable to use, the second chapter <strong>Packages</strong> selects some of the R-packages to use for modeling. Then chapter three shows how to make <strong>Predictions</strong>.</p>
+<p>The <code>third section</code> of the book is all focused on <strong>Data Visualization</strong>, the first chapter shows the <strong>Application</strong>, the second chapter applies <strong>Spatial Visualization</strong> into modeling results. Then, the third chapter further allows the reader to be able to improve the knowledge acquired with some tailored examples.</p>
 <p>The <code>fourth section</code> of the book, <strong>Case Studies</strong> presents two main case studies, one is <em>Covid19</em> and the other one is the case of <em>Malaria</em>. To eventually summarize the variation of the health metrics when these two infectious diseases affect the population.</p>
 <p>In <strong>Conclusion</strong>, the technique of modeling transfer learning shows as the foundation of model application to make prediction and to improve public policies.</p>
 
@@ -508,8 +517,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01-Metrics_and_Evaluation.html" class="pagination-link">
-        <span class="nav-page-text">Health metrics</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./01-MetricsEvaluation.html" class="pagination-link">
+        <span class="nav-page-text">Metrics and Evaluation</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

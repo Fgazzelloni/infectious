@@ -1,1 +1,3 @@
-# Data Visualizations {#sec-ch30DataVisualizations}
+# Data Visualizations {#sec-03-DataVisualizations}
+
+## Overview

@@ -1,6 +1,14 @@
 # Health Metrics {#sec-01.1HealthMetrics}
 
--   A closer look at the metrics, their usage and potentiality for improvements
+::: {.callout}
+## Learning Objectives: 
+- A closer look at the metrics
+- Understand how to use them
+- Think about potentiality for improvements
+:::
+
+
+## YLLs, YLDs and DALYs
 
 In this section are shown the methods used for building three key metrics: YLLs, YLDs and DALYs. These will be used throughout the book for making comparisons among the state of health of different countries.
 
@@ -36,8 +44,6 @@ The health metrics of DALY, YLL, and YLD can be used in several ways to help pri
 
 Overall, the health metrics of DALY, YLL, and YLD provide valuable information for public health practitioners, researchers, and policy makers to help prioritize and allocate resources, evaluate the impact of diseases and injuries, and inform public health decision-making.
 
-
-
 ## HALE (Healthy Life Expectancy)
 
 -   Description and calculation
@@ -50,11 +56,10 @@ HALE is a useful tool for public health practitioners and policy makers, as it p
 
 Overall, the HALE metric provides a valuable perspective on the overall health and well-being of a population, combining information about both quantity and quality of life to provide a comprehensive view of health outcomes.
 
-It adjusts overall life expectancy by the amount of time lived in less than perfect health. This is calculated by subtracting from the life expectancy a figure which is the number of years lived with disability multiplied by a weighting to represent the effect of the disability.[^01.4-metrics2-1]
+It adjusts overall life expectancy by the amount of time lived in less than perfect health. This is calculated by subtracting from the life expectancy a figure which is the number of years lived with disability multiplied by a weighting to represent the effect of the disability.[^01.1-healthmetrics-1]
 
-[^01.4-metrics2-1]: [www.healthknowledge.org.uk](https://www.healthknowledge.org.uk/e-learning/health-information/population-health-specialists/lifetables-hales-dalys-pylls#:~:text=Health%20Adjusted%20Life%20Expectancy%20(HALE)&text=It%20adjusts%20overall%20life%20expectancy,the%20effect%20of%20the%20disability.)
+[^01.1-healthmetrics-1]: [www.healthknowledge.org.uk](https://www.healthknowledge.org.uk/e-learning/health-information/population-health-specialists/lifetables-hales-dalys-pylls#:~:text=Health%20Adjusted%20Life%20Expectancy%20(HALE)&text=It%20adjusts%20overall%20life%20expectancy,the%20effect%20of%20the%20disability.)
 
-More info [^01.4-metrics2-2]
+More info [^01.1-healthmetrics-2]
 
-[^01.4-metrics2-2]: about the methodology https://www.un.org/esa/sustdev/natlinfo/indicators/methodology_sheets/health/health_life_expectancy.pdf
-
+[^01.1-healthmetrics-2]: about the methodology https://www.un.org/esa/sustdev/natlinfo/indicators/methodology_sheets/health/health_life_expectancy.pdf

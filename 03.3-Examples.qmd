@@ -1,1 +1,9 @@
-# Examples of data visualizations {#sec-ch33Examples}
+# Examples of data visualizations {#sec-03.3-Examples}
+
+
+::: {.callout}
+## Learning Objectives: 
+- Learn how to improve the visualization 
+- Make a custom theme
+- Save your plot
+:::

@@ -32,7 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./01.2-Components.html" rel="next">
-<link href="./01-Metrics_and_Evaluation.html" rel="prev">
+<link href="./01-MetricsEvaluation.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./01-Metrics_and_Evaluation.html" class="sidebar-item-text sidebar-link">Health metrics</a>
+            <a href="./01-MetricsEvaluation.html" class="sidebar-item-text sidebar-link">Metrics and Evaluation</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -165,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./02-Modeling.html" class="sidebar-item-text sidebar-link">Modeling</a>
+            <a href="./02-Modeling.html" class="sidebar-item-text sidebar-link">Modelling</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -183,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02.3-Prediction.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Predicting the future</span></a>
+  <a href="./02.3-Predictions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Predicting the future</span></a>
   </div>
 </li>
       </ul>
@@ -198,12 +198,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03.1-Application.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Application of the model results</span></a>
+  <a href="./03.1-Applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Application of the model results</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03.2-Spatials.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spatial data modeling</span></a>
+  <a href="./03.2-Spatials.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spatial data modeling and Visualization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -215,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./04-CaseStudies.html" class="sidebar-item-text sidebar-link">Case Studies</a>
+            <a href="./04-InfectiousDiseases.html" class="sidebar-item-text sidebar-link">Infectious Diseases</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -223,17 +223,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04.1-Covid19.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Covid19</span></a>
+  <a href="./04.1-Covid19.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Covid19 Outbreaks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04.2-Health.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The state of health</span></a>
+  <a href="./04.2-Malaria.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The case of Malaria</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04.3-Summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./04.3-Summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary: the state of health</span></a>
   </div>
 </li>
       </ul>
@@ -282,11 +282,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#yll-years-of-life-lost" id="toc-yll-years-of-life-lost" class="nav-link active" data-scroll-target="#yll-years-of-life-lost"><span class="toc-section-number">1.1</span>  YLL (Years of Life Lost)</a></li>
-  <li><a href="#yld-years-lived-with-disability" id="toc-yld-years-lived-with-disability" class="nav-link" data-scroll-target="#yld-years-lived-with-disability"><span class="toc-section-number">1.2</span>  YLD (Years Lived with Disability)</a></li>
-  <li><a href="#daly-disability-adjusted-life-year" id="toc-daly-disability-adjusted-life-year" class="nav-link" data-scroll-target="#daly-disability-adjusted-life-year"><span class="toc-section-number">1.3</span>  DALY (Disability-Adjusted Life Year)</a></li>
-  <li><a href="#how-the-metrics-are-used" id="toc-how-the-metrics-are-used" class="nav-link" data-scroll-target="#how-the-metrics-are-used"><span class="toc-section-number">1.4</span>  How the metrics are used</a></li>
-  <li><a href="#hale-healthy-life-expectancy" id="toc-hale-healthy-life-expectancy" class="nav-link" data-scroll-target="#hale-healthy-life-expectancy"><span class="toc-section-number">1.5</span>  HALE (Healthy Life Expectancy)</a></li>
+  <li><a href="#ylls-ylds-and-dalys" id="toc-ylls-ylds-and-dalys" class="nav-link active" data-scroll-target="#ylls-ylds-and-dalys"><span class="toc-section-number">1.1</span>  YLLs, YLDs and DALYs</a></li>
+  <li><a href="#yll-years-of-life-lost" id="toc-yll-years-of-life-lost" class="nav-link" data-scroll-target="#yll-years-of-life-lost"><span class="toc-section-number">1.2</span>  YLL (Years of Life Lost)</a></li>
+  <li><a href="#yld-years-lived-with-disability" id="toc-yld-years-lived-with-disability" class="nav-link" data-scroll-target="#yld-years-lived-with-disability"><span class="toc-section-number">1.3</span>  YLD (Years Lived with Disability)</a></li>
+  <li><a href="#daly-disability-adjusted-life-year" id="toc-daly-disability-adjusted-life-year" class="nav-link" data-scroll-target="#daly-disability-adjusted-life-year"><span class="toc-section-number">1.4</span>  DALY (Disability-Adjusted Life Year)</a></li>
+  <li><a href="#how-the-metrics-are-used" id="toc-how-the-metrics-are-used" class="nav-link" data-scroll-target="#how-the-metrics-are-used"><span class="toc-section-number">1.5</span>  How the metrics are used</a></li>
+  <li><a href="#hale-healthy-life-expectancy" id="toc-hale-healthy-life-expectancy" class="nav-link" data-scroll-target="#hale-healthy-life-expectancy"><span class="toc-section-number">1.6</span>  HALE (Healthy Life Expectancy)</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Fgazzelloni/infectious/edit/origin/01.1-HealthMetrics.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -310,26 +311,43 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<div class="callout callout callout-style-simple no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Learning Objectives:
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li>A closer look at the metrics, their usage and potentiality for improvements</li>
+<li>A closer look at the metrics</li>
+<li>Understand how to use them</li>
+<li>Think about potentiality for improvements</li>
 </ul>
+</div>
+</div>
+<section id="ylls-ylds-and-dalys" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="ylls-ylds-and-dalys"><span class="header-section-number">1.1</span> YLLs, YLDs and DALYs</h2>
 <p>In this section are shown the methods used for building three key metrics: YLLs, YLDs and DALYs. These will be used throughout the book for making comparisons among the state of health of different countries.</p>
 <p>The health metrics, and their components are used to measure the burden of disease and quantify the impact of diseases and injuries on individuals and populations. These metrics can help prioritize public health interventions and evaluate the effectiveness of public health programs.</p>
-<section id="yll-years-of-life-lost" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="yll-years-of-life-lost"><span class="header-section-number">1.1</span> YLL (Years of Life Lost)</h2>
+</section>
+<section id="yll-years-of-life-lost" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="yll-years-of-life-lost"><span class="header-section-number">1.2</span> YLL (Years of Life Lost)</h2>
 <p>YLL (Years of Life Lost) measures the number of years a person would have lived if they had not died prematurely due to a disease or injury. YLL is calculated by subtracting the age at death from the expected age at death in a population without the disease or injury.</p>
 </section>
-<section id="yld-years-lived-with-disability" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="yld-years-lived-with-disability"><span class="header-section-number">1.2</span> YLD (Years Lived with Disability)</h2>
+<section id="yld-years-lived-with-disability" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="yld-years-lived-with-disability"><span class="header-section-number">1.3</span> YLD (Years Lived with Disability)</h2>
 <p>YLD (Years Lived with Disability) measures the number of years a person lives with a disability due to a disease or injury. It is calculated by multiplying the prevalence of a condition by the disability weight, which reflects the severity of the disability.</p>
 </section>
-<section id="daly-disability-adjusted-life-year" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="daly-disability-adjusted-life-year"><span class="header-section-number">1.3</span> DALY (Disability-Adjusted Life Year)</h2>
+<section id="daly-disability-adjusted-life-year" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="daly-disability-adjusted-life-year"><span class="header-section-number">1.4</span> DALY (Disability-Adjusted Life Year)</h2>
 <p>DALY (Disability-Adjusted Life Year) is a measure of overall disease burden and is calculated as the sum of years of potential life lost due to premature death (YLL) and years lived with disability (YLD). The DALY takes into account both the quantity and quality of life lost due to disease or injury.</p>
 <p>The YLL and YLD are components of the DALY, which are used to assess how diseases and injuries impact populations. As a result, @sec-ch12Components section provides a more comprehensive picture of the overall burden of disease by combining YLLs and YLDs in different life expectancy groups.</p>
 </section>
-<section id="how-the-metrics-are-used" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="how-the-metrics-are-used"><span class="header-section-number">1.4</span> How the metrics are used</h2>
+<section id="how-the-metrics-are-used" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="how-the-metrics-are-used"><span class="header-section-number">1.5</span> How the metrics are used</h2>
 <p>The health metrics of DALY, YLL, and YLD can be used in several ways to help prioritize public health interventions, evaluate the impact of diseases and injuries, and inform public health decision-making. Some common uses of these metrics include:</p>
 <p><strong>Prioritizing public health interventions</strong>: By calculating the overall burden of disease in a population, public health practitioners can prioritize which diseases and injuries to address first. This helps allocate resources and target interventions to the areas of greatest need.</p>
 <p><strong>Evaluating the impact of diseases and injuries</strong>: These metrics can be used to measure the impact of diseases and injuries on individuals and populations and to track changes over time. This information can help inform public health decision-making and allocate resources more effectively.</p>
@@ -338,8 +356,8 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Monitoring global health trends</strong>: DALY, YLL, and YLD can also be used to monitor global health trends and track changes in the burden of disease over time. This information can be used to inform global health policies and allocate resources to address emerging health threats.</p>
 <p>Overall, the health metrics of DALY, YLL, and YLD provide valuable information for public health practitioners, researchers, and policy makers to help prioritize and allocate resources, evaluate the impact of diseases and injuries, and inform public health decision-making.</p>
 </section>
-<section id="hale-healthy-life-expectancy" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="hale-healthy-life-expectancy"><span class="header-section-number">1.5</span> HALE (Healthy Life Expectancy)</h2>
+<section id="hale-healthy-life-expectancy" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="hale-healthy-life-expectancy"><span class="header-section-number">1.6</span> HALE (Healthy Life Expectancy)</h2>
 <ul>
 <li>Description and calculation</li>
 </ul>
@@ -510,8 +528,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./01-Metrics_and_Evaluation.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Health metrics</span>
+      <a href="./01-MetricsEvaluation.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Metrics and Evaluation</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

@@ -1,29 +1,17 @@
-# Covid19 {#sec-ch41Covid19}
+# Covid19 Outbreaks {#sec-04.1-Covid19}
 
-## Infectious Diseases the invisible enemies
-
-The infective agent begins to thrive and multiply throughout the body [see @broemeling2021]. Its prolifaration can be fast or slow depending on the type of organism. Every infectious disease has an incubation period, the length of time the pathogen is established until appearance of symptoms of the disease.
-
-Factors influencing infection
-
--   quantity of invading germs (dose of the infection)
-
--   the virulence of the infection
-
--   the condition of the body's immune system
-
--   contact with source of infection for contagious diseases
-
-Microorganisms adapt far more rapidly than humans as the scene shifts
-
-A bacterial generation ranges from 20-30 minutes, for viruses it's much smaller
-
-> Who is going to adapt to whom?
-
-Virus means **poisonous substance** ranging from 20 to 400 nm in diameter can be observed only with a electron microscope. Outside of a living cell is a dormant particle of strange shapes. When manage to get inside the cell it starts replicating killing the cell or skewing its functions.
+::: {.callout}
+## Learning Objectives: 
+- What is Covid19 
+- How does it spread
+- Map Covid19 outbreaks
+:::
 
 
-The Bayesian Analysis of Infectious Diseases: COVID-19 and Beyond book is a comprehensive resource that covers the use of Bayesian analysis in the modeling of infectious diseases, including COVID-19. 
+
+## Covid19 spread of infection as a cause for increased DALY for selected countries
+
+The Bayesian Analysis of Infectious Diseases: COVID-19 and Beyond book is a comprehensive resource that covers the use of Bayesian analysis in the modeling of infectious diseases, including COVID-19.
 
 In the context of modeling COVID-19 in R, the following steps can be taken:
 
@@ -41,16 +29,13 @@ Evaluate the model: The final step is to evaluate the performance of the model, 
 
 This is a general outline of the steps involved in modeling COVID-19 in R using Bayesian analysis. The specific details of the implementation will depend on the particular model structure and data being used.
 
-
 Suppose we have data on the number of confirmed cases of COVID-19 in a region for a period of time, and we want to model the spread of the disease.
 
 **Step 1**: Define the model structure
 
 We can use the Susceptible-Infected-Recovered (SIR) model to describe the spread of the disease, where S represents the number of susceptible individuals, I represents the number of infected individuals, and R represents the number of recovered individuals. The model structure can be described as follows:
 
-$$dS/dt = -beta * S * I / N$$
-$$dI/dt = beta * S * I / N - gamma * I$$
-$$dR/dt = gamma * I$$
+$$dS/dt = -beta * S * I / N$$ $$dI/dt = beta * S * I / N - gamma * I$$ $$dR/dt = gamma * I$$
 
 where beta is the rate of transmission, gamma is the rate of recovery, and N is the total population.
 
@@ -102,9 +87,6 @@ SIR_model <- function(data) {
 
 ```
 
-
-
-
 **Step 5**: Estimate the parameters
 
 We can use the `sampling` function in the `{rstan}` package to estimate the parameters, as follows:
@@ -120,12 +102,9 @@ data <- alist(
 
 ```
 
-
 **Step 6**: Evaluate the model
 
 We can evaluate the performance of the model by comparing the model predictions with the observed data and checking the validity
-
-
 
 ```{r}
 #| eval: false
@@ -162,4 +141,3 @@ mcmc_areas(results, pars = c("beta", "gamma", "I0"),
            main = "Posterior Distribution of Parameters")
 
 ```
-

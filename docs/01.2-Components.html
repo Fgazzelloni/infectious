@@ -206,7 +206,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./01-Metrics_and_Evaluation.html" class="sidebar-item-text sidebar-link">Health metrics</a>
+            <a href="./01-MetricsEvaluation.html" class="sidebar-item-text sidebar-link">Metrics and Evaluation</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -231,7 +231,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./02-Modeling.html" class="sidebar-item-text sidebar-link">Modeling</a>
+            <a href="./02-Modeling.html" class="sidebar-item-text sidebar-link">Modelling</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -249,7 +249,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02.3-Prediction.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Predicting the future</span></a>
+  <a href="./02.3-Predictions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Predicting the future</span></a>
   </div>
 </li>
       </ul>
@@ -264,12 +264,12 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03.1-Application.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Application of the model results</span></a>
+  <a href="./03.1-Applications.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Application of the model results</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03.2-Spatials.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spatial data modeling</span></a>
+  <a href="./03.2-Spatials.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Spatial data modeling and Visualization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -281,7 +281,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./04-CaseStudies.html" class="sidebar-item-text sidebar-link">Case Studies</a>
+            <a href="./04-InfectiousDiseases.html" class="sidebar-item-text sidebar-link">Infectious Diseases</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -289,17 +289,17 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04.1-Covid19.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Covid19</span></a>
+  <a href="./04.1-Covid19.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Covid19 Outbreaks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04.2-Health.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The state of health</span></a>
+  <a href="./04.2-Malaria.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The case of Malaria</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04.3-Summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./04.3-Summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary: the state of health</span></a>
   </div>
 </li>
       </ul>
@@ -372,14 +372,27 @@ div.csl-indent {
   </div>
   
 
-</header><ul>
+</header><div class="callout callout callout-style-simple no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Learning Objectives:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
 <li>Life tables and Life expectancy used in the book</li>
-<li>How to use them and where to find them</li>
+<li>Mortality level and rates</li>
+<li>Identify the disability weights</li>
 </ul>
+</div>
+</div>
 <p>This section is dedicated to a closer look at what are the components of the health metrics, how to build them and finally how to use them for making countries comparison. YLLs, YLDs and DALYs can be used for different cause of deaths and disabilities, at different age levels.</p>
 <section id="ylls-components" class="level3" data-number="2.0.1"><h3 data-number="2.0.1" class="anchored" data-anchor-id="ylls-components">
 <span class="header-section-number">2.0.1</span> YLLs components</h3>
-<p>The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death <span class="citation" data-cites="reiner2022">(see <a href="references.html#ref-reiner2022" role="doc-biblioref">Reiner &amp; Hay, 2022</a>)</span></p>
+<p>The number of years of life lost YLLs is the first of the three metrics that is calculated, and is important for releasing a first look at the status of a population. It is calculated for identifying the area where improvement is required for reducing the loss in health status and clearly reducing the probability of death <span class="citation" data-cites="reiner2022">(<a href="references.html#ref-reiner2022" role="doc-biblioref">Reiner &amp; Hay, 2022</a>)</span></p>
 <p>The components of YLL (Years of Life Lost) include several factors that contribute to the calculation of premature death due to a disease or injury. These components are:</p>
 <p><strong>Age at death</strong>: The age at which a person died due to a disease or injury is a crucial component of YLL. The earlier the age at death, the greater the impact on potential years of life lost.</p>
 <p><strong>Life expectancy</strong>: The expected age at death in a population without the disease or injury is an important component of YLL. This value is used to compare the actual age at death with the expected age at death and determine the number of years of life lost.</p>

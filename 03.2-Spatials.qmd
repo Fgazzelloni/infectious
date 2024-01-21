@@ -1,1 +1,8 @@
-# Spatial data modeling {#sec-ch32Spatials}
+# Spatial data modeling and Visualization {#sec-03.2-Spatials}
+
+::: {.callout}
+## Learning Objectives: 
+- How to make a map 
+- Identify the missing pieces
+- Map the results
+:::
