@@ -26,3 +26,5 @@ man
 *.ind
 *.run.xml
 notes.qmd
+*.html$
+_book/

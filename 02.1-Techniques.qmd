@@ -1,13 +1,12 @@
 # Techniques {#sec-02.1-Techniques}
 
-::: {.callout}
-## Learning Objectives: 
+::: callout
+## Learning Objectives:
 
-- How to manipulate data through feature engineering
-- Select the most suitable model for your data
-- Learn how to apply machine learning algorithms
+-   How to manipulate data through feature engineering
+-   Select the most suitable model for your data
+-   Learn how to apply machine learning algorithms
 :::
-
 
 ## Data Analytics
 

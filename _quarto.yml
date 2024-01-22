@@ -3,13 +3,13 @@ project:
   output-dir: docs
 
 book:
-  title: "Health metrics and the spread of infectious diseases"
-  subtitle: "with machine learning applications and spatial model analysis"
+  title: "Health Metrics and the Spread of Infectious Diseases"
+  subtitle: "Machine Learning Applications and Spatial Modeling Analysis with R"
   reader-mode: true
   author: 
     name: Federica Gazzelloni
     orcid: 0000-0002-4285-611X
-  site-url: https://fgazzelloni.quarto.pub/hmsid/
+  site-url: https://fgazzelloni.quarto.pub/hmsidr/
   repo-url: https://github.com/Fgazzelloni/infectious
   repo-branch: origin
   sharing: [twitter, facebook, linkedin]
@@ -22,7 +22,7 @@ book:
   page-navigation: true
   page-footer:
     left: |
-      Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis was written by <a href="https://federicagazzelloni.netlify.app/">Federica Gazzelloni</a>.
+      Health Metrics and the Spread of Infectious Diseases was written by <a href="https://federicagazzelloni.netlify.app/">Federica Gazzelloni</a>.
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
 
@@ -36,7 +36,7 @@ book:
         - 01.2-Components.qmd
         - 01.3-Causes_and_Risks.qmd
         
-    - part: 02-Modeling.qmd
+    - part: 02-MachineLearning.qmd
       chapters:
         - 02.1-Techniques.qmd
         - 02.2-Packages.qmd

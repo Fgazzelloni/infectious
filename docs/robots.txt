@@ -1,1 +1,1 @@
-Sitemap: https://fgazzelloni.quarto.pub/hmsid/sitemap.xml
+Sitemap: https://fgazzelloni.quarto.pub/hmsidr/sitemap.xml

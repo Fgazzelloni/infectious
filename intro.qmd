@@ -1,7 +1,6 @@
 # Introduction {#sec-intro .unnumbered}
 
-
-::: {.callout}
+::: callout
 -   What this book is all about
 -   How it can be used
 -   What is the main take away
@@ -41,4 +40,4 @@ The `third section` of the book is all focused on **Data Visualization**, the fi
 
 The `fourth section` of the book, **Case Studies** presents two main case studies, one is *Covid19* and the other one is the case of *Malaria*. To eventually summarize the variation of the health metrics when these two infectious diseases affect the population.
 
-In **Conclusion**, the technique of modeling transfer learning shows as the foundation of model application to make prediction and to improve public policies.
+In **Conclusion**, the technique of modeling transfer learning shows as the foundation of model application how to make prediction and to improve public policies.

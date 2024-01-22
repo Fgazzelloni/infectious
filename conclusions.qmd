@@ -1,1 +1,3 @@
 # Conclusions {.unnumbered}
+
+In Conclusion, the technique of modeling transfer learning shows as the foundation of model application how to make prediction and to improve public policies.

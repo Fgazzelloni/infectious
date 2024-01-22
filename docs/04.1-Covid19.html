@@ -5,7 +5,7 @@
 <meta name="generator" content="quarto-1.2.313">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Federica Gazzelloni">
-<title>Health metrics and the spread of infectious diseases - 10&nbsp; Covid19 Outbreaks</title>
+<title>Health Metrics and the Spread of Infectious Diseases - 10&nbsp; Covid19 Outbreaks</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Health metrics and the spread of infectious diseases</a> 
+      <a href="./">Health Metrics and the Spread of Infectious Diseases</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/Fgazzelloni/infectious" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
     <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
@@ -213,7 +213,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./02-Modeling.html" class="sidebar-item-text sidebar-link">Modelling</a>
+            <a href="./02-MachineLearning.html" class="sidebar-item-text sidebar-link">Machine Learning</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -328,6 +328,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
 <li><a href="#covid19-spread-of-infection-as-a-cause-for-increased-daly-for-selected-countries" id="toc-covid19-spread-of-infection-as-a-cause-for-increased-daly-for-selected-countries" class="nav-link active" data-scroll-target="#covid19-spread-of-infection-as-a-cause-for-increased-daly-for-selected-countries"><span class="toc-section-number">10.1</span>  Covid19 spread of infection as a cause for increased DALY for selected countries</a></li>
+  <li>
+<a href="#the-spread-of-covid-19" id="toc-the-spread-of-covid-19" class="nav-link" data-scroll-target="#the-spread-of-covid-19"><span class="toc-section-number">10.2</span>  The spread of COVID-19</a>
+  <ul class="collapse">
+<li><a href="#covid19-modeling" id="toc-covid19-modeling" class="nav-link" data-scroll-target="#covid19-modeling"><span class="toc-section-number">10.2.1</span>  Covid19 modeling</a></li>
+  </ul>
+</li>
   </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Fgazzelloni/infectious/edit/origin/04.1-Covid19.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
@@ -364,6 +370,57 @@ Learning Objectives:
 </div>
 <section id="covid19-spread-of-infection-as-a-cause-for-increased-daly-for-selected-countries" class="level2" data-number="10.1"><h2 data-number="10.1" class="anchored" data-anchor-id="covid19-spread-of-infection-as-a-cause-for-increased-daly-for-selected-countries">
 <span class="header-section-number">10.1</span> Covid19 spread of infection as a cause for increased DALY for selected countries</h2>
+</section><section id="the-spread-of-covid-19" class="level2" data-number="10.2"><h2 data-number="10.2" class="anchored" data-anchor-id="the-spread-of-covid-19">
+<span class="header-section-number">10.2</span> The spread of COVID-19</h2>
+<p>Here is a model example of the spread of COVID-19 using a stochastic process. In this example, we’ll use a simple SEIR (Susceptible-Exposed-Infected-Recovered) model to simulate the spread of the virus in a population. The SEIR model divides a population into four compartments based on their status with respect to the virus: susceptible, exposed, infected, and recovered.</p>
+<p>First, we’ll load the necessary packages and define some parameters for our model:</p>
+<div class="cell">
+<details open=""><summary>Hide code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://desolve.r-forge.r-project.org/">deSolve</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Define parameters</span></span>
+<span><span class="va">N</span> <span class="op">&lt;-</span> <span class="fl">1e6</span>  <span class="co"># Total population</span></span>
+<span><span class="va">beta</span> <span class="op">&lt;-</span> <span class="fl">0.5</span>  <span class="co"># Transmission rate</span></span>
+<span><span class="va">gamma</span> <span class="op">&lt;-</span> <span class="fl">0.1</span>  <span class="co"># Recovery rate</span></span>
+<span><span class="va">t_exp</span> <span class="op">&lt;-</span> <span class="fl">5</span>  <span class="co"># Latent period</span></span>
+<span></span>
+<span><span class="co"># Initial conditions</span></span>
+<span><span class="va">init</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>S <span class="op">=</span> <span class="va">N</span> <span class="op">-</span> <span class="fl">1</span>, E <span class="op">=</span> <span class="fl">1</span>, I <span class="op">=</span> <span class="fl">0</span>, R <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Define the SEIR model</span></span>
+<span><span class="va">seir_model</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">t</span>, <span class="va">y</span>, <span class="va">parameters</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/with.html">with</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">as.list</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, <span class="op">{</span></span>
+<span>    <span class="va">dS</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="va">beta</span> <span class="op">*</span> <span class="va">S</span> <span class="op">*</span> <span class="va">I</span> <span class="op">/</span> <span class="va">N</span></span>
+<span>    <span class="va">dE</span> <span class="op">&lt;-</span> <span class="va">beta</span> <span class="op">*</span> <span class="va">S</span> <span class="op">*</span> <span class="va">I</span> <span class="op">/</span> <span class="va">N</span> <span class="op">-</span> <span class="op">(</span><span class="fl">1</span> <span class="op">/</span> <span class="va">t_exp</span><span class="op">)</span> <span class="op">*</span> <span class="va">E</span></span>
+<span>    <span class="va">dI</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="fl">1</span> <span class="op">/</span> <span class="va">t_exp</span><span class="op">)</span> <span class="op">*</span> <span class="va">E</span> <span class="op">-</span> <span class="va">gamma</span> <span class="op">*</span> <span class="va">I</span></span>
+<span>    <span class="va">dR</span> <span class="op">&lt;-</span> <span class="va">gamma</span> <span class="op">*</span> <span class="va">I</span></span>
+<span>    <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">dS</span>, <span class="va">dE</span>, <span class="va">dI</span>, <span class="va">dR</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">}</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Next, we’ll use the ode function from the deSolve package to solve the ODEs and simulate the spread of the virus over a period of 365 days:</p>
+<div class="cell">
+<details open=""><summary>Hide code</summary><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Solve the ODEs</span></span>
+<span><span class="va">times</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">365</span>, by <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/deSolve/man/ode.html">ode</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">init</span>, times <span class="op">=</span> <span class="va">times</span>, func <span class="op">=</span> <span class="va">seir_model</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Plot the results</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">time</span>, <span class="va">I</span>, color <span class="op">=</span> <span class="st">"Infected"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">time</span>, <span class="va">R</span>, color <span class="op">=</span> <span class="st">"Recovered"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">time</span>, <span class="va">S</span>, color <span class="op">=</span> <span class="st">"Susceptible"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">time</span>, <span class="va">E</span>, color <span class="op">=</span> <span class="st">"Exposed"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html">scale_color_discrete</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Compartment"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Time (days)"</span>, y <span class="op">=</span> <span class="st">"Number of individuals"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<p><img src="04.1-Covid19_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+<p>In this example, many factors are not taken into account. In reality, the spread of a virus is much more complex and influenced by many factors such as human behavior, government policies, and healthcare systems.</p>
+<section id="covid19-modeling" class="level3" data-number="10.2.1"><h3 data-number="10.2.1" class="anchored" data-anchor-id="covid19-modeling">
+<span class="header-section-number">10.2.1</span> Covid19 modeling</h3>
 <p>The Bayesian Analysis of Infectious Diseases: COVID-19 and Beyond book is a comprehensive resource that covers the use of Bayesian analysis in the modeling of infectious diseases, including COVID-19.</p>
 <p>In the context of modeling COVID-19 in R, the following steps can be taken:</p>
 <p>Define the model structure: The first step is to define the model structure, which involves specifying the underlying mechanisms of disease spread and the parameters of interest. For COVID-19, the model structure might include the number of susceptible individuals, the number of infected individuals, the number of recovered individuals, and the rate of disease transmission.</p>
@@ -385,7 +442,7 @@ Learning Objectives:
 <p><strong>Step 4</strong>: Implement the model in R</p>
 <p>We can use the <a href="https://mc-stan.org/rstan/">rstan</a> package in R to implement the model, as follows:</p>
 <div class="cell">
-<details open=""><summary>Hide code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load the rethinking package</span></span>
+<details open=""><summary>Hide code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load the rethinking package</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">rethinking</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstan/">rstan</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
@@ -421,7 +478,7 @@ Learning Objectives:
 <p><strong>Step 5</strong>: Estimate the parameters</p>
 <p>We can use the <code>sampling</code> function in the <a href="https://mc-stan.org/rstan/">rstan</a> package to estimate the parameters, as follows:</p>
 <div class="cell">
-<details open=""><summary>Hide code</summary><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">alist</a></span><span class="op">(</span></span>
+<details open=""><summary>Hide code</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">alist</a></span><span class="op">(</span></span>
 <span>  <span class="va">time</span><span class="op">&lt;-</span> <span class="va">data</span><span class="op">$</span><span class="va">time</span>,</span>
 <span>  <span class="va">S</span><span class="op">&lt;-</span><span class="va">data</span><span class="op">$</span><span class="va">S</span>,</span>
 <span>  <span class="va">I</span><span class="op">&lt;-</span><span class="va">data</span><span class="op">$</span><span class="va">I</span>,</span>
@@ -432,7 +489,7 @@ Learning Objectives:
 <p><strong>Step 6</strong>: Evaluate the model</p>
 <p>We can evaluate the performance of the model by comparing the model predictions with the observed data and checking the validity</p>
 <div class="cell">
-<details open=""><summary>Hide code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Plot the observed data and the model predictions</span></span>
+<details open=""><summary>Hide code</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Plot the observed data and the model predictions</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">predictions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstan/reference/stanfit-method-extract.html">extract</a></span><span class="op">(</span><span class="va">results</span><span class="op">)</span><span class="op">$</span><span class="va">I</span></span>
@@ -467,7 +524,7 @@ Learning Objectives:
 </div>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -599,7 +656,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/fgazzelloni\.quarto\.pub\/hmsid\//);
+      var filterRegex = new RegExp(/https:\/\/fgazzelloni\.quarto\.pub\/hmsidr\//);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
@@ -626,7 +683,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </nav>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis was written by <a href="https://federicagazzelloni.netlify.app/">Federica Gazzelloni</a>.</div>   
+    <div class="nav-footer-left">Health Metrics and the Spread of Infectious Diseases was written by <a href="https://federicagazzelloni.netlify.app/">Federica Gazzelloni</a>.</div>   
     <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
