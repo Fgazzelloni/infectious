@@ -28,5 +28,5 @@ This is the way to use it:
 
 ``` r
 library(infectious)
-## it loads all the datasets and packages needed for the book analysis
+## it loads all the datasets and some of the functions used in the book
 ```
