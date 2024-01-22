@@ -4,7 +4,7 @@
 
 <!-- badges: end -->
 
-The goal of **infectious** is to introduce you to the **Health metrics and the spread of infectious diseases, with machine learning applications and spatial model analysis** book written by Federica Gazzelloni.
+The goal of **infectious** is to introduce you to the **Health Metrics and the Spread of Infectious Diseases: Machine Learning Applications and Spatial Modeling Analysis with R** book written by Federica Gazzelloni.
 
 This book guides you through the modeling representation of the selected real world cases for the identification of the state of health of a population.
 
