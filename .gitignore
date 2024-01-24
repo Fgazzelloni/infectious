@@ -18,13 +18,4 @@ notes.qmd
 *.tex$
 *.pdf$
 *.html$
-*.aux
-*.bcf
-*.idx
-*.log
-*.toc
-*.bbl
-*.blg
-*.ilg
-*.ind
 *.run.xml
