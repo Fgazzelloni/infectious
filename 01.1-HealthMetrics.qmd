@@ -1,10 +1,11 @@
 # Health Metrics {#sec-01.1HealthMetrics}
 
-::: {.callout}
-## Learning Objectives: 
-- A closer look at the metrics
-- Understand how to use them
-- Think about potentiality for improvements
+::: callout
+## Learning Objectives:
+
+-   A closer look at the metrics
+-   Understand how to use them
+-   Think about potentiality for improvements
 :::
 
 
@@ -26,7 +27,7 @@ YLD (Years Lived with Disability) measures the number of years a person lives wi
 
 DALY (Disability-Adjusted Life Year) is a measure of overall disease burden and is calculated as the sum of years of potential life lost due to premature death (YLL) and years lived with disability (YLD). The DALY takes into account both the quantity and quality of life lost due to disease or injury.
 
-The YLL and YLD are components of the DALY, which are used to assess how diseases and injuries impact populations. As a result, \@sec-ch12Components section provides a more comprehensive picture of the overall burden of disease by combining YLLs and YLDs in different life expectancy groups.
+The YLL and YLD are components of the DALY, which are used to assess how diseases and injuries impact populations. As a result, \@sec-01.2Components section provides a more comprehensive picture of the overall burden of disease by combining YLLs and YLDs in different life expectancy groups.
 
 ## How the metrics are used
 
@@ -48,18 +49,4 @@ Overall, the health metrics of DALY, YLL, and YLD provide valuable information f
 
 -   Description and calculation
 
-The health metric of HALE (Healthy Life Expectancy) is a measure of overall health and well-being that takes into account both quantity and quality of life. It is a composite measure that combines years of life expectancy with a measure of the prevalence and severity of disability in a population. HALE provides a more comprehensive view of health outcomes than traditional measures of life expectancy, which only consider the quantity of life.
 
-The calculation of HALE typically involves estimating the number of years that an individual can expect to live in good health, taking into account the impact of diseases and injuries on quality of life. This information is then used to estimate the overall health status of a population.
-
-HALE is a useful tool for public health practitioners and policy makers, as it provides a more nuanced view of the health outcomes of a population. This information can help inform public health interventions and prioritize resources, as well as help track changes in health outcomes over time. Additionally, HALE can be used to compare the health outcomes of different populations and identify disparities in health outcomes, which can help inform targeted public health interventions.
-
-Overall, the HALE metric provides a valuable perspective on the overall health and well-being of a population, combining information about both quantity and quality of life to provide a comprehensive view of health outcomes.
-
-It adjusts overall life expectancy by the amount of time lived in less than perfect health. This is calculated by subtracting from the life expectancy a figure which is the number of years lived with disability multiplied by a weighting to represent the effect of the disability.[^01.1-healthmetrics-1]
-
-[^01.1-healthmetrics-1]: [www.healthknowledge.org.uk](https://www.healthknowledge.org.uk/e-learning/health-information/population-health-specialists/lifetables-hales-dalys-pylls#:~:text=Health%20Adjusted%20Life%20Expectancy%20(HALE)&text=It%20adjusts%20overall%20life%20expectancy,the%20effect%20of%20the%20disability.)
-
-More info [^01.1-healthmetrics-2]
-
-[^01.1-healthmetrics-2]: about the methodology https://www.un.org/esa/sustdev/natlinfo/indicators/methodology_sheets/health/health_life_expectancy.pdf

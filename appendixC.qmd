@@ -1,2 +1,1 @@
-# Hints for translating into Python {#sec-appendixC}
-
+# Tips on converting to Python {#sec-appendixC}

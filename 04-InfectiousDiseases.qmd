@@ -2,7 +2,6 @@
 
 ## Overview
 
-
 ### Infectious Diseases the invisible enemies
 
 The infective agent begins to thrive and multiply throughout the body [@broemeling2021]. Its proliferation can be fast or slow depending on the type of organism. Every infectious disease has an incubation period, the length of time the pathogen is established until appearance of symptoms of the disease.
@@ -19,5 +18,3 @@ Microorganisms adapt far more rapidly than humans as the scene shifts. A bacteri
 > Who is going to adapt to whom?
 
 Virus means **poisonous substance** ranging from 20 to 400 nm in diameter can be observed only with a electron microscope. Outside of a living cell is a dormant particle of strange shapes. When manage to get inside the cell it starts replicating killing the cell or skewing its functions.
-
-

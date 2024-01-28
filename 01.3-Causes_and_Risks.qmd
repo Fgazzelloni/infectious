@@ -1,11 +1,11 @@
 # Causes and Risks {#sec-01.3-Causes_and_Risks}
 
+::: callout
+## Learning Objectives:
 
-::: {.callout}
-## Learning Objectives: 
-- How to use the metrics
-- Overview of the causes and risks
-- Identify the objective of the research question
+-   How to use the metrics
+-   Overview of the causes and risks
+-   Identify the objective of the research question
 :::
 
 Conditions and injuries that are associated with the burden of disease and injury vary according to their specific causes and risks. However, some common causes and risk factors include:

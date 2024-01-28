@@ -1,9 +1,9 @@
 # The case of Malaria {#sec-04.2-Malaria}
 
+::: callout
+## Learning Objectives:
 
-::: {.callout}
-## Learning Objectives: 
-- What is Malaria 
-- How does it spread
-- Map Malaria outbreaks
+-   What is Malaria
+-   How does it spread
+-   Map Malaria outbreaks
 :::

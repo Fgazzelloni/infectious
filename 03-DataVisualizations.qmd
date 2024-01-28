@@ -1,3 +1,4 @@
 # Data Visualizations {#sec-03-DataVisualizations}
 
+
 ## Overview

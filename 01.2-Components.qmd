@@ -1,8 +1,8 @@
 # Metrics components {#sec-02-Components}
 
+::: callout
+## Learning Objectives:
 
-::: {.callout}
-## Learning Objectives: 
 -   Life tables and Life expectancy used in the book
 -   Mortality level and rates
 -   Identify the disability weights

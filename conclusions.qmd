@@ -12,4 +12,4 @@ A meticulous approach, encompassing data collection, preprocessing, exploratory 
 
 The integration of machine learning, particularly transfer learning, brings a transformative dimension to understanding and predicting infectious diseases. The application of these technologies in health metrics analysis holds the potential for more accurate assessments of disease burden.
 
-As the study moves forward, dedicated efforts and resources are imperative to fully realize the capabilities of transfer learning and machine learning in addressing global health challenges.
+Dedicated efforts and resources are imperative to fully realize the capabilities of transfer learning and machine learning in addressing global health challenges.

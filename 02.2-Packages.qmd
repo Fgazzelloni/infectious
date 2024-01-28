@@ -1,9 +1,9 @@
 # Packages and functions {#sec-02.2-Packages}
 
-::: {.callout}
-## Learning Objectives: 
-- Overview of the most suitable R-packages 
-- Combination of packages and functions
-- How to find a new R-package
-:::
+::: callout
+## Learning Objectives:
 
+-   Overview of the most suitable R-packages
+-   Combination of packages and functions
+-   How to find a new R-package
+:::

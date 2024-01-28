@@ -2,7 +2,37 @@
 
 ## Overview
 
-Health metrics are key variables to understand more about the state of health of a population. In this book we'll talk about how to calculate the **numbers of years of life lost (YLLs)** and the **numbers of years lived with disabilities (YLDs)**, to finally obtain the key metric of the **DALYs** which identify the numbers of years of life lost due to death or a disability status, namely **disability adjusted life years**.
+The health metrics are key variables to understand more about the state of health of a population. In this first section of the book we'll learn about the history of the metrics, how to calculate them, and how to take consideration of their variation due to causes and risks. In particular, we will have a look at the metrics components and the challenges in providing standardized values for a global comparison. Moreover in the following sections we will see how to build a model, evaluate the effect of the spread of infectious disease on the health metrics and how if affects the overall state of health of a population.
+
+### The history of health metrics
+
+The history of health metrics is a fascinating journey that spans centuries, evolving from rudimentary observations to sophisticated statistical methods. One of the earliest forms of health metrics can be traced back to the work of *John Graunt*, an Englishman, in the 17th century [@johngra2024].
+
+In 1662, Graunt published a landmark work titled "Natural and Political Observations Made upon the Bills of Mortality." Graunt was not a physician but a haberdasher, and his interest in mortality data was driven by the Bills of Mortality, which were weekly and annual records of deaths in London. These bills were maintained by the Worshipful Company of Parish Clerks and provided information on the number of births and deaths in the city.
+
+Graunt meticulously analyzed this **mortality data** and produced **tables** that presented various patterns and trends. His work laid the foundation for modern demography and statistical analysis. Among his notable contributions were the concepts of **life expectancy** and **mortality rates**.
+
+One of Graunt's key observations was the consistent pattern of higher mortality among infants and young children. He noted the difference in life expectancy between males and females and provided insights into factors influencing mortality, such as epidemics and seasons.
+
+Over time, advancements in mathematics, medicine, and statistics led to the development of more sophisticated health metrics. The 19th century saw the emergence of **life tables**, which provided a systematic way to analyze mortality and life expectancy. With the growth of epidemiology in the 20th century, health metrics expanded to include measures like **Disability-Adjusted Life Years (DALYs)** and **Quality-Adjusted Life Years (QALYs)**, capturing not just mortality but also the impact of diseases on overall health and well-being.
+
+In the contemporary era, the integration of computing power and big data has further transformed health metrics. Today, we have complex models, machine learning algorithms, and global health databases that allow for real-time tracking of diseases and health outcomes.
+
+John Graunt's work may have been a humble beginning, but it set in motion a scientific approach to understanding population health. The journey from *Graunt's Bills of Mortality* [@johngra2024a] to today's sophisticated health metrics reflects the continuous quest to quantify and comprehend the complexities of human health and disease.
+
+### **Quality-Adjusted Life Years (QALYs)**
+
+The concept of Quality-Adjusted Life Years (QALYs) emerged in the late 1970s, originating from the idea of combining both the *quantity* and *quality* of life by *Joseph S. Pliskin*, then it became a widely used metric for evaluating the *cost-effectiveness* of healthcare interventions [@quality-2023]. One QALY corresponds to one year in perfect health, it ranges from 1 (perfect health) to 0 (dead). However, this metric, used in various sectors such as health insurance, is somewhat criticized due to its lack of addressing disparities among individuals. It might result in discrimination against individuals with specific medical conditions or disabilities.
+
+A controversial result followed 25 years of research and studies due to the concerning validity of the metric to be inclusive. Started in the early 1989s, to step in the 2010 with the European Commission [@echoutco2016] which started the largest-ever study specifically dedicated to testing the assumptions of the QALY [@holmes2013], ending in 2013 with the recommended not using QALYs in healthcare decision making, arguing that patients with disabilities are valued less under a QALY-based system then individuals with no disabilites. The result was then further criticized and it is still on debate.
+
+### **Disability-Adjusted Life Years (DALYs)**
+
+It was in the 1990s when the World Bank financed a study at Harvard University to develop a sustainable index capable of considering not only the health status but also identifying the level of disabilities concerned by disparities. A new way of comparing the overall health and life expectancy of different countries was released along with the Global Burden of Disease Study in 1990 [@murray1994], a project involving *Christopher J. L. Murray* [@christop2024] and *Alan Lopez* [@alanlop2023], in collaboration with the World Health Organization (WHO), the Disability-Adjusted Life Years (DALYs) [@disabili2023a]. A metric that combines **years of life lost due to premature death** and **years lived with disability**.
+
+Hence DALYs share a connection with the quality-adjusted life year (QALY) metric, however, while QALYs specifically represent an individual measure focusing on the benefits with and without medical intervention, the DALYs consider the overall burden of diseases.
+
+The metric of DALYs is obtained by the sum of the **numbers of years of life lost (YLLs)** and the **numbers of years lived with disabilities (YLDs)**, and it identify the numbers of years of life lost due to death or a disability status.
 
 The numbers of years of life lost by a population in comparison to other countries or to the Global mean trend, is based on the latest study results relative to how the well being of a country is in terms of the definition of a healthy life. To give an example, let's think about a population whose individuals are living a good life, so defined *healthy life* measured on **life expectancy** established to be 80 years on average, as most of the World population meets this as a deadline.
 

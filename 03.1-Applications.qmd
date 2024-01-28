@@ -1,9 +1,9 @@
 # Application of the model results {#sec-03.2-Applications}
 
+::: callout
+## Learning Objectives:
 
-::: {.callout}
-## Learning Objectives: 
-- Overview of the basic plots 
-- How to customize a plot
-- Tell the story with data
+-   Overview of the basic plots
+-   How to customize a plot
+-   Tell the story with data
 :::

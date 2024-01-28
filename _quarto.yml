@@ -69,8 +69,6 @@ bibliography: references.bib
 csl: apa-6th-edition.csl
 
 format:
-  pdf:
-    documentclass: scrreport
   html:
     theme:
       - cosmo
@@ -78,7 +76,6 @@ format:
       text: | 
         <script defer data-domain="" src=""></script>
         <link rel = "shortcut icon" href = "favicon.ico" />
-        
     smooth-scroll: true
     code-link: true
     code-overflow: wrap
@@ -114,13 +111,6 @@ knitr:
         comment: "#>"
         R.options:
             knitr.graphics.auto_pdf: true
-              
-
-# bibliography:
-#     - references.bib
-#     - refpackages.bib
-# csl: C:/Users/Slava/Documents/tsar/springerbasicVL.csl
-
 
 
 

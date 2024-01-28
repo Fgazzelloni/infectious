@@ -10,8 +10,6 @@
 
 ## Covid19 spread of infection as a cause for increased DALY for selected countries
 
-
-
 ## The spread of COVID-19
 
 Here is a model example of the spread of COVID-19 using a stochastic process. In this example, we'll use a simple SEIR (Susceptible-Exposed-Infected-Recovered) model to simulate the spread of the virus in a population. The SEIR model divides a population into four compartments based on their status with respect to the virus: susceptible, exposed, infected, and recovered.
@@ -63,7 +61,7 @@ ggplot(as.data.frame(result), aes(time, I, color = "Infected")) +
 
 In this example, many factors are not taken into account. In reality, the spread of a virus is much more complex and influenced by many factors such as human behavior, government policies, and healthcare systems.
 
-### Covid19 modeling 
+### Covid19 modeling
 
 The Bayesian Analysis of Infectious Diseases: COVID-19 and Beyond book is a comprehensive resource that covers the use of Bayesian analysis in the modeling of infectious diseases, including COVID-19.
 
