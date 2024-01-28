@@ -9,12 +9,14 @@ _book/
 .DS_Store
 data
 data-raw
+inst
 inst/scripts
 inst/extdata
 components_hm_files
 R
 man
 notes.qmd
+rsconnect
 *.tex$
 *.pdf$
 *.html$
