@@ -8,7 +8,7 @@
 
 <meta name="author" content="Federica Gazzelloni">
 
-<title>Health Metrics and the Spread of Infectious Diseases - 4&nbsp; Techniques</title>
+<title>Health Metrics and the Spread of Infectious Diseases - Metrics and Evaluation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./02.2-Packages.html" rel="next">
-<link href="./02-MachineLearning.html" rel="prev">
+<link href="./01.1-HealthMetrics.html" rel="next">
+<link href="./intro.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-MachineLearning.html">Machine Learning</a></li><li class="breadcrumb-item"><a href="./02.1-Techniques.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Techniques</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-MetricsEvaluation.html">Metrics and Evaluation</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -156,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./01-MetricsEvaluation.html" class="sidebar-item-text sidebar-link">
+            <a href="./01-MetricsEvaluation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Metrics and Evaluation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -194,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02.1-Techniques.html" class="sidebar-item-text sidebar-link active">
+  <a href="./02.1-Techniques.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Techniques</span></span></a>
   </div>
 </li>
@@ -321,16 +321,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"><span class="header-section-number">4.1</span> </a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#the-history-of-health-metrics" id="toc-the-history-of-health-metrics" class="nav-link" data-scroll-target="#the-history-of-health-metrics">The history of health metrics</a></li>
+  <li><a href="#quality-adjusted-life-years-qalys" id="toc-quality-adjusted-life-years-qalys" class="nav-link" data-scroll-target="#quality-adjusted-life-years-qalys"><strong>Quality-Adjusted Life Years (QALYs)</strong></a></li>
+  <li><a href="#disability-adjusted-life-years-dalys" id="toc-disability-adjusted-life-years-dalys" class="nav-link" data-scroll-target="#disability-adjusted-life-years-dalys"><strong>Disability-Adjusted Life Years (DALYs)</strong></a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Fgazzelloni/infectious/edit/origin/02.1-Techniques.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Fgazzelloni/infectious/edit/origin/01-MetricsEvaluation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-MachineLearning.html">Machine Learning</a></li><li class="breadcrumb-item"><a href="./02.1-Techniques.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Techniques</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-02.1-Techniques" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Techniques</span></span></h1>
+<h1 class="title"><span id="sec-01-MetricsEvaluation" class="quarto-section-identifier">Metrics and Evaluation</span></h1>
 </div>
 
 
@@ -347,27 +352,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-simple callout-none no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Learning Objectives:
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>How to manipulate data through feature engineering</li>
-<li>Select the most suitable model for your data</li>
-<li>Learn how to apply machine learning algorithms</li>
-</ul>
-</div>
-</div>
-<section id="section" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="section"><span class="header-section-number">4.1</span> </h2>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The health metrics are key variables to understand more about the state of health of a population. In this first section of the book we’ll learn about the history of the metrics, how to calculate them, and how to take consideration of their variation due to causes and risks. In particular, we will have a look at the metrics components and the challenges in providing standardized values for a global comparison. Moreover in the following sections we will see how to build a model, evaluate the effect of the spread of infectious disease on the health metrics and how if affects the overall state of health of a population.</p>
+<section id="the-history-of-health-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="the-history-of-health-metrics">The history of health metrics</h3>
+<p>The history of health metrics is a fascinating journey that spans centuries, evolving from rudimentary observations to sophisticated statistical methods. One of the earliest forms of health metrics can be traced back to the work of <em>John Graunt</em>, an Englishman, in the 17th century <span class="citation" data-cites="johngra2024">(<a href="references.html#ref-johngra2024" role="doc-biblioref"><strong>johngra2024?</strong></a>)</span>.</p>
+<p>In 1662, Graunt published a landmark work titled “Natural and Political Observations Made upon the Bills of Mortality.” Graunt was not a physician but a haberdasher, and his interest in mortality data was driven by the Bills of Mortality, which were weekly and annual records of deaths in London. These bills were maintained by the Worshipful Company of Parish Clerks and provided information on the number of births and deaths in the city.</p>
+<p>Graunt meticulously analyzed this <strong>mortality data</strong> and produced <strong>tables</strong> that presented various patterns and trends. His work laid the foundation for modern demography and statistical analysis. Among his notable contributions were the concepts of <strong>life expectancy</strong> and <strong>mortality rates</strong>.</p>
+<p>One of Graunt’s key observations was the consistent pattern of higher mortality among infants and young children. He noted the difference in life expectancy between males and females and provided insights into factors influencing mortality, such as epidemics and seasons.</p>
+<p>Over time, advancements in mathematics, medicine, and statistics led to the development of more sophisticated health metrics. The 19th century saw the emergence of <strong>life tables</strong>, which provided a systematic way to analyze mortality and life expectancy. With the growth of epidemiology in the 20th century, health metrics expanded to include measures like <strong>Disability-Adjusted Life Years (DALYs)</strong> and <strong>Quality-Adjusted Life Years (QALYs)</strong>, capturing not just mortality but also the impact of diseases on overall health and well-being.</p>
+<p>In the contemporary era, the integration of computing power and big data has further transformed health metrics. Today, we have complex models, machine learning algorithms, and global health databases that allow for real-time tracking of diseases and health outcomes.</p>
+<p>John Graunt’s work may have been a humble beginning, but it set in motion a scientific approach to understanding population health. The journey from <em>Graunt’s Bills of Mortality</em> <span class="citation" data-cites="johngra2024a">(<a href="references.html#ref-johngra2024a" role="doc-biblioref"><strong>johngra2024a?</strong></a>)</span> to today’s sophisticated health metrics reflects the continuous quest to quantify and comprehend the complexities of human health and disease.</p>
+</section>
+<section id="quality-adjusted-life-years-qalys" class="level3">
+<h3 class="anchored" data-anchor-id="quality-adjusted-life-years-qalys"><strong>Quality-Adjusted Life Years (QALYs)</strong></h3>
+<p>The concept of Quality-Adjusted Life Years (QALYs) emerged in the late 1970s, originating from the idea of combining both the <em>quantity</em> and <em>quality</em> of life by <em>Joseph S. Pliskin</em>, then it became a widely used metric for evaluating the <em>cost-effectiveness</em> of healthcare interventions <span class="citation" data-cites="quality-2023">(<a href="references.html#ref-quality-2023" role="doc-biblioref"><strong>quality-2023?</strong></a>)</span>. One QALY corresponds to one year in perfect health, it ranges from 1 (perfect health) to 0 (dead). However, this metric, used in various sectors such as health insurance, is somewhat criticized due to its lack of addressing disparities among individuals. It might result in discrimination against individuals with specific medical conditions or disabilities.</p>
+<p>A controversial result followed 25 years of research and studies due to the concerning validity of the metric to be inclusive. Started in the early 1989s, to step in the 2010 with the European Commission <span class="citation" data-cites="echoutco2016">(<a href="references.html#ref-echoutco2016" role="doc-biblioref"><strong>echoutco2016?</strong></a>)</span> which started the largest-ever study specifically dedicated to testing the assumptions of the QALY <span class="citation" data-cites="holmes2013">(<a href="references.html#ref-holmes2013" role="doc-biblioref"><strong>holmes2013?</strong></a>)</span>, ending in 2013 with the recommended not using QALYs in healthcare decision making, arguing that patients with disabilities are valued less under a QALY-based system then individuals with no disabilites. The result was then further criticized and it is still on debate.</p>
+</section>
+<section id="disability-adjusted-life-years-dalys" class="level3">
+<h3 class="anchored" data-anchor-id="disability-adjusted-life-years-dalys"><strong>Disability-Adjusted Life Years (DALYs)</strong></h3>
+<p>It was in the 1990s when the World Bank financed a study at Harvard University to develop a sustainable index capable of considering not only the health status but also identifying the level of disabilities concerned by disparities. A new way of comparing the overall health and life expectancy of different countries was released along with the Global Burden of Disease Study in 1990 <span class="citation" data-cites="murray1994">(<a href="references.html#ref-murray1994" role="doc-biblioref"><strong>murray1994?</strong></a>)</span>, a project involving <em>Christopher J. L. Murray</em> <span class="citation" data-cites="christop2024">(<a href="references.html#ref-christop2024" role="doc-biblioref"><strong>christop2024?</strong></a>)</span> and <em>Alan Lopez</em> <span class="citation" data-cites="alanlop2023">(<a href="references.html#ref-alanlop2023" role="doc-biblioref"><strong>alanlop2023?</strong></a>)</span>, in collaboration with the World Health Organization (WHO), the Disability-Adjusted Life Years (DALYs) <span class="citation" data-cites="disabili2023a">(<a href="references.html#ref-disabili2023a" role="doc-biblioref"><strong>disabili2023a?</strong></a>)</span>. A metric that combines <strong>years of life lost due to premature death</strong> and <strong>years lived with disability</strong>.</p>
+<p>Hence DALYs share a connection with the quality-adjusted life year (QALY) metric, however, while QALYs specifically represent an individual measure focusing on the benefits with and without medical intervention, the DALYs consider the overall burden of diseases.</p>
+<p>The metric of DALYs is obtained by the sum of the <strong>numbers of years of life lost (YLLs)</strong> and the <strong>numbers of years lived with disabilities (YLDs)</strong>, and it identify the numbers of years of life lost due to death or a disability status.</p>
+<p>The numbers of years of life lost by a population in comparison to other countries or to the Global mean trend, is based on the latest study results relative to how the well being of a country is in terms of the definition of a healthy life. To give an example, let’s think about a population whose individuals are living a good life, so defined <em>healthy life</em> measured on <strong>life expectancy</strong> established to be 80 years on average, as most of the World population meets this as a deadline.</p>
+<p>The part of the population who do not meet this age, but dies earlier, contributes as a building block of the numbers of years of life lost (YLLs), as well as for all that is related with a healthy living, the numbers of years spent dealing with a disability contribute to increasing the numbers of years lived with disabilities for a country’s population.</p>
+<p>To establish a <em>healthy life status</em> for a country, meaning the state of health of a population, the sum of the two values YLLs and YLDs is used to obtain the key metric of DALYs. This metric value is used to quickly identify the level of health of a population compared to a Global review based on the latest findings of the most updated studies.</p>
+<p>In addition, this level is used to improve the proportion of countries who are in need of a better health status recognition. To be more specific, the focus on the numbers of years can help identify the areas where most of the years are lost and need for improvement, whether in facilities, research or investments.</p>
+<p>An improvement of health at a Global level is reached when the definition of a <strong>healthy file</strong> is met in most of the countries where it wasn’t before.</p>
+<p>Furthermore, what we want to analyze are a series of data that are produced taking into account the tables of mortality and future life expectancy these are defined as means that these metrics have been considered important for assessing the state of health of one point population</p>
+<p>What we refer to are the health metrics and which refer to the number of years lost due to an increase in mortality or in any case to a mortality trend that is above a certain general level which we can consider as the level optimal health globally.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -778,13 +795,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./02-MachineLearning.html" class="pagination-link  aria-label=" machine="" learning"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Machine Learning</span>
+      <a href="./intro.html" class="pagination-link  aria-label=" introduction"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02.2-Packages.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>Packages and functions</span>">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Packages and functions</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./01.1-HealthMetrics.html" class="pagination-link" aria-label="<span class='chapter-number'>1</span>&nbsp; <span class='chapter-title'>Health Metrics</span>">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Health Metrics</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -796,7 +813,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Fgazzelloni/infectious/edit/origin/02.1-Techniques.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Fgazzelloni/infectious/edit/origin/01-MetricsEvaluation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

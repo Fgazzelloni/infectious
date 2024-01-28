@@ -8,7 +8,7 @@
 
 <meta name="author" content="Federica Gazzelloni">
 
-<title>Health Metrics and the Spread of Infectious Diseases - 4&nbsp; Techniques</title>
+<title>Health Metrics and the Spread of Infectious Diseases - Machine Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,8 +51,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./02.2-Packages.html" rel="next">
-<link href="./02-MachineLearning.html" rel="prev">
+<link href="./02.1-Techniques.html" rel="next">
+<link href="./01.3-Causes_and_Risks.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -86,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-MachineLearning.html">Machine Learning</a></li><li class="breadcrumb-item"><a href="./02.1-Techniques.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Techniques</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-MachineLearning.html">Machine Learning</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -185,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./02-MachineLearning.html" class="sidebar-item-text sidebar-link">
+            <a href="./02-MachineLearning.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Machine Learning</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -194,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02.1-Techniques.html" class="sidebar-item-text sidebar-link active">
+  <a href="./02.1-Techniques.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Techniques</span></span></a>
   </div>
 </li>
@@ -321,16 +341,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"><span class="header-section-number">4.1</span> </a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Fgazzelloni/infectious/edit/origin/02.1-Techniques.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Fgazzelloni/infectious/edit/origin/02-MachineLearning.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-MachineLearning.html">Machine Learning</a></li><li class="breadcrumb-item"><a href="./02.1-Techniques.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Techniques</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-02.1-Techniques" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Techniques</span></span></h1>
+<h1 class="title"><span id="sec-02-MachineLearning" class="quarto-section-identifier">Machine Learning</span></h1>
 </div>
 
 
@@ -347,27 +367,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-simple callout-none no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Learning Objectives:
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>How to manipulate data through feature engineering</li>
-<li>Select the most suitable model for your data</li>
-<li>Learn how to apply machine learning algorithms</li>
-</ul>
-</div>
-</div>
-<section id="section" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="section"><span class="header-section-number">4.1</span> </h2>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This chapter provides a simple explanation on how to model a fast growing phenomenon such as in the case of the spread of infectious diseases, or on the contrary how a fast growing little impact can influence the performance of health metrics for some countries but doesn’t affect the Global picture. More specifically, a further look will be provided at the evolution of the infection in some specific countries, and how this influences the overall level of health metrics.</p>
+<p>The spread of a virus can be seen as a random process, since the number of individuals who are infected at any given time can change randomly. The exact number of individuals who will be infected in the future cannot be determined with certainty, since it depends on various factors such as the contagiousness of the virus, the behavior of individuals, and the efficacy of mitigation measures.</p>
+<p>A deterministic model, on the other hand, could be used to model the spread of a virus under certain conditions, such as a fixed number of individuals, constant contagiousness, and no mitigation measures. This type of model can be used to make predictions about the spread of a virus under certain assumptions, but it will not account for the randomness and uncertainty associated with real-world scenarios.</p>
+<p>In general, a <strong>stochastic process</strong>, or random process <span class="citation" data-cites="dobrow2016">(<a href="references.html#ref-dobrow2016" role="doc-biblioref">Dobrow, 2016</a>)</span> is the type of model which attempt to replicate uncertain outcomes. At opposite, in a <strong>deterministic system</strong> the outcome is obtained from a given input, and for this reason it is reproducible.</p>
+<p>Most models used to study the spread of a virus are a <strong>combination of both deterministic and stochastic models</strong>. For example, the SIR (Susceptible-Infected-Recovered) model is a deterministic model that describes the dynamics of the spread of a virus, but it also includes stochastic elements such as random interactions between individuals.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-dobrow2016" class="csl-entry" role="listitem">
+Dobrow, R. P. (2016). <em>Introduction to Stochastic Processes with R</em>. John Wiley &amp; Sons.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -778,13 +791,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./02-MachineLearning.html" class="pagination-link  aria-label=" machine="" learning"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Machine Learning</span>
+      <a href="./01.3-Causes_and_Risks.html" class="pagination-link  aria-label=" &lt;span="" and="" risks&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Causes and Risks</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02.2-Packages.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>Packages and functions</span>">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Packages and functions</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./02.1-Techniques.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>Techniques</span>">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Techniques</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -796,7 +809,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Fgazzelloni/infectious/edit/origin/02.1-Techniques.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Fgazzelloni/infectious/edit/origin/02-MachineLearning.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

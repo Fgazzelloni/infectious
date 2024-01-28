@@ -8,7 +8,7 @@
 
 <meta name="author" content="Federica Gazzelloni">
 
-<title>Health Metrics and the Spread of Infectious Diseases - 4&nbsp; Techniques</title>
+<title>Health Metrics and the Spread of Infectious Diseases - Infectious Diseases</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,8 +51,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./02.2-Packages.html" rel="next">
-<link href="./02-MachineLearning.html" rel="prev">
+<link href="./04.1-Covid19.html" rel="next">
+<link href="./03.3-Examples.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -86,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-MachineLearning.html">Machine Learning</a></li><li class="breadcrumb-item"><a href="./02.1-Techniques.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Techniques</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-InfectiousDiseases.html">Infectious Diseases</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -194,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02.1-Techniques.html" class="sidebar-item-text sidebar-link active">
+  <a href="./02.1-Techniques.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Techniques</span></span></a>
   </div>
 </li>
@@ -243,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./04-InfectiousDiseases.html" class="sidebar-item-text sidebar-link">
+            <a href="./04-InfectiousDiseases.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Infectious Diseases</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -321,16 +341,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"><span class="header-section-number">4.1</span> </a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#infectious-diseases-the-invisible-enemies" id="toc-infectious-diseases-the-invisible-enemies" class="nav-link" data-scroll-target="#infectious-diseases-the-invisible-enemies">Infectious Diseases the invisible enemies</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Fgazzelloni/infectious/edit/origin/02.1-Techniques.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Fgazzelloni/infectious/edit/origin/04-InfectiousDiseases.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-MachineLearning.html">Machine Learning</a></li><li class="breadcrumb-item"><a href="./02.1-Techniques.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Techniques</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-02.1-Techniques" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Techniques</span></span></h1>
+<h1 class="title"><span id="sec-04-InfectiousDiseases" class="quarto-section-identifier">Infectious Diseases</span></h1>
 </div>
 
 
@@ -347,27 +370,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-simple callout-none no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Learning Objectives:
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<section id="infectious-diseases-the-invisible-enemies" class="level3">
+<h3 class="anchored" data-anchor-id="infectious-diseases-the-invisible-enemies">Infectious Diseases the invisible enemies</h3>
+<p>The infective agent begins to thrive and multiply throughout the body <span class="citation" data-cites="broemeling2021">(<a href="references.html#ref-broemeling2021" role="doc-biblioref">Broemeling, 2021</a>)</span>. Its proliferation can be fast or slow depending on the type of organism. Every infectious disease has an incubation period, the length of time the pathogen is established until appearance of symptoms of the disease.</p>
+<p>Factors influencing infection</p>
 <ul>
-<li>How to manipulate data through feature engineering</li>
-<li>Select the most suitable model for your data</li>
-<li>Learn how to apply machine learning algorithms</li>
+<li>quantity of invading germs (dose of the infection)</li>
+<li>the virulence of the infection</li>
+<li>the condition of the body’s immune system</li>
+<li>contact with source of infection for contagious diseases</li>
 </ul>
-</div>
-</div>
-<section id="section" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="section"><span class="header-section-number">4.1</span> </h2>
+<p>Microorganisms adapt far more rapidly than humans as the scene shifts. A bacterial generation ranges from 20-30 minutes, for viruses it’s much smaller.</p>
+<blockquote class="blockquote">
+<p>Who is going to adapt to whom?</p>
+</blockquote>
+<p>Virus means <strong>poisonous substance</strong> ranging from 20 to 400 nm in diameter can be observed only with a electron microscope. Outside of a living cell is a dormant particle of strange shapes. When manage to get inside the cell it starts replicating killing the cell or skewing its functions.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-broemeling2021" class="csl-entry" role="listitem">
+Broemeling, L. D. (2021). <em>Bayesian analysis of infectious diseases: COVID-19 and beyond</em>. New York: Chapman; Hall/CRC. <a href="https://doi.org/10.1201/9781003125983">https://doi.org/10.1201/9781003125983</a>
+</div>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -778,13 +805,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./02-MachineLearning.html" class="pagination-link  aria-label=" machine="" learning"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Machine Learning</span>
+      <a href="./03.3-Examples.html" class="pagination-link  aria-label=" &lt;span="" of="" data="" visualizations&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Examples of data visualizations</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02.2-Packages.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>Packages and functions</span>">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Packages and functions</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./04.1-Covid19.html" class="pagination-link" aria-label="<span class='chapter-number'>10</span>&nbsp; <span class='chapter-title'>Covid19 Outbreaks</span>">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Covid19 Outbreaks</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -796,7 +823,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Fgazzelloni/infectious/edit/origin/02.1-Techniques.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Fgazzelloni/infectious/edit/origin/04-InfectiousDiseases.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Fgazzelloni/infectious/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
